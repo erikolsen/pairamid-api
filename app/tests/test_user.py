@@ -1,6 +1,7 @@
 import unittest
 from app.models import User, UserSchema
 from app import db
+from datetime import timedelta, datetime
 
 class TestUser(unittest.TestCase):
     def test_users_are_serialize_able(self):

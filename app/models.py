@@ -4,8 +4,6 @@ from datetime import datetime
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 from uuid import uuid4
 
-
-
 #### Tables 
 
 participants = db.Table('participants',
@@ -63,14 +61,19 @@ def seed():
     jl = User(username='jl', role='VISITOR')
     cp = User(username='cp', role='VISITOR')
 
-    home = [eo, nh, bd, jh, ms, es, kd, mvs, mj, jw, ar]
+    home = [eo, nh, bd, jh, ms, es, kd]
+    solos = [[mvs], [mj], [jw], [ar]]
     visitor = [cd, tp, mr, rp, rj, jl, cp]
 
 
     for user in home + visitor:
         db.session.add(user)
 
-    for pair in zip(home, visitor):
+    for pair in solos:
+        pairing_session = PairingSession(users=list(pair))
+        db.session.add(pairing_session)
+
+    for pair in list(zip(home, visitor)):
         pairing_session = PairingSession(users=list(pair))
         db.session.add(pairing_session)
 
