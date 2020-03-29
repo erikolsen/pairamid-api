@@ -1,6 +1,7 @@
 import json
 from app import app, db
 from app.models import User, PairingSession, PairingSessionSchema
+from app.rocket_chat import RocketChat
 from flask import jsonify, request
 from sqlalchemy import desc
 
@@ -27,3 +28,14 @@ def create():
     if db.session.commit():
         return 'Success'
     return 'Failure'
+
+@app.route('/post_message', methods=["POST"])
+def post_message():
+    content = request.get_json()
+
+    result = RocketChat.post(content["message"])
+
+    if result:
+        return jsonify(status='success'), 200
+
+    return jsonify(status='failed'), 500
