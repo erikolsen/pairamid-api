@@ -3,12 +3,12 @@ from app import app, db
 from app.models import User, PairingSession, PairingSessionSchema
 from app.rocket_chat import RocketChat
 from flask import jsonify, request
-from sqlalchemy import desc
+from sqlalchemy import asc
 
 
-@app.route('/pairing_sessions')
+@app.route('/pairing_sessions', methods=["GET"])
 def index():
-    pairs = PairingSession.query.order_by(desc(PairingSession.created_at)).all()
+    pairs = PairingSession.query.order_by(asc(PairingSession.created_at)).all()
     schema = PairingSessionSchema(many=True)
     display_pairs = schema.dump(pairs) 
 
@@ -16,6 +16,17 @@ def index():
 
 @app.route('/pairing_sessions', methods=["POST"])
 def create():
+    pair = PairingSession()
+    db.session.add(pair)
+    db.session.commit()
+
+    schema = PairingSessionSchema()
+    display_pair = schema.dump(pair) 
+
+    return jsonify(display_pair)
+
+@app.route('/pairing_sessions', methods=["PUT"])
+def update():
     for pair in json.loads(request.data):
         user_ids = [user['id'] for user in pair['users']]
         users = User.query.filter(User.id.in_(user_ids))
@@ -29,13 +40,20 @@ def create():
         return 'Success'
     return 'Failure'
 
-@app.route('/post_message', methods=["POST"])
-def post_message():
-    content = request.get_json()
+@app.route("/pairing_session/<uuid>", methods=["DELETE"])
+def delete(uuid):
+    PairingSession.query.filter(PairingSession.uuid == uuid).delete()
+    if db.session.commit():
+        return 'Success'
+    return 'Failure'
 
-    result = RocketChat.post(content["message"])
+# @app.route('/post_message', methods=["POST"])
+# def post_message():
+#     content = request.get_json()
 
-    if result:
-        return jsonify(status='success'), 200
+#     result = RocketChat.post(content["message"])
 
-    return jsonify(status='failed'), 500
+#     if result:
+#         return jsonify(status='success'), 200
+
+#     return jsonify(status='failed'), 500
