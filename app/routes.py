@@ -1,9 +1,10 @@
 import json
 from app import app, db
-from app.models import User, PairingSession, PairingSessionSchema, PairHistory
+from app.models import User, PairingSession, PairingSessionSchema, PairHistory, PairHistorySchema
 from app.rocket_chat import RocketChat
 from flask import jsonify, request
 from sqlalchemy import asc
+import pdb
 
 
 @app.route('/pairing_sessions', methods=["GET"])
@@ -74,3 +75,20 @@ def create_history():
         return jsonify(status='success'), 201
     except:
         return jsonify(status='failure'), 500
+
+def _split_usernames(pair_history):
+    pair_history['pairs'] = pair_history['pairs'].split(" ")
+
+    return pair_history
+
+@app.route("/history", methods=["GET"])
+def fetch_history():
+    pair_history = PairHistory.query.order_by(asc(PairHistory.created_at)).all()
+    schema = PairHistorySchema()
+    display_history = [schema.dump(history) for history in pair_history]
+
+    list(map(_split_usernames, display_history))
+
+    pdb.set_trace()
+
+    return jsonify(display_history)
