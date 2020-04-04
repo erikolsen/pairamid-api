@@ -26,6 +26,11 @@ class User(db.Model):
     role = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
+class PairHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    pairs = db.Column(db.String(64))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
 #### Schemas
 
 class UserSchema(SQLAlchemyAutoSchema):
@@ -38,6 +43,10 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
         include_relationships = True
     
     users = fields.Nested(UserSchema, many=True)
+
+class PairHistorySchema(SQLAlchemyAutoSchema):
+    class Meta:
+        model = PairHistory
 
 
 def seed():

@@ -34,6 +34,8 @@ def update():
         session.info = pair['info']
         session.users = list(users)
 
+        _add_to_history(db, session)
+
         db.session.add(session)
 
     if db.session.commit():
@@ -57,3 +59,7 @@ def delete(uuid):
 #         return jsonify(status='success'), 200
 
 #     return jsonify(status='failed'), 500
+
+def _add_to_history(db, pairing_session):
+    pass
+
