@@ -1,6 +1,6 @@
 import json
 from app import app, db
-from app.models import User, PairingSession, PairingSessionSchema
+from app.models import User, PairingSession, PairingSessionSchema, PairHistory
 from app.rocket_chat import RocketChat
 from flask import jsonify, request
 from sqlalchemy import asc
@@ -34,8 +34,6 @@ def update():
         session.info = pair['info']
         session.users = list(users)
 
-        _add_to_history(db, session)
-
         db.session.add(session)
 
     if db.session.commit():
@@ -60,6 +58,19 @@ def delete(uuid):
 
 #     return jsonify(status='failed'), 500
 
-def _add_to_history(db, pairing_session):
-    pass
+@app.route("/history", methods=["POST"])
+def create_history():
+    current_pairs = PairingSession.query.all()
+    for current_pair in current_pairs:
+        pairs = [user.username for user in current_pair.users]
+        pairs.sort()
 
+        pair_history = PairHistory()
+        pair_history.pairs = " ".join(pairs)
+        db.session.add(pair_history)
+
+    try: 
+        db.session.commit()
+        return jsonify(status='success'), 201
+    except:
+        return jsonify(status='failure'), 500
