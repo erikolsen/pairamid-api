@@ -62,6 +62,8 @@ def delete(uuid):
 def create_history():
     current_pairs = PairingSession.query.all()
     for current_pair in current_pairs:
+        if len(current_pair.users) == 0:
+            continue
         pairs = [user.username for user in current_pair.users]
         pairs.sort()
 
