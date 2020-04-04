@@ -4,7 +4,6 @@ from app.models import User, PairingSession, PairingSessionSchema, PairHistory, 
 from app.rocket_chat import RocketChat
 from flask import jsonify, request
 from sqlalchemy import asc
-import pdb
 
 
 @app.route('/pairing_sessions', methods=["GET"])
@@ -88,7 +87,5 @@ def fetch_history():
     display_history = [schema.dump(history) for history in pair_history]
 
     list(map(_split_usernames, display_history))
-
-    pdb.set_trace()
 
     return jsonify(display_history)
