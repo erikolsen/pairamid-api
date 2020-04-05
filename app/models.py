@@ -3,6 +3,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 from uuid import uuid4
+from sqlalchemy.ext.serializer import loads, dumps
 
 #### Tables 
 
@@ -85,5 +86,17 @@ def seed():
     for pair in list(zip(home, visitor)):
         pairing_session = PairingSession(users=list(pair))
         db.session.add(pairing_session)
+
+    db.session.commit()
+
+def save_history():
+    with open('./app/tests/fixtures/history.bin', 'wb') as f:
+        history = PairHistory.query.all()
+        f.write(dumps(history))
+
+def load_history():
+    with open('./app/tests/fixtures/history.bin', 'rb') as f:
+        for row in loads(f.read()):
+            db.session.merge(row)
 
     db.session.commit()
