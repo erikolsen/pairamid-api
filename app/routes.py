@@ -10,7 +10,12 @@ from sqlalchemy import asc
 def index():
     pairs = PairingSession.query.order_by(asc(PairingSession.created_at)).all()
     schema = PairingSessionSchema(many=True)
-    display_pairs = schema.dump(pairs) 
+    display_pairs = schema.dump(pairs)
+
+    def _foo(display_pair):
+        display_pair['duration'] = 0
+
+    list(map(_foo, display_pairs))
 
     return jsonify(display_pairs)
 
