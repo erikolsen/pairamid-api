@@ -12,11 +12,6 @@ def index():
     schema = PairingSessionSchema(many=True)
     display_pairs = schema.dump(pairs)
 
-    def _foo(display_pair):
-        display_pair['duration'] = 0
-
-    list(map(_foo, display_pairs))
-
     return jsonify(display_pairs)
 
 @app.route('/pairing_sessions/batch', methods=["PUT"])
