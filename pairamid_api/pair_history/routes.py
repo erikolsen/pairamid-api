@@ -24,11 +24,8 @@ def create_history():
         pair_history.pairs = " ".join(pairs)
         db.session.add(pair_history)
 
-    try: 
-        db.session.commit()
-        return jsonify(status='success'), 201
-    except:
-        return jsonify(status='failure'), 500
+    db.session.commit()
+    return jsonify(status='success'), 201
 
 def _split_usernames(pair_history):
     pair_history['pairs'] = pair_history['pairs'].split(" ")

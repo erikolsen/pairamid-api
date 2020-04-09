@@ -1,13 +1,14 @@
-from flask import Flask
+from flask import Flask, jsonify
 from pairamid_api import pairing_session, pair_history, commands
 from pairamid_api.extensions import ( migrate, db, CORS )
 
-def create_app(config_object='config'):
+def create_app(config_object='pairamid_api.config'):
     app = Flask(__name__)
     app.config.from_object(config_object)
     register_extensions(app)
     register_blueprints(app)
     register_commands(app)
+    register_errorhandlers(app)
     return app
 
 def register_blueprints(app):
@@ -23,4 +24,13 @@ def register_extensions(app):
 
 def register_commands(app):
     app.cli.add_command(commands.full_seed)
+    return None
+
+def register_errorhandlers(app):
+
+    @app.errorhandler(Exception)
+    def _handle_exception(error):
+        print('Error', error)
+        return jsonify(status='failed', message=str(error)), 500
+
     return None
