@@ -1,20 +1,25 @@
 import requests
-from config import Config
+from app.config import ( 
+    auth_token, 
+    user_id, 
+    rc_base_url, 
+    rc_channel
+)
 
 class RocketChat():
     @classmethod
     def post(cls, message):
         headers = {
             'Content-Type': 'application/json',
-            'X-Auth-Token': Config.auth_token,
-            'X-User-Id': Config.user_id
+            'X-Auth-Token': auth_token,
+            'X-User-Id': user_id
             }
-        url = f'{Config.rc_base_url}/chat.postMessage'
+        url = f'{rc_base_url}/chat.postMessage'
         data = {
-                "channel": Config.rc_channel,
+                "channel": rc_channel,
                 "text": message,
                 }
-        response = requests.post(url, headers=header, data=data)
+        response = requests.post(url, headers=headers, data=data)
 
         if response:
             return True

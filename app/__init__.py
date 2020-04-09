@@ -1,13 +1,21 @@
 from flask import Flask
-from config import Config
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from flask_cors import CORS # allow communication with react app
+from app import pairing_session, pair_history
+from app.extensions import ( migrate, db, CORS )
 
-app = Flask(__name__)
-CORS(app)
-app.config.from_object(Config)
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+def create_app(config_object='config'):
+    app = Flask(__name__)
+    app.config.from_object(config_object)
+    register_extensions(app)
+    register_blueprints(app)
+    return app
 
-from app import routes, models
+def register_blueprints(app):
+    app.register_blueprint(pairing_session.routes.blueprint)
+    app.register_blueprint(pair_history.routes.blueprint)
+    return None
+
+def register_extensions(app):
+    CORS(app)
+    db.init_app(app)
+    migrate.init_app(app, db)
+    return None
