@@ -1,6 +1,6 @@
 import json
-from app.extensions import db
-from app.models import User, PairingSession, PairingSessionSchema
+from pairamid_api.extensions import db
+from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from flask import jsonify, request, Blueprint
 from sqlalchemy import asc
 

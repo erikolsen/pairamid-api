@@ -1,8 +1,18 @@
-from app.extensions import db
-from app.models import User, PairingSession, PairingSession
+from pairamid_api.extensions import db
+from pairamid_api.models import User, PairingSession, PairingSession, PairHistory
 from sqlalchemy.ext.serializer import loads, dumps
+import click
+from flask.cli import with_appcontext
 
-def seed():
+@click.command()
+@with_appcontext
+def full_seed():
+    '''Seeds the db with Users and Pairing Sessions'''
+
+    if User.query.count():
+        print('Database base has already been seeded.')
+        return None
+
     eo = User(username='eo', role='HOME')
     nh = User(username='nh', role='HOME')
     bd = User(username='bd', role='HOME')
@@ -40,6 +50,8 @@ def seed():
         db.session.add(pairing_session)
 
     db.session.commit()
+
+    print(f'Database has been seeded with Users: {User.query.count()} and Pairs: {PairingSession.query.count()}')
 
 def save_history():
     with open('./app/tests/fixtures/history.bin', 'wb') as f:

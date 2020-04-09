@@ -1,5 +1,5 @@
 import requests
-from app.config import ( 
+from pairamid_api.config import ( 
     auth_token, 
     user_id, 
     rc_base_url, 

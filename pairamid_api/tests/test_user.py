@@ -1,6 +1,6 @@
 import unittest
-from app.models import User, UserSchema
-from app import db
+from pairamid_api.models import User, UserSchema
+from pairamid_api.extensions import db
 from datetime import timedelta, datetime
 
 class TestUser(unittest.TestCase):

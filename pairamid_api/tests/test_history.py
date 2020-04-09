@@ -16,7 +16,7 @@ def last_concurrent_days(days):
 
 class TestHistory(unittest.TestCase):
     def test_histroy(self):
-        with open('./app/tests/fixtures/pair_history.json') as f:
+        with open('./pairamid_api/tests/fixtures/pair_history.json') as f:
             data = json.loads(f.read())
         
 

@@ -1,6 +1,6 @@
 import json
-from app.extensions import db
-from app.models import (
+from pairamid_api.extensions import db
+from pairamid_api.models import (
     PairingSession, 
     PairingSessionSchema, 
     PairHistory, 
