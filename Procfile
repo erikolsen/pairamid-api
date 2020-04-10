@@ -1,1 +1,1 @@
-web: gunicorn 'pairamid_api:app'
+web: gunicorn 'autoapp:app'
