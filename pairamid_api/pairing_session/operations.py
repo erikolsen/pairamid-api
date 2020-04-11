@@ -19,20 +19,23 @@ def run_create():
 
     return display_pair
 
+def run_delete(uuid):
+    PairingSession.query.filter(PairingSession.uuid == uuid).delete()
+    db.session.commit()
+    return uuid
+
 def run_batch_update(pairs):
-    for pair in json.loads(pairs):
+    schema = PairingSessionSchema()
+    display_pairs = []
+    for data in pairs:
+        pair = data['pair']
         user_ids = [user['id'] for user in pair['users']]
         users = User.query.filter(User.id.in_(user_ids))
         session = PairingSession.query.get(pair['id'])
         session.info = pair['info']
         session.users = list(users)
         db.session.add(session)
+        display_pairs.append({'index': data['index'], 'pair': schema.dump(session)})
     db.session.commit()
 
-    return None
-
-def run_delete(uuid):
-    PairingSession.query.filter(PairingSession.uuid == uuid).delete()
-    db.session.commit()
-
-    return None
+    return display_pairs
