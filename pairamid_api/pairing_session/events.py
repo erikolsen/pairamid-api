@@ -15,3 +15,7 @@ def delete(json, methods=['GET', 'POST']):
 def batch_update(json,methods=['GET', 'POST']):
     pairs = operations.run_batch_update(json)
     socketio.emit('batch update pairs', pairs)
+
+@socketio.on_error_default
+def default_error_handler(e):
+    socketio.emit('server error', {'message': str(e)})

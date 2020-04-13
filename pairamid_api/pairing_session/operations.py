@@ -24,6 +24,9 @@ def run_delete(uuid):
     db.session.commit()
     return uuid
 
+def _no_duplicate_users(pairs):
+    return all([len(u.pairing_sessions) == 1 for u in User.query.all()])
+
 def run_batch_update(pairs):
     schema = PairingSessionSchema()
     display_pairs = []
@@ -36,6 +39,9 @@ def run_batch_update(pairs):
         session.users = list(users)
         db.session.add(session)
         display_pairs.append({'index': data['index'], 'pair': schema.dump(session)})
-    db.session.commit()
 
-    return display_pairs
+    if len(pairs) == 1 or _no_duplicate_users(pairs):
+        db.session.commit()
+        return display_pairs
+    else:
+        raise Exception('An error occured. Refresh page and try again.')
