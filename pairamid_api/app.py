@@ -1,9 +1,10 @@
 from flask import Flask, jsonify
 from pairamid_api import pairing_session, pair_history, commands
-from pairamid_api.extensions import ( migrate, db, CORS )
+from pairamid_api.extensions import ( migrate, db, CORS, socketio )
 
 def create_app(config_object='pairamid_api.config'):
     app = Flask(__name__)
+    app.config['SECRET_KEY'] = 'a_super_secret_key'
     app.config.from_object(config_object)
     register_extensions(app)
     register_blueprints(app)
@@ -20,6 +21,7 @@ def register_extensions(app):
     CORS(app)
     db.init_app(app)
     migrate.init_app(app, db)
+    socketio.init_app(app, cors_allowed_origins='*')
     return None
 
 def register_commands(app):

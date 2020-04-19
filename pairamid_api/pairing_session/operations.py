@@ -19,20 +19,29 @@ def run_create():
 
     return display_pair
 
+def run_delete(uuid):
+    PairingSession.query.filter(PairingSession.uuid == uuid).delete()
+    db.session.commit()
+    return uuid
+
+def _no_duplicate_users(pairs):
+    return all([len(u.pairing_sessions) == 1 for u in User.query.all()])
+
 def run_batch_update(pairs):
-    for pair in json.loads(pairs):
+    schema = PairingSessionSchema()
+    display_pairs = []
+    for data in pairs:
+        pair = data['pair']
         user_ids = [user['id'] for user in pair['users']]
         users = User.query.filter(User.id.in_(user_ids))
         session = PairingSession.query.get(pair['id'])
         session.info = pair['info']
         session.users = list(users)
         db.session.add(session)
-    db.session.commit()
+        display_pairs.append({'index': data['index'], 'pair': schema.dump(session)})
 
-    return None
-
-def run_delete(uuid):
-    PairingSession.query.filter(PairingSession.uuid == uuid).delete()
-    db.session.commit()
-
-    return None
+    if len(pairs) == 1 or _no_duplicate_users(pairs):
+        db.session.commit()
+        return display_pairs
+    else:
+        raise Exception('An error occured. Refresh page and try again.')

@@ -1,1 +1,1 @@
-web: gunicorn 'autoapp:app'
+web: gunicorn --worker-class eventlet -w 1 autoapp:app
