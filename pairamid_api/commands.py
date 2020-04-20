@@ -3,6 +3,80 @@ from pairamid_api.models import User, PairingSession, PairingSession, PairHistor
 from sqlalchemy.ext.serializer import loads, dumps
 import click
 from flask.cli import with_appcontext
+import datetime
+
+@click.command()
+@with_appcontext
+def build_history():
+    '''Seeds the db with past Pairing Sessions '''
+    seed_pairs = [
+        {
+            'date': [2020, 4, 17],
+            'pairs': [
+                ('ar', 'cp'),
+                ('kd', 'cd'),
+                ('mj', 'jl'),
+                ('ms', 'jh'),
+                ('eo', 'rp')
+            ]
+        },
+        {
+            'date': [2020, 4, 16],
+            'pairs': [
+                ('ar', 'cp'),
+                ('ms', 'rj'),
+                ('mr', 'nh'),
+                ('eo', 'rp'),
+                ('jh', 'jw')
+
+            ]
+        },
+        {
+            'date': [2020, 4, 15],
+            'pairs': [
+                ('ar', 'cp'),
+                ('ms', 'rj'),
+                ('mr', 'nh'),
+                ('eo', 'rp'),
+                ('jh', 'jw')
+
+            ]
+        },
+        {
+            'date': [2020, 4, 14],
+            'pairs': [
+                ('ar', 'cp'),
+                ('ms', 'jh'),
+                ('kd', 'jl'),
+                ('nh', 'mj'),
+                ('eo', 'mr'),
+                ('es', 'cd')
+
+            ]
+        },
+        {
+            'date': [2020, 4, 13],
+            'pairs': [
+                ('ar', 'cp'),
+                ('rj', 'rp'),
+                ('ms', 'jh'),
+                ('kd', 'jl'),
+                ('nh', 'mj'),
+                ('eo', 'mr'),
+                ('es', 'cd')
+
+            ]
+        }
+    ]
+
+    for day in seed_pairs:
+        for pair in day['pairs']:
+            users = [User.query.filter_by(username=u).first() for u in pair]
+            ps = PairingSession(users=users, created_at=datetime.datetime(*day['date']))
+            db.session.add(ps)
+
+    db.session.commit()
+
 
 @click.command()
 @with_appcontext
@@ -33,21 +107,21 @@ def full_seed():
     jl = User(username='jl', role='VISITOR')
     cp = User(username='cp', role='VISITOR')
 
-    home = [eo, nh, bd, jh, ms, es, kd]
-    solos = [[mvs], [mj], [jw], [ar]]
+    home = [eo, nh, jh, ms, es, kd]
+    solos = [[mj], [jw], [ar]]
     visitor = [cd, tp, mr, rp, rj, jl, cp]
 
 
-    for user in home + visitor:
+    for user in home + visitor +[mj, jw, ar]:
         db.session.add(user)
 
-    for pair in solos:
-        pairing_session = PairingSession(users=list(pair))
-        db.session.add(pairing_session)
+    # for pair in solos:
+    #     pairing_session = PairingSession(users=list(pair))
+    #     db.session.add(pairing_session)
 
-    for pair in list(zip(home, visitor)):
-        pairing_session = PairingSession(users=list(pair))
-        db.session.add(pairing_session)
+    # for pair in list(zip(home, visitor)):
+    #     pairing_session = PairingSession(users=list(pair))
+    #     db.session.add(pairing_session)
 
     db.session.commit()
 

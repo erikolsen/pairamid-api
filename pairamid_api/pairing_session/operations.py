@@ -2,9 +2,18 @@ import json
 from pairamid_api.extensions import db
 from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from sqlalchemy import asc
+from datetime import date
 
 def run_fetch_all():
-    pairs = PairingSession.query.order_by(asc(PairingSession.created_at)).all()
+    pairs = PairingSession.query.filter(PairingSession.created_at > date.today()).all()
+    if not pairs:
+        all_users = User.query.order_by(asc(User.username)).all()
+        unpaired = PairingSession(users=all_users, info='UNPAIRED')
+        new = PairingSession()
+        pairs = [unpaired, new]
+        db.session.add(unpaired)
+        db.session.add(new)
+        db.session.commit()
     schema = PairingSessionSchema(many=True)
     display_pairs = schema.dump(pairs)
 
@@ -40,8 +49,10 @@ def run_batch_update(pairs):
         db.session.add(session)
         display_pairs.append({'index': data['index'], 'pair': schema.dump(session)})
 
-    if len(pairs) == 1 or _no_duplicate_users(pairs):
-        db.session.commit()
-        return display_pairs
-    else:
-        raise Exception('An error occured. Refresh page and try again.')
+    db.session.commit()
+    return display_pairs
+    # if len(pairs) == 1 or _no_duplicate_users(pairs):
+    #     db.session.commit()
+    #     return display_pairs
+    # else:
+    #     raise Exception('An error occured. Refresh page and try again.')

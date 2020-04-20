@@ -26,6 +26,7 @@ def register_extensions(app):
 
 def register_commands(app):
     app.cli.add_command(commands.full_seed)
+    app.cli.add_command(commands.build_history)
     return None
 
 def register_errorhandlers(app):
