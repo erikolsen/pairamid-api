@@ -4,72 +4,13 @@ from sqlalchemy.ext.serializer import loads, dumps
 import click
 from flask.cli import with_appcontext
 import datetime
+from . import seed_history
 
 @click.command()
 @with_appcontext
 def build_history():
     '''Seeds the db with past Pairing Sessions '''
-    seed_pairs = [
-        {
-            'date': [2020, 4, 17],
-            'pairs': [
-                ('ar', 'cp'),
-                ('kd', 'cd'),
-                ('mj', 'jl'),
-                ('ms', 'jh'),
-                ('eo', 'rp')
-            ]
-        },
-        {
-            'date': [2020, 4, 16],
-            'pairs': [
-                ('ar', 'cp'),
-                ('ms', 'rj'),
-                ('mr', 'nh'),
-                ('eo', 'rp'),
-                ('jh', 'jw')
-
-            ]
-        },
-        {
-            'date': [2020, 4, 15],
-            'pairs': [
-                ('ar', 'cp'),
-                ('ms', 'rj'),
-                ('mr', 'nh'),
-                ('eo', 'rp'),
-                ('jh', 'jw')
-
-            ]
-        },
-        {
-            'date': [2020, 4, 14],
-            'pairs': [
-                ('ar', 'cp'),
-                ('ms', 'jh'),
-                ('kd', 'jl'),
-                ('nh', 'mj'),
-                ('eo', 'mr'),
-                ('es', 'cd')
-
-            ]
-        },
-        {
-            'date': [2020, 4, 13],
-            'pairs': [
-                ('ar', 'cp'),
-                ('rj', 'rp'),
-                ('ms', 'jh'),
-                ('kd', 'jl'),
-                ('nh', 'mj'),
-                ('eo', 'mr'),
-                ('es', 'cd')
-
-            ]
-        }
-    ]
-
-    for day in seed_pairs:
+    for day in seed_history.pairs:
         for pair in day['pairs']:
             users = [User.query.filter_by(username=u).first() for u in pair]
             ps = PairingSession(users=users, created_at=datetime.datetime(*day['date']))
@@ -89,7 +30,6 @@ def full_seed():
 
     eo = User(username='eo', role='HOME')
     nh = User(username='nh', role='HOME')
-    bd = User(username='bd', role='HOME')
     jh = User(username='jh', role='HOME')
     ms = User(username='ms', role='HOME')
     es = User(username='es', role='HOME')
@@ -97,7 +37,6 @@ def full_seed():
     mj = User(username='mj', role='HOME')
     jw = User(username='jw', role='HOME')
     ar = User(username='ar', role='HOME')
-    mvs = User(username='mvs', role='HOME')
 
     cd = User(username='cd', role='VISITOR')
     tp = User(username='tp', role='VISITOR')
@@ -107,13 +46,18 @@ def full_seed():
     jl = User(username='jl', role='VISITOR')
     cp = User(username='cp', role='VISITOR')
 
-    home = [eo, nh, jh, ms, es, kd]
-    solos = [[mj], [jw], [ar]]
+    home = [eo, nh, jh, ms, es, kd, mj, jw, ar]
     visitor = [cd, tp, mr, rp, rj, jl, cp]
 
 
-    for user in home + visitor +[mj, jw, ar]:
+    for user in home + visitor:
         db.session.add(user)
+
+    for day in seed_history.pairs:
+        for pair in day['pairs']:
+            users = [User.query.filter_by(username=u).first() for u in pair]
+            ps = PairingSession(users=users, created_at=datetime.datetime(*day['date']))
+            db.session.add(ps)
 
     # for pair in solos:
     #     pairing_session = PairingSession(users=list(pair))

@@ -17,7 +17,7 @@ class PairingSession(db.Model):
     info = db.Column(db.Text, default='')
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     users = db.relationship('User', secondary=participants, passive_deletes=True, 
-        backref=db.backref('pairing_sessions'))
+        order_by="User.username")
 
     def __lt__(self, obj):
         return self.created_at < obj.created_at
@@ -32,6 +32,8 @@ class User(db.Model):
     username = db.Column(db.String(64))
     role = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    pairing_sessions = db.relationship('PairingSession', secondary=participants,
+        order_by="desc(PairingSession.created_at)")
 
     def __lt__(self, obj):
         return self.username < obj.username
@@ -60,7 +62,7 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
 
     def counter(self, obj):
         if bool(obj.users):
-            ps = sorted(obj.users[0].pairing_sessions, reverse=True)
+            ps = obj.users[0].pairing_sessions
             count = 0
             for pair in ps:
                 if pair == ps[0]:

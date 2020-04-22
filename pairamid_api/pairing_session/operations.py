@@ -4,23 +4,28 @@ from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from sqlalchemy import asc
 from datetime import date
 
+def _daily_refresh_pairs():
+    all_users = User.query.order_by(asc(User.username)).all()
+    unpaired = PairingSession(users=all_users, info='UNPAIRED')
+    new = PairingSession()
+    pairs = [unpaired, new]
+    db.session.add(unpaired)
+    db.session.add(new)
+    db.session.commit()
+    return pairs
+
 def run_fetch_all():
     pairs = PairingSession.query.filter(PairingSession.created_at > date.today()).all()
     if not pairs:
-        all_users = User.query.order_by(asc(User.username)).all()
-        unpaired = PairingSession(users=all_users, info='UNPAIRED')
-        new = PairingSession()
-        pairs = [unpaired, new]
-        db.session.add(unpaired)
-        db.session.add(new)
-        db.session.commit()
+        pairs = _daily_refresh_pairs()
+
     schema = PairingSessionSchema(many=True)
     display_pairs = schema.dump(pairs)
 
     return display_pairs
 
 def run_create():
-    pair = PairingSession()
+    pair = PairingSession() 
     db.session.add(pair)
     db.session.commit()
     schema = PairingSessionSchema()
@@ -42,7 +47,7 @@ def run_batch_update(pairs):
     for data in pairs:
         pair = data['pair']
         user_ids = [user['id'] for user in pair['users']]
-        users = User.query.filter(User.id.in_(user_ids))
+        users = User.query.filter(User.id.in_(user_ids)).order_by(asc(User.username))
         session = PairingSession.query.get(pair['id'])
         session.info = pair['info']
         session.users = list(users)
