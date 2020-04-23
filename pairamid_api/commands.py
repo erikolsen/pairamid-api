@@ -8,22 +8,35 @@ from . import seed_history
 
 @click.command()
 @with_appcontext
-def build_history():
+def clear_pairs():
+    '''Removes all pairs from the db'''
+    for pair in PairingSession.query.all():
+        pair.users = []
+        PairingSession.query.filter(PairingSession.uuid == pair.uuid).delete()
+
+    db.session.commit()
+    print(f'Current Pair Count: {PairingSession.query.count()}')
+
+@click.command()
+@with_appcontext
+def add_pairs():
     '''Seeds the db with past Pairing Sessions '''
-    up = PairingSession(info='UNPAIRED')
-    db.session.add(up)
     for day in seed_history.pairs:
+        unpaired = [User.query.filter_by(username=u).first() for u in day['unpaired']]
+        up = PairingSession(users=unpaired, info='UNPAIRED', created_at=datetime.datetime(*day['date']))
+        db.session.add(up)
         for pair in day['pairs']:
             users = [User.query.filter_by(username=u).first() for u in pair]
             ps = PairingSession(users=users, created_at=datetime.datetime(*day['date']))
             db.session.add(ps)
 
     db.session.commit()
+    print(f'Database has been seeded with Pairs: {PairingSession.query.count()}')
 
 
 @click.command()
 @with_appcontext
-def full_seed():
+def add_users():
     '''Seeds the db with Users and Pairing Sessions'''
 
     if User.query.count():
@@ -51,29 +64,12 @@ def full_seed():
     home = [eo, nh, jh, ms, es, kd, mj, jw, ar]
     visitor = [cd, tp, mr, rp, rj, jl, cp]
 
-    up = PairingSession(info='UNPAIRED')
-    db.session.add(up)
-
     for user in home + visitor:
         db.session.add(user)
 
-    for day in seed_history.pairs:
-        for pair in day['pairs']:
-            users = [User.query.filter_by(username=u).first() for u in pair]
-            ps = PairingSession(users=users, created_at=datetime.datetime(*day['date']))
-            db.session.add(ps)
-
-    # for pair in solos:
-    #     pairing_session = PairingSession(users=list(pair))
-    #     db.session.add(pairing_session)
-
-    # for pair in list(zip(home, visitor)):
-    #     pairing_session = PairingSession(users=list(pair))
-    #     db.session.add(pairing_session)
-
     db.session.commit()
 
-    print(f'Database has been seeded with Users: {User.query.count()} and Pairs: {PairingSession.query.count()}')
+    print(f'Database has been seeded with Users: {User.query.count()}')
 
 def save_history():
     with open('./app/tests/fixtures/history.bin', 'wb') as f:

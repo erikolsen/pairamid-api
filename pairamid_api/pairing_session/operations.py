@@ -5,7 +5,7 @@ from sqlalchemy import asc
 from datetime import date, datetime
 
 def run_fetch_all():
-    pairs = PairingSession.todays_pairs
+    pairs = _todays_pairs()
     if not pairs:
         pairs = _daily_refresh_pairs()
 
@@ -46,8 +46,11 @@ def run_batch_update(pairs):
     db.session.commit()
     return display_pairs
 
+def _pair_string(pair):
+    return ''.join([u.username for u in pair.users])
+
 def _duplicate_users():
-    pair_list = [p.pair_string for p in PairingSession.todays_pairs if p.users]
+    pair_list = [_pair_string(p) for p in _todays_pairs() if p.users]
     return len(pair_list) != len(set(pair_list))
 
 def _daily_refresh_pairs():
@@ -59,3 +62,9 @@ def _daily_refresh_pairs():
     db.session.add(new)
     db.session.commit()
     return pairs
+
+def _start_of_day():
+    return datetime.combine(date.today(), datetime.min.time())
+
+def _todays_pairs():
+    return list(PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).all())

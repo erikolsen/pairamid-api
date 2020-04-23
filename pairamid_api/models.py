@@ -1,14 +1,10 @@
 from pairamid_api.extensions import db
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.ext.hybrid import hybrid_property, hybrid_method
 from datetime import datetime, date
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 from uuid import uuid4
 import random
 #### Tables 
-
-def _start_of_day():
-    return datetime.combine(date.today(), datetime.min.time())
 
 participants = db.Table('participants',
     db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True),
@@ -28,14 +24,6 @@ class PairingSession(db.Model):
 
     def __eq__(self, obj):
         return sorted(self.users) == sorted(obj.users)
-
-    @hybrid_property
-    def pair_string(self):
-        return ''.join([u.username for u in self.users])
-
-    @hybrid_property
-    def todays_pairs(self):
-        return list(self.query.filter(self.created_at >= _start_of_day()).all())
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
