@@ -10,6 +10,8 @@ from . import seed_history
 @with_appcontext
 def build_history():
     '''Seeds the db with past Pairing Sessions '''
+    up = PairingSession(info='UNPAIRED')
+    db.session.add(up)
     for day in seed_history.pairs:
         for pair in day['pairs']:
             users = [User.query.filter_by(username=u).first() for u in pair]
@@ -49,6 +51,8 @@ def full_seed():
     home = [eo, nh, jh, ms, es, kd, mj, jw, ar]
     visitor = [cd, tp, mr, rp, rj, jl, cp]
 
+    up = PairingSession(info='UNPAIRED')
+    db.session.add(up)
 
     for user in home + visitor:
         db.session.add(user)
