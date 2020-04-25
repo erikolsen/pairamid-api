@@ -21,5 +21,5 @@ def batch_update(json,methods=['GET', 'POST']):
 
 @socketio.on_error_default
 def default_error_handler(e):
-    print('\n\n {e} \n\n')
+    print(f'\n\n {e} \n\n')
     return {'error': True, 'message': str(e) }

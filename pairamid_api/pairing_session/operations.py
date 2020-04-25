@@ -2,16 +2,20 @@ import json
 from pairamid_api.extensions import db
 from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from sqlalchemy import asc
+from datetime import date, datetime
 
 def run_fetch_all():
-    pairs = PairingSession.query.order_by(asc(PairingSession.created_at)).all()
+    pairs = _todays_pairs()
+    if not pairs:
+        pairs = _daily_refresh_pairs()
+
     schema = PairingSessionSchema(many=True)
     display_pairs = schema.dump(pairs)
 
     return display_pairs
 
 def run_create():
-    pair = PairingSession()
+    pair = PairingSession() 
     db.session.add(pair)
     db.session.commit()
     schema = PairingSessionSchema()
@@ -24,24 +28,43 @@ def run_delete(uuid):
     db.session.commit()
     return uuid
 
-def _no_duplicate_users(pairs):
-    return all([len(u.pairing_sessions) == 1 for u in User.query.all()])
-
 def run_batch_update(pairs):
     schema = PairingSessionSchema()
     display_pairs = []
     for data in pairs:
         pair = data['pair']
         user_ids = [user['id'] for user in pair['users']]
-        users = User.query.filter(User.id.in_(user_ids))
-        session = PairingSession.query.get(pair['id'])
-        session.info = pair['info']
-        session.users = list(users)
-        db.session.add(session)
-        display_pairs.append({'index': data['index'], 'pair': schema.dump(session)})
+        users = User.query.filter(User.id.in_(user_ids)).order_by(asc(User.username))
+        pairing_session = PairingSession.query.get(pair['id'])
+        pairing_session.info = pair['info']
+        pairing_session.users = list(users)
+        db.session.add(pairing_session)
+        display_pairs.append({'index': data['index'], 'pair': schema.dump(pairing_session)})
 
-    if len(pairs) == 1 or _no_duplicate_users(pairs):
-        db.session.commit()
-        return display_pairs
-    else:
+    if _duplicate_users():
         raise Exception('An error occured. Refresh page and try again.')
+    db.session.commit()
+    return display_pairs
+
+def _pair_string(pair):
+    return ''.join([u.username for u in pair.users])
+
+def _duplicate_users():
+    pair_list = [_pair_string(p) for p in _todays_pairs() if p.users]
+    return len(pair_list) != len(set(pair_list))
+
+def _daily_refresh_pairs():
+    all_users = User.query.order_by(asc(User.username)).all()
+    unpaired = PairingSession(users=all_users, info='UNPAIRED')
+    new = PairingSession()
+    pairs = [unpaired, new]
+    db.session.add(unpaired)
+    db.session.add(new)
+    db.session.commit()
+    return pairs
+
+def _start_of_day():
+    return datetime.combine(date.today(), datetime.min.time())
+
+def _todays_pairs():
+    return list(PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).all())
