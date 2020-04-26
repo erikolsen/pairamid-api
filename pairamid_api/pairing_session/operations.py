@@ -46,11 +46,8 @@ def run_batch_update(pairs):
     db.session.commit()
     return display_pairs
 
-def _pair_string(pair):
-    return ''.join([u.username for u in pair.users])
-
 def _duplicate_users():
-    pair_list = [_pair_string(p) for p in _todays_pairs() if p.users]
+    pair_list = [u.username for pair in _todays_pairs() for u in pair.users if pair.users]
     return len(pair_list) != len(set(pair_list))
 
 def _daily_refresh_pairs():
