@@ -57,6 +57,8 @@ def _daily_refresh_pairs():
     unpaired = PairingSession(users=all_users, info='UNPAIRED')
     new = PairingSession()
     pairs = [unpaired, new]
+    if _duplicate_users():
+        raise Exception('An error occured. Refresh page and try again.')
     db.session.add(unpaired)
     db.session.add(new)
     db.session.commit()
@@ -74,4 +76,4 @@ def _start_of_day_in_central():
     return _date_in_central() + _central_delta()
 
 def _todays_pairs():
-    return list(PairingSession.query.filter(PairingSession.created_at >= _start_of_day_in_central()).all())
+    return PairingSession.query.filter(PairingSession.created_at >= _start_of_day_in_central()).all()

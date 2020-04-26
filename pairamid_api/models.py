@@ -61,10 +61,10 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
 
     def counter(self, obj):
         if bool(obj.users):
-            ps = obj.users[0].pairing_sessions.limit(10)
+            ps = obj.users[0].pairing_sessions.filter(PairingSession.info != 'UNPAIRED').limit(10)
             count = 0
             for pair in ps:
-                if pair == ps[0] and pair.info != 'UNPAIRED':
+                if pair == ps[0]:
                     count += 1 
                 else:
                     break
