@@ -64,7 +64,7 @@ def _daily_refresh_pairs():
 
 def _central_delta():
     central = datetime.now(pytz.timezone('US/Central'))
-    utc_offset = central.utcoffset().total_seconds()
+    utc_offset = abs(central.utcoffset().total_seconds())
     return timedelta(seconds=utc_offset) 
 
 def _date_in_central():
