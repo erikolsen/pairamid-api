@@ -62,7 +62,7 @@ def _daily_refresh_pairs():
     return pairs
 
 def _start_of_day():
-    utc_offset = -18000 #time.localtime().tm_gmtoff
+    utc_offset = 18000 #time.localtime().tm_gmtoff
     return datetime.combine(datetime.utcnow().date(), datetime.min.time()) + timedelta(seconds=utc_offset) 
 
 def _todays_pairs():
