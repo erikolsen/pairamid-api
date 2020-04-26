@@ -32,7 +32,7 @@ class User(db.Model):
     role = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     pairing_sessions = db.relationship('PairingSession', secondary=participants,
-        order_by="desc(PairingSession.created_at)")
+        order_by="desc(PairingSession.created_at)", lazy='dynamic')
 
     def __lt__(self, obj):
         return self.username < obj.username
@@ -61,10 +61,10 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
 
     def counter(self, obj):
         if bool(obj.users):
-            ps = obj.users[0].pairing_sessions
+            ps = obj.users[0].pairing_sessions.limit(10)
             count = 0
             for pair in ps:
-                if pair == ps[0]:
+                if pair == ps[0] and pair.info != 'UNPAIRED':
                     count += 1 
                 else:
                     break
