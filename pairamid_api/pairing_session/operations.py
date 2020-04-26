@@ -2,7 +2,8 @@ import json
 from pairamid_api.extensions import db
 from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from sqlalchemy import asc
-from datetime import date, datetime
+from datetime import datetime, timedelta
+import time
 
 def run_fetch_all():
     pairs = _todays_pairs()
@@ -61,7 +62,8 @@ def _daily_refresh_pairs():
     return pairs
 
 def _start_of_day():
-    return datetime.combine(date.today(), datetime.min.time())
+    utc_offset = -18000 #time.localtime().tm_gmtoff
+    return datetime.combine(datetime.utcnow().date(), datetime.min.time()) + timedelta(seconds=utc_offset) 
 
 def _todays_pairs():
     return list(PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).all())
