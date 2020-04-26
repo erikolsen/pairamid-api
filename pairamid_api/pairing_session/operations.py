@@ -3,6 +3,7 @@ from pairamid_api.extensions import db
 from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from sqlalchemy import asc
 from datetime import datetime, timedelta
+import pytz
 import time
 
 def run_fetch_all():
@@ -61,9 +62,16 @@ def _daily_refresh_pairs():
     db.session.commit()
     return pairs
 
-def _start_of_day():
-    utc_offset = 18000 #time.localtime().tm_gmtoff
-    return datetime.combine(datetime.utcnow().date(), datetime.min.time()) + timedelta(seconds=utc_offset) 
+def _central_delta():
+    central = datetime.now(pytz.timezone('US/Central'))
+    utc_offset = central.utcoffset().total_seconds()
+    return timedelta(seconds=utc_offset) 
+
+def _date_in_central():
+    return datetime.combine(datetime.utcnow().date() - _central_delta(), datetime.min.time())
+
+def _start_of_day_in_central():
+    return _date_in_central() + _central_delta()
 
 def _todays_pairs():
-    return list(PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).all())
+    return list(PairingSession.query.filter(PairingSession.created_at >= _start_of_day_in_central()).all())
