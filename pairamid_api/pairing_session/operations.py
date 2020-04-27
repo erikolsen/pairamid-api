@@ -64,16 +64,9 @@ def _daily_refresh_pairs():
     db.session.commit()
     return pairs
 
-def _central_delta():
+def _start_of_day():
     central = datetime.now(pytz.timezone('US/Central'))
-    utc_offset = abs(central.utcoffset().total_seconds())
-    return timedelta(seconds=utc_offset) 
-
-def _date_in_central():
-    return datetime.combine(datetime.utcnow().date() - _central_delta(), datetime.min.time())
-
-def _start_of_day_in_central():
-    return _date_in_central() + _central_delta()
+    return datetime(central.year, central.month, central.day, 0, 0)
 
 def _todays_pairs():
-    return PairingSession.query.filter(PairingSession.created_at >= _start_of_day_in_central()).all()
+    return PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).all()

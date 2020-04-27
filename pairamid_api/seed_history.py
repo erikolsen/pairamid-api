@@ -1,6 +1,26 @@
 pairs = [
     {
-        'date': [2020, 4, 24],
+        'date': [2020, 4, 26, 20],
+        'unpaired': ['jh', 'jl', 'jw', 'ms', 'mj', 'cd', 'nh', 'es', 'rj', 'kd', 'rp'],
+        'pairs': [
+            ['eo', 'mr'],
+            ['tp']
+        ]
+    },
+    {
+        'date': [2020, 4, 24, 9],
+        'unpaired': ['tp', 'jl', 'jw'],
+        'pairs': [
+            ['ms', 'mj'],
+            ['cd', 'nh'],
+            ['es', 'rj'],
+            ['kd', 'rp'],
+            ['eo', 'mr'],
+            ['jh']
+        ]
+    },
+    {
+        'date': [2020, 4, 23, 9],
         'unpaired': ['tp', 'jl', 'jw'],
         'pairs': [
             ['ar', 'cp'],
@@ -13,20 +33,7 @@ pairs = [
         ]
     },
     {
-        'date': [2020, 4, 23],
-        'unpaired': ['tp', 'jl', 'jw'],
-        'pairs': [
-            ['ar', 'cp'],
-            ['ms', 'mj'],
-            ['cd', 'nh'],
-            ['es', 'rj'],
-            ['kd', 'rp'],
-            ['eo', 'mr'],
-            ['jh']
-        ]
-    },
-    {
-        'date': [2020, 4, 22],
+        'date': [2020, 4, 22, 9],
         'unpaired': ['tp'],
         'pairs': [
             ['ar', 'cp'],
@@ -38,7 +45,7 @@ pairs = [
         ]
     },
     {
-        'date': [2020, 4, 21],
+        'date': [2020, 4, 21, 9],
         'unpaired': ['tp'],
         'pairs': [
             ['ar', 'cp'],
@@ -50,7 +57,7 @@ pairs = [
         ]
     },
     {
-        'date': [2020, 4, 20],
+        'date': [2020, 4, 20, 9],
         'unpaired': ['tp'],
         'pairs': [
             ['ar', 'cp'],
@@ -62,7 +69,7 @@ pairs = [
         ]
     },
     {
-        'date': [2020, 4, 17],
+        'date': [2020, 4, 17, 9],
         'unpaired': ['tp'],
         'pairs': [
             ['ar', 'cp'],
@@ -73,7 +80,7 @@ pairs = [
         ]
     },
     {
-        'date': [2020, 4, 16],
+        'date': [2020, 4, 16, 9],
         'unpaired': ['tp'],
         'pairs': [
             ['ar', 'cp'],
@@ -85,7 +92,7 @@ pairs = [
         ]
     },
     {
-        'date': [2020, 4, 15],
+        'date': [2020, 4, 15, 9],
         'unpaired': ['tp'],
         'pairs': [
             ['ar', 'cp'],
@@ -97,7 +104,7 @@ pairs = [
         ]
     },
     {
-        'date': [2020, 4, 14],
+        'date': [2020, 4, 14, 9],
         'unpaired': ['tp'],
         'pairs': [
             ['ar', 'cp'],
@@ -110,7 +117,7 @@ pairs = [
         ]
     },
     {
-        'date': [2020, 4, 13],
+        'date': [2020, 4, 13, 9],
         'unpaired': ['tp'],
         'pairs': [
             ['ar', 'cp'],
