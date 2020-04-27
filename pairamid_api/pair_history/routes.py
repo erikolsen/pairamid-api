@@ -1,43 +1,20 @@
 import json
 from pairamid_api.extensions import db
-from pairamid_api.models import (
-    PairingSession, 
-    PairingSessionSchema, 
-    PairHistory, 
-    PairHistorySchema
-)
+from pairamid_api.models import User, PairingSession
+
 from flask import jsonify, request, Blueprint
-from sqlalchemy import asc
 
 blueprint = Blueprint('pair_history', __name__)
 
-@blueprint.route("/history", methods=["POST"])
-def create_history():
-    current_pairs = PairingSession.query.all()
-    for current_pair in current_pairs:
-        if len(current_pair.users) == 0:
-            continue
-        pairs = [user.username for user in current_pair.users]
-        pairs.sort()
-
-        pair_history = PairHistory()
-        pair_history.pairs = " ".join(pairs)
-        db.session.add(pair_history)
-
-    db.session.commit()
-    return jsonify(status='success'), 201
-
-def _split_usernames(pair_history):
-    pair_history['pairs'] = pair_history['pairs'].split(" ")
-
-    return pair_history
+def _build_history():
+    home_users = User.query.filter_by(role='HOME').all()
+    visitor_users = [u.username for u in User.query.filter_by(role='VISITOR').all()]
+    history = {'visitor': visitor_users, 'home': {} }
+    for user in home_users:
+        paired_users = [u.username for p in user.pairing_sessions.filter(PairingSession.info != 'UNPAIRED').all() for u in p.users]
+        history['home'][user.username] = [ {u: paired_users.count(u)} for u in visitor_users ]
+    return history
 
 @blueprint.route("/history", methods=["GET"])
 def fetch_history():
-    pair_history = PairHistory.query.order_by(asc(PairHistory.created_at)).all()
-    schema = PairHistorySchema()
-    display_history = [schema.dump(history) for history in pair_history]
-
-    list(map(_split_usernames, display_history))
-
-    return jsonify(display_history)
+    return jsonify(_build_history())
