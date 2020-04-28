@@ -1,5 +1,17 @@
 pairs = [
     {
+        'date': [2020, 4, 27, 9],
+        'unpaired': ['ar', 'cp', 'rp', 'tp'],
+        'pairs': [
+            ['ms', 'mj'],
+            ['jh', 'nh'],
+            ['jl', 'jw'],
+            ['es', 'rj'],
+            ['cd', 'kd'],
+            ['es', 'rj'],
+        ]
+    },
+    {
         'date': [2020, 4, 24, 9],
         'unpaired': ['ar', 'cp', 'jl', 'jw', 'tp'],
         'pairs': [

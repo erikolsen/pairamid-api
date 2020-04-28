@@ -66,7 +66,8 @@ def _daily_refresh_pairs():
 
 def _start_of_day():
     central = datetime.now(pytz.timezone('US/Central'))
-    return datetime(central.year, central.month, central.day, 0, 0)
+    offset = abs(int(central.utcoffset().total_seconds()/60/60))
+    return datetime(central.year, central.month, central.day, offset, 0)
 
 def _todays_pairs():
     return PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).all()
