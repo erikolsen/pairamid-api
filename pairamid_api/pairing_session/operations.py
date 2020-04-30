@@ -70,4 +70,4 @@ def _start_of_day():
     return datetime(central.year, central.month, central.day, offset, 0)
 
 def _todays_pairs():
-    return PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).all()
+    return PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).order_by(asc(PairingSession.created_at)).all()
