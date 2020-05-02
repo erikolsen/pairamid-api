@@ -7,6 +7,14 @@ import pytz
 import time
 
 def run_fetch_all():
+    pairs = PairingSession.query.all()
+    schema = PairingSessionSchema(many=True)
+    display_pairs = schema.dump(pairs)
+
+    return display_pairs
+
+
+def run_fetch_day():
     pairs = _todays_pairs()
     if not pairs:
         pairs = _daily_refresh_pairs()
