@@ -70,15 +70,3 @@ def add_users():
     db.session.commit()
 
     print(f'Database has been seeded with Users: {User.query.count()}')
-
-def save_history():
-    with open('./app/tests/fixtures/history.bin', 'wb') as f:
-        history = PairHistory.query.all()
-        f.write(dumps(history))
-
-def load_history():
-    with open('./app/tests/fixtures/history.bin', 'rb') as f:
-        for row in loads(f.read()):
-            db.session.merge(row)
-
-    db.session.commit()

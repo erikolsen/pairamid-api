@@ -3,7 +3,6 @@ from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime, date
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 from uuid import uuid4
-import random
 #### Tables 
 
 participants = db.Table('participants',
@@ -38,12 +37,7 @@ class User(db.Model):
         return self.username < obj.username
 
     def __repr__(self):
-        return f'<User {self.username} >'
-
-class PairHistory(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    pairs = db.Column(db.String(64))
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+        return f'<User {self.username} {self.role} >'
 
 #### Schemas
 
@@ -71,11 +65,3 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
             return count
         else:
             return 0
-
-
-
-class PairHistorySchema(SQLAlchemyAutoSchema):
-    class Meta:
-        model = PairHistory
-
-
