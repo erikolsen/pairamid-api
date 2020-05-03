@@ -14,7 +14,8 @@ def run_fetch_all():
     return display_pairs
 
 def run_fetch_day():
-    pairs = _todays_pairs()
+    pairs = _todays_pairs().all()
+    print('Pairs', pairs)
     if not pairs:
         pairs = _daily_refresh_pairs()
 
@@ -62,7 +63,7 @@ def run_batch_update(pairs):
     return display_pairs
 
 def _duplicate_users():
-    pair_list = [u.username for pair in _todays_pairs() for u in pair.users if pair.users]
+    pair_list = [u.username for pair in _todays_pairs().all() for u in pair.users if pair.users]
     return len(pair_list) != len(set(pair_list))
 
 def _daily_refresh_pairs():
@@ -95,7 +96,7 @@ def _todays_pairs(current=datetime.now()):
 
 def _build_day(day):
     schema = PairingSessionSchema(many=True)
-    pairs = sorted(_todays_pairs(day).filter(PairingSession.info != 'UNPAIRED').all(), key=lambda p: len(p.users))
+    pairs = sorted(_todays_pairs(day).filter(PairingSession.info != 'UNPAIRED').all(), key=lambda p: p.users and p.users[0].username)
     return {
         'weekday': day.strftime('%a'),
         'day': day.strftime('%d'),
