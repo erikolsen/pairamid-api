@@ -1,3 +1,4 @@
+from flask import current_app
 from pairamid_api.extensions import socketio
 from . import operations
 
@@ -21,5 +22,5 @@ def batch_update(json,methods=['GET', 'POST']):
 
 @socketio.on_error_default
 def default_error_handler(e):
-    print(f'\n\n {e} \n\n')
+    current_app.log_exception(e)
     return {'error': True, 'message': str(e) }

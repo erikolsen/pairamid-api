@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, current_app
 from pairamid_api import pairing_session, pair_frequency, commands
 from pairamid_api.extensions import ( migrate, db, CORS, socketio )
 
@@ -34,7 +34,7 @@ def register_errorhandlers(app):
 
     @app.errorhandler(Exception)
     def _handle_exception(error):
-        print('Error', error)
+        current_app.log_exception(error)
         return jsonify(status='failed', message=str(error)), 500
 
     return None
