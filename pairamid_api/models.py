@@ -1,4 +1,5 @@
 from pairamid_api.extensions import db
+from pairamid_api.lib.date_helpers import end_of_day
 from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime, date
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
@@ -55,7 +56,10 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
 
     def counter(self, obj):
         if bool(obj.users):
-            ps = obj.users[0].pairing_sessions.filter(PairingSession.info != 'UNPAIRED').limit(10)
+            ps = (obj.users[0].pairing_sessions
+                              .filter(PairingSession.info != 'UNPAIRED')
+                              .filter(PairingSession.created_at < end_of_day(obj.created_at))
+                              .limit(10))
             count = 0
             for pair in ps:
                 if pair == ps[0]:

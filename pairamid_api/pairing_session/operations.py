@@ -1,9 +1,9 @@
 import json
 from pairamid_api.extensions import db
+from pairamid_api.lib.date_helpers import start_of_day, end_of_day
 from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from sqlalchemy import asc
 from datetime import datetime, timedelta
-import pytz
 import time
 
 def run_fetch_all():
@@ -24,7 +24,7 @@ def run_fetch_day():
     return display_pairs
 
 def run_fetch_week():
-    fetch_date = lambda ago: _start_of_day() - timedelta(days=ago)
+    fetch_date = lambda ago: start_of_day() - timedelta(days=ago)
     display_pairs = [_build_day(fetch_date(ago)) for ago in reversed(range(5))]
 
     return display_pairs
@@ -77,20 +77,9 @@ def _daily_refresh_pairs():
     db.session.commit()
     return pairs
 
-def _central_offset():
-    central = datetime.now(pytz.timezone('US/Central'))
-    return abs(int(central.utcoffset().total_seconds()/60/60))
-
-def _start_of_day(current=datetime.now()):
-    central = current - timedelta(hours=_central_offset())
-    return datetime(central.year, central.month, central.day, _central_offset(), 0)
-
-def _end_of_day(current=datetime.now()):
-    return _start_of_day(current) + timedelta(days=1)
-
 def _todays_pairs(current=datetime.now()):
-    return (PairingSession.query.filter(PairingSession.created_at >= _start_of_day(current))
-                                .filter(PairingSession.created_at < _end_of_day(current))
+    return (PairingSession.query.filter(PairingSession.created_at >= start_of_day(current))
+                                .filter(PairingSession.created_at < end_of_day(current))
                                 .order_by(asc(PairingSession.created_at)))
 
 def _build_day(day):
