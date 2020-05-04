@@ -15,7 +15,6 @@ def run_fetch_all():
 
 def run_fetch_day():
     pairs = _todays_pairs().all()
-    print('Pairs', pairs)
     if not pairs:
         pairs = _daily_refresh_pairs()
 
@@ -96,7 +95,9 @@ def _todays_pairs(current=datetime.now()):
 
 def _build_day(day):
     schema = PairingSessionSchema(many=True)
-    pairs = sorted(_todays_pairs(day).filter(PairingSession.info != 'UNPAIRED').all(), key=lambda p: p.users and p.users[0].username)
+    pairs = sorted(_todays_pairs(day).filter(PairingSession.info != 'UNPAIRED')
+                                     .filter(PairingSession.users.any()).all(), 
+                                     key=lambda p: p.users and p.users[0].username)
     return {
         'weekday': day.strftime('%a'),
         'day': day.strftime('%d'),
