@@ -77,7 +77,8 @@ def _daily_refresh_pairs():
     db.session.commit()
     return pairs
 
-def _todays_pairs(current=datetime.now()):
+def _todays_pairs(current=None):
+    current = current or datetime.now()
     return (PairingSession.query.filter(PairingSession.created_at >= start_of_day(current))
                                 .filter(PairingSession.created_at < end_of_day(current))
                                 .order_by(asc(PairingSession.created_at)))
