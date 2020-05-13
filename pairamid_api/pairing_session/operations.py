@@ -1,6 +1,6 @@
 import json
 from pairamid_api.extensions import db
-from pairamid_api.lib.date_helpers import start_of_day, end_of_day
+from pairamid_api.lib.date_helpers import start_of_day, end_of_day, is_weekday
 from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from sqlalchemy import asc
 from datetime import datetime, timedelta
@@ -25,9 +25,7 @@ def run_fetch_day():
 
 def run_fetch_week():
     fetch_date = lambda ago: start_of_day() - timedelta(days=ago)
-    display_pairs = [_build_day(fetch_date(ago)) for ago in reversed(range(5))]
-
-    return display_pairs
+    return  [_build_day(fetch_date(ago)) for ago in reversed(range(7)) if is_weekday(fetch_date(ago))]
 
 def run_create():
     pair = PairingSession() 

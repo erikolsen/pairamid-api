@@ -1,55 +1,55 @@
 [
   {
-    "created_at": "2020-05-04T14:18:49.663390",
-    "history": 0,
-    "id": 108,
-    "info": "UNPAIRED",
+    "created_at": "2020-04-17T09:00:00",
+    "history": 1,
+    "id": 266,
+    "info": "",
     "users": [
       {
-        "created_at": "2020-05-02T18:26:57.229921",
-        "id": 13,
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
         "role": "VISITOR",
-        "username": "rp",
-        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
-        "created_at": "2020-05-02T18:26:57.227816",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
-      }
-    ],
-    "uuid": "61142476-b051-4267-9087-a3c3cc9d103e"
-  },
-  {
-    "created_at": "2020-05-04T14:18:49.665532",
-    "history": 1,
-    "id": 109,
-    "info": "Ensuring UI cards existed & are updated, NN review for the Condition Comparison Screen, reviewing UI suggestions from Friday's WWT internal design review",
-    "users": [
-      {
-        "created_at": "2020-05-02T18:26:57.225852",
-        "id": 9,
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
         "role": "HOME",
-        "username": "ar",
-        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
-      },
-      {
-        "created_at": "2020-05-02T18:26:57.232944",
-        "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
-    "uuid": "02b60b08-bf41-4502-8fe7-9b80928db808"
+    "uuid": "b9096ed6-5e2d-4538-a1ed-07711b3873ac"
   },
   {
-    "created_at": "2020-05-04T14:19:08.623215",
+    "created_at": "2020-04-17T09:00:00",
     "history": 1,
-    "id": 110,
-    "info": "56634",
+    "id": 267,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "595c0cd9-3ddc-465f-a137-db5b44f28ca3"
+  },
+  {
+    "created_at": "2020-04-17T09:00:00",
+    "history": 3,
+    "id": 268,
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
@@ -57,37 +57,21 @@
         "role": "HOME",
         "username": "eo",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
-      }
-    ],
-    "uuid": "7176ef8b-c3ed-4cda-a2ab-e9ec216efd0c"
-  },
-  {
-    "created_at": "2020-05-04T14:19:11.630161",
-    "history": 1,
-    "id": 111,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-05-02T18:26:57.220843",
-        "id": 4,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
-        "created_at": "2020-05-02T18:26:57.218581",
-        "id": 2,
-        "role": "HOME",
-        "username": "nh",
-        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
-    "uuid": "373658ed-d7d7-403a-860b-034a404545b5"
+    "uuid": "75c4fc41-7599-4ce1-95a0-fdb3e24a02d5"
   },
   {
     "created_at": "2020-05-04T14:27:27.554548",
     "history": 1,
-    "id": 112,
+    "id": 212,
     "info": "59591 (GEOALCHEMY)",
     "users": [
       {
@@ -112,12 +96,28 @@
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
-    "uuid": "f15ef208-b08e-4903-9458-a04b03d8260f"
+    "uuid": "82f30099-de2d-469b-be43-3d27e1d20449"
+  },
+  {
+    "created_at": "2020-04-16T09:00:00",
+    "history": 0,
+    "id": 269,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "7f7e320a-b1ef-431f-97f7-7d86e5a5861f"
   },
   {
     "created_at": "2020-05-04T14:27:57.889927",
-    "history": 1,
-    "id": 113,
+    "history": 2,
+    "id": 213,
     "info": "59589",
     "users": [
       {
@@ -135,12 +135,12 @@
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
-    "uuid": "180deb08-a372-4283-b783-fcd8ea84b714"
+    "uuid": "97186cbd-2979-4bf4-b90a-1d73a8bf8a3e"
   },
   {
     "created_at": "2020-05-04T14:33:00.223779",
     "history": 1,
-    "id": 114,
+    "id": 214,
     "info": "53794",
     "users": [
       {
@@ -158,12 +158,12 @@
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
-    "uuid": "359bd828-8add-4e93-b270-103b10ee06ba"
+    "uuid": "c330e648-3d07-45a9-b07d-d7c809b74c6c"
   },
   {
     "created_at": "2020-05-04T14:34:48.278264",
     "history": 1,
-    "id": 115,
+    "id": 215,
     "info": "59303",
     "users": [
       {
@@ -174,12 +174,12 @@
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       }
     ],
-    "uuid": "a4bf74d1-0d1e-4a5f-8b8d-1c2196bc5ac2"
+    "uuid": "d927f402-aa50-441b-a412-b201a7b53e2b"
   },
   {
     "created_at": "2020-05-04T17:38:43.047974",
-    "history": 1,
-    "id": 116,
+    "history": 2,
+    "id": 216,
     "info": "Transition off BW",
     "users": [
       {
@@ -190,2528 +190,3854 @@
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
-    "uuid": "94e14cbd-8791-43b2-8d72-b35598ca1693"
+    "uuid": "7b5dee2b-b862-46e3-8a9a-125a4c794c72"
   },
   {
     "created_at": "2020-04-27T09:00:00",
-    "history": 10,
-    "id": 859,
+    "history": 9,
+    "id": 217,
     "info": "UNPAIRED",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
         "role": "HOME",
         "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
         "role": "VISITOR",
         "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "4ac5aa0f-da0f-4afb-b593-9b9cc816fa33"
-  },
-  {
-    "created_at": "2020-04-27T09:00:00",
-    "history": 2,
-    "id": 860,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
-      }
-    ],
-    "uuid": "cf6ad272-dc0c-4a46-a382-ee8b69ee04e2"
-  },
-  {
-    "created_at": "2020-04-27T09:00:00",
-    "history": 2,
-    "id": 861,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.969865",
-        "id": 2,
-        "role": "HOME",
-        "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
-      }
-    ],
-    "uuid": "9bacaf1c-7b7d-4679-8413-08f2530ea481"
-  },
-  {
-    "created_at": "2020-04-27T09:00:00",
-    "history": 1,
-    "id": 862,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
+        "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
         "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
-        "role": "HOME",
-        "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
-    "uuid": "b3eb8479-4a3a-45e1-9983-8a8350db1ed8"
+    "uuid": "eca73b83-f2e9-4cf1-81e8-0340befd53b0"
   },
   {
     "created_at": "2020-04-27T09:00:00",
-    "history": 2,
-    "id": 863,
+    "history": 3,
+    "id": 218,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
-        "role": "HOME",
-        "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
-        "role": "VISITOR",
-        "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
-      }
-    ],
-    "uuid": "d74080a5-5346-4f7a-9ce4-6a94b2325ebd"
-  },
-  {
-    "created_at": "2020-04-27T09:00:00",
-    "history": 1,
-    "id": 864,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
-        "role": "VISITOR",
-        "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
+        "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
         "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
-    "uuid": "7a891527-874f-44cd-a402-56488a0d3547"
+    "uuid": "60008b5b-345b-471f-9e39-1efb4d344a60"
   },
   {
     "created_at": "2020-04-27T09:00:00",
     "history": 1,
-    "id": 865,
+    "id": 219,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
-        "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      }
-    ],
-    "uuid": "40ddf69f-6994-493a-b4fc-3985fb239246"
-  },
-  {
-    "created_at": "2020-04-24T09:00:00",
-    "history": 10,
-    "id": 866,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
-        "role": "HOME",
-        "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
-        "role": "HOME",
-        "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "e30fc78e-61b3-4e37-9914-f69585674b12"
-  },
-  {
-    "created_at": "2020-04-24T09:00:00",
-    "history": 2,
-    "id": 867,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
-      }
-    ],
-    "uuid": "d4d11fe4-a8c3-407a-a83d-53d47091e4ff"
-  },
-  {
-    "created_at": "2020-04-24T09:00:00",
-    "history": 1,
-    "id": 868,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
-        "role": "VISITOR",
-        "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.969865",
-        "id": 2,
-        "role": "HOME",
-        "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
-      }
-    ],
-    "uuid": "edccc042-f866-4915-83a3-110eaa3df38b"
-  },
-  {
-    "created_at": "2020-04-24T09:00:00",
-    "history": 2,
-    "id": 869,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
-        "role": "HOME",
-        "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
-        "role": "VISITOR",
-        "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
-      }
-    ],
-    "uuid": "307f0a77-6d15-42cd-82f2-019bed34ff7a"
-  },
-  {
-    "created_at": "2020-04-24T09:00:00",
-    "history": 1,
-    "id": 870,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
-      }
-    ],
-    "uuid": "73e0a11d-080d-49e1-bfc2-d66435247701"
-  },
-  {
-    "created_at": "2020-04-29T14:29:25.873306",
-    "history": 1,
-    "id": 953,
-    "info": "59255",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
-        "role": "HOME",
-        "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.969865",
-        "id": 2,
-        "role": "HOME",
-        "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
-      }
-    ],
-    "uuid": "5a3b5ae5-e33d-4ab9-923b-a88cdf15f253"
-  },
-  {
-    "created_at": "2020-04-24T09:00:00",
-    "history": 1,
-    "id": 871,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
-        "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      }
-    ],
-    "uuid": "95c52684-96d3-4bb7-b4f2-ea2dda54340c"
-  },
-  {
-    "created_at": "2020-04-24T09:00:00",
-    "history": 2,
-    "id": 872,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
         "role": "HOME",
         "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      }
-    ],
-    "uuid": "493cc0c9-e48a-4317-aa8b-ca95c39959c4"
-  },
-  {
-    "created_at": "2020-04-23T09:00:00",
-    "history": 1,
-    "id": 873,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
-        "role": "HOME",
-        "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "77aff52f-ae11-4bee-8065-827c6dc038d6"
-  },
-  {
-    "created_at": "2020-04-28T12:00:25.301819",
-    "history": 2,
-    "id": 939,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
-        "role": "HOME",
-        "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
-        "role": "VISITOR",
-        "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "b6d5fc60-1bdd-4471-85d8-59cd411635b9"
-  },
-  {
-    "created_at": "2020-04-23T09:00:00",
-    "history": 10,
-    "id": 874,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
-        "role": "HOME",
-        "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
-      }
-    ],
-    "uuid": "474514a7-ffb3-4b6e-b586-975d3608f8c0"
-  },
-  {
-    "created_at": "2020-04-23T09:00:00",
-    "history": 2,
-    "id": 875,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
-      }
-    ],
-    "uuid": "bcacb6df-c1c9-4796-ac83-2bd94c3dbde9"
-  },
-  {
-    "created_at": "2020-05-01T05:08:33.702355",
-    "history": 2,
-    "id": 965,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
-        "role": "VISITOR",
-        "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "5bae3af1-4efd-4da2-a41c-53061d285139"
-  },
-  {
-    "created_at": "2020-04-23T09:00:00",
-    "history": 1,
-    "id": 876,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
-        "role": "VISITOR",
-        "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.969865",
+        "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
         "role": "HOME",
         "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
-    "uuid": "d2b0aad2-a79e-4a25-ad11-19a15e161bf1"
-  },
-  {
-    "created_at": "2020-04-23T09:00:00",
-    "history": 2,
-    "id": 877,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
-        "role": "HOME",
-        "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
-        "role": "VISITOR",
-        "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
-      }
-    ],
-    "uuid": "3abd29fa-5be4-4e16-9939-1558806dea6c"
-  },
-  {
-    "created_at": "2020-04-23T09:00:00",
-    "history": 1,
-    "id": 878,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
-      }
-    ],
-    "uuid": "acc279a5-2360-49db-92c8-d7689298be95"
-  },
-  {
-    "created_at": "2020-04-23T09:00:00",
-    "history": 1,
-    "id": 879,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
-        "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      }
-    ],
-    "uuid": "be017252-90b7-4529-85ae-2fe651542a3a"
-  },
-  {
-    "created_at": "2020-04-23T09:00:00",
-    "history": 2,
-    "id": 880,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      }
-    ],
-    "uuid": "73c9d26c-9498-4bbf-bf38-3bdd718a4d45"
-  },
-  {
-    "created_at": "2020-04-22T09:00:00",
-    "history": 0,
-    "id": 881,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "51f7c225-fd28-483f-9e45-0376a7b50d06"
-  },
-  {
-    "created_at": "2020-04-22T09:00:00",
-    "history": 10,
-    "id": 882,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
-        "role": "HOME",
-        "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
-      }
-    ],
-    "uuid": "ea03ade5-c1b5-4c5e-ab2b-8b907b764a44"
-  },
-  {
-    "created_at": "2020-04-22T09:00:00",
-    "history": 1,
-    "id": 883,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
-        "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
-      }
-    ],
-    "uuid": "74536dc7-9ca3-4402-8fe2-c2608d5bf076"
-  },
-  {
-    "created_at": "2020-04-22T09:00:00",
-    "history": 1,
-    "id": 884,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
-        "role": "VISITOR",
-        "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
-      }
-    ],
-    "uuid": "a37f9ef8-7493-4ce7-b910-3aea3d4bc9e3"
-  },
-  {
-    "created_at": "2020-04-22T09:00:00",
-    "history": 2,
-    "id": 885,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
-        "role": "HOME",
-        "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      }
-    ],
-    "uuid": "06e2ca85-56f8-4922-89fb-3ae432204164"
-  },
-  {
-    "created_at": "2020-04-22T09:00:00",
-    "history": 1,
-    "id": 886,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
-      }
-    ],
-    "uuid": "fcb4c88a-02a1-45e6-8822-f9b9f70f61a3"
-  },
-  {
-    "created_at": "2020-04-22T09:00:00",
-    "history": 2,
-    "id": 887,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.969865",
-        "id": 2,
-        "role": "HOME",
-        "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
-      }
-    ],
-    "uuid": "b5a9dcf3-c1a6-42e7-b63c-508959f7e57b"
-  },
-  {
-    "created_at": "2020-04-21T09:00:00",
-    "history": 0,
-    "id": 888,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "1ea24263-2c88-4645-b444-ef1effff9435"
-  },
-  {
-    "created_at": "2020-04-21T09:00:00",
-    "history": 10,
-    "id": 889,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
-        "role": "HOME",
-        "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
-      }
-    ],
-    "uuid": "b4ded57d-be67-4ea4-b967-605b5cc00cdf"
-  },
-  {
-    "created_at": "2020-04-21T09:00:00",
-    "history": 1,
-    "id": 890,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
-        "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
-      }
-    ],
-    "uuid": "131c336f-7382-4607-8866-0c4584929ef0"
-  },
-  {
-    "created_at": "2020-04-21T09:00:00",
-    "history": 1,
-    "id": 891,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
-        "role": "VISITOR",
-        "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
-      }
-    ],
-    "uuid": "b560d03a-df34-4a83-823e-03705dd6aa08"
-  },
-  {
-    "created_at": "2020-04-21T09:00:00",
-    "history": 1,
-    "id": 892,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
-        "role": "VISITOR",
-        "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
-      }
-    ],
-    "uuid": "51256a88-f531-4094-ba09-31eb438cd76d"
-  },
-  {
-    "created_at": "2020-04-21T09:00:00",
-    "history": 2,
-    "id": 893,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
-        "role": "HOME",
-        "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      }
-    ],
-    "uuid": "758d3a1e-9fcf-4c21-8885-d92aa7794c52"
-  },
-  {
-    "created_at": "2020-04-21T09:00:00",
-    "history": 2,
-    "id": 894,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.969865",
-        "id": 2,
-        "role": "HOME",
-        "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
-      }
-    ],
-    "uuid": "e69cb913-030c-4ab7-914f-a91615895ade"
-  },
-  {
-    "created_at": "2020-04-20T09:00:00",
-    "history": 0,
-    "id": 895,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "52a1c74f-c404-4525-b031-e4489b84954c"
-  },
-  {
-    "created_at": "2020-04-20T09:00:00",
-    "history": 10,
-    "id": 896,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
-        "role": "HOME",
-        "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
-      }
-    ],
-    "uuid": "c527ebc3-c022-417d-a48c-312863d5dd18"
-  },
-  {
-    "created_at": "2020-04-20T09:00:00",
-    "history": 1,
-    "id": 897,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
-        "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
-      }
-    ],
-    "uuid": "c10cd071-5128-42df-b465-a376297d9fbb"
-  },
-  {
-    "created_at": "2020-04-20T09:00:00",
-    "history": 1,
-    "id": 898,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      }
-    ],
-    "uuid": "445878a3-5deb-427e-9e6a-aaa0abe4d0a0"
-  },
-  {
-    "created_at": "2020-04-20T09:00:00",
-    "history": 2,
-    "id": 899,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
-      }
-    ],
-    "uuid": "0a793fa9-dffe-4fff-8fd9-bf2e8bbe0552"
-  },
-  {
-    "created_at": "2020-04-20T09:00:00",
-    "history": 1,
-    "id": 900,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
-        "role": "VISITOR",
-        "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
-        "role": "HOME",
-        "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
-      }
-    ],
-    "uuid": "0866029f-50b2-4042-b43d-da2284d832ee"
-  },
-  {
-    "created_at": "2020-04-20T09:00:00",
-    "history": 1,
-    "id": 901,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.969865",
-        "id": 2,
-        "role": "HOME",
-        "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
-      }
-    ],
-    "uuid": "e3866dbd-d361-4e1a-a5bc-9bf3edfee0e2"
-  },
-  {
-    "created_at": "2020-04-17T09:00:00",
-    "history": 0,
-    "id": 902,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "986d033c-3d6e-4d99-b6cc-d2a5c36846ec"
-  },
-  {
-    "created_at": "2020-04-17T09:00:00",
-    "history": 10,
-    "id": 903,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
-        "role": "HOME",
-        "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
-      }
-    ],
-    "uuid": "46662135-9ea7-48d2-add7-aa7b02dc4eba"
-  },
-  {
-    "created_at": "2020-04-17T09:00:00",
-    "history": 1,
-    "id": 904,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
-        "role": "VISITOR",
-        "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
-      }
-    ],
-    "uuid": "ec701681-a351-4e79-a545-f2dafd2de54f"
-  },
-  {
-    "created_at": "2020-04-17T09:00:00",
-    "history": 1,
-    "id": 905,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      }
-    ],
-    "uuid": "a24897a8-6b35-43b7-a9f9-2806708d85db"
-  },
-  {
-    "created_at": "2020-04-17T09:00:00",
-    "history": 2,
-    "id": 906,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
-      }
-    ],
-    "uuid": "b4d474f5-bcad-4276-b969-7b76df0dd794"
-  },
-  {
-    "created_at": "2020-04-17T09:00:00",
-    "history": 1,
-    "id": 907,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
-        "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
-      }
-    ],
-    "uuid": "87673409-f1b8-4f0a-9bb9-454688f3546e"
+    "uuid": "8d66bab1-066a-45e4-8a7e-f01632e2cc93"
   },
   {
     "created_at": "2020-04-16T09:00:00",
-    "history": 0,
-    "id": 908,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "67663881-4e62-4e88-8104-af973bc14cd1"
-  },
-  {
-    "created_at": "2020-04-16T09:00:00",
-    "history": 10,
-    "id": 909,
+    "history": 4,
+    "id": 270,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
         "role": "HOME",
         "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
         "role": "VISITOR",
         "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
-    "uuid": "3d7a9f7a-cd2f-496a-8d2c-d535175c835b"
+    "uuid": "d4127fa1-ebea-43fc-84bd-0393c0114215"
   },
   {
-    "created_at": "2020-04-16T09:00:00",
+    "created_at": "2020-04-27T09:00:00",
     "history": 1,
-    "id": 910,
+    "id": 220,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.972521",
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      }
+    ],
+    "uuid": "defea0c5-8c12-41e9-9f32-809e651431af"
+  },
+  {
+    "created_at": "2020-04-27T09:00:00",
+    "history": 3,
+    "id": 221,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
         "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
         "role": "VISITOR",
         "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
-    "uuid": "29db3e5d-5225-4a2b-a942-7dca05187197"
-  },
-  {
-    "created_at": "2020-04-16T09:00:00",
-    "history": 1,
-    "id": 911,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.969865",
-        "id": 2,
-        "role": "HOME",
-        "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
-      }
-    ],
-    "uuid": "6c43b21f-4b19-4354-ba95-db570d1b18a1"
-  },
-  {
-    "created_at": "2020-04-16T09:00:00",
-    "history": 1,
-    "id": 912,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
-        "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
-        "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
-      }
-    ],
-    "uuid": "9a02c0f2-fb9f-441f-8657-66f1c0ca2914"
+    "uuid": "d41d88c8-b37c-4249-8a4d-f2d1f170756e"
   },
   {
     "created_at": "2020-04-16T09:00:00",
     "history": 2,
-    "id": 913,
+    "id": 271,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.971646",
+        "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
         "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
-        "role": "HOME",
-        "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
-      }
-    ],
-    "uuid": "0ffd45b1-2c4c-49d0-a797-8acb704189e6"
-  },
-  {
-    "created_at": "2020-04-15T09:00:00",
-    "history": 0,
-    "id": 914,
-    "info": "UNPAIRED",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "d73f0e30-ac24-4ce7-b8b1-a96f6622f89b"
-  },
-  {
-    "created_at": "2020-04-15T09:00:00",
-    "history": 10,
-    "id": 915,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
-        "role": "HOME",
-        "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
-      }
-    ],
-    "uuid": "b5b42cd7-d9c6-447f-a552-22da14adc0ab"
-  },
-  {
-    "created_at": "2020-04-15T09:00:00",
-    "history": 1,
-    "id": 916,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
         "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
         "role": "VISITOR",
         "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
-    "uuid": "7923c175-830a-451d-9a18-f44c9d4f33c9"
+    "uuid": "7d4ebb3f-8c89-4361-9968-bb691b90f593"
   },
   {
-    "created_at": "2020-04-15T09:00:00",
-    "history": 1,
-    "id": 917,
+    "created_at": "2020-04-16T09:00:00",
+    "history": 2,
+    "id": 272,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
         "role": "VISITOR",
         "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
-        "created_at": "2020-03-29T02:18:13.969865",
+        "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
         "role": "HOME",
         "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
-    "uuid": "a3df42ba-0301-49ce-90c9-084e8c2cc302"
+    "uuid": "e809aa97-b7a4-4d43-92b0-76d9298e0725"
+  },
+  {
+    "created_at": "2020-04-16T09:00:00",
+    "history": 2,
+    "id": 273,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "5dcdd9c2-9fcc-47da-8b86-0c5bd2e08ee9"
+  },
+  {
+    "created_at": "2020-04-16T09:00:00",
+    "history": 2,
+    "id": 274,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      }
+    ],
+    "uuid": "9aa562b0-1c05-435a-9a85-24de7b40e671"
+  },
+  {
+    "created_at": "2020-04-15T09:00:00",
+    "history": 0,
+    "id": 275,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "1e5b252b-a4e6-4252-bda3-d9fbc1a26cbd"
+  },
+  {
+    "created_at": "2020-04-15T09:00:00",
+    "history": 3,
+    "id": 276,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "f7391e06-2e97-4465-b35a-fed840c8aa8e"
   },
   {
     "created_at": "2020-04-15T09:00:00",
     "history": 1,
-    "id": 918,
+    "id": 277,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.967453",
-        "id": 1,
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
         "role": "HOME",
-        "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
         "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
-    "uuid": "7cb5cff6-10ab-4c82-bad6-7d5dc53fc1c9"
+    "uuid": "480b3298-6e3c-4ba5-bd0d-2d099c2b2525"
   },
   {
     "created_at": "2020-04-15T09:00:00",
-    "history": 2,
-    "id": 919,
+    "history": 1,
+    "id": 278,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
         "role": "HOME",
-        "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
-    "uuid": "36b440bf-f49a-4d6a-9a59-85466907b09d"
+    "uuid": "84c43936-bcdb-4035-951a-f756c5657ad5"
+  },
+  {
+    "created_at": "2020-04-15T09:00:00",
+    "history": 1,
+    "id": 279,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "e56f356f-59e1-4ee9-ae30-a22c023c9ded"
+  },
+  {
+    "created_at": "2020-04-15T09:00:00",
+    "history": 1,
+    "id": 280,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      }
+    ],
+    "uuid": "291b74df-9160-4940-b120-72e8e02543e7"
   },
   {
     "created_at": "2020-04-14T09:00:00",
     "history": 0,
-    "id": 920,
+    "id": 281,
     "info": "UNPAIRED",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
         "role": "VISITOR",
         "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
-    "uuid": "fbadbea1-4442-4a35-9b1f-4a85fc8f1387"
+    "uuid": "ad2f7a65-d903-46ef-ae01-6c010500bb89"
   },
   {
     "created_at": "2020-04-14T09:00:00",
-    "history": 10,
-    "id": 921,
+    "history": 2,
+    "id": 282,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
         "role": "HOME",
         "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
         "role": "VISITOR",
         "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
-    "uuid": "ffa2c72f-47cf-4494-85e0-711fb41acb64"
+    "uuid": "61d9c182-01ee-43cf-91e3-ac562ae0123b"
   },
   {
     "created_at": "2020-04-14T09:00:00",
     "history": 2,
-    "id": 922,
+    "id": 283,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
         "role": "HOME",
         "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
         "role": "HOME",
         "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
-    "uuid": "1e44c5ba-df55-4219-9cee-c709bf9c8c18"
-  },
-  {
-    "created_at": "2020-04-14T09:00:00",
-    "history": 1,
-    "id": 923,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
-      }
-    ],
-    "uuid": "91319d9c-3c4e-448f-ac3e-ea417e2f7a31"
+    "uuid": "b6f79c3c-7b26-4997-8d40-210516100434"
   },
   {
     "created_at": "2020-04-14T09:00:00",
     "history": 2,
-    "id": 924,
+    "id": 284,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
-        "created_at": "2020-03-29T02:18:13.969865",
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      }
+    ],
+    "uuid": "bc617fc4-c270-4f19-95be-d78d2c7562c5"
+  },
+  {
+    "created_at": "2020-04-14T09:00:00",
+    "history": 2,
+    "id": 285,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
         "role": "HOME",
         "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
-    "uuid": "9fb65a5d-c05e-4349-a7e1-01f2727057ad"
+    "uuid": "6b8751d7-4081-4768-b41c-11ade74512fa"
   },
   {
     "created_at": "2020-04-14T09:00:00",
-    "history": 1,
-    "id": 925,
+    "history": 2,
+    "id": 286,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.967453",
+        "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
         "role": "HOME",
         "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
         "role": "VISITOR",
         "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
-    "uuid": "6dcb9e3f-127e-4eeb-b4cf-aa9fc20e354c"
+    "uuid": "f42539f3-c050-454a-b0b7-d77a2b6932c7"
   },
   {
     "created_at": "2020-04-14T09:00:00",
-    "history": 1,
-    "id": 926,
+    "history": 2,
+    "id": 287,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
         "role": "VISITOR",
         "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
         "role": "HOME",
         "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       }
     ],
-    "uuid": "f4a3a6f1-5632-41b1-8e61-b6bcdf829416"
+    "uuid": "c3e4b1a4-c865-4527-bf57-807ee898ca5d"
   },
   {
     "created_at": "2020-04-13T09:00:00",
     "history": 0,
-    "id": 927,
+    "id": 288,
     "info": "UNPAIRED",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
-        "role": "VISITOR",
-        "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
-      }
-    ],
-    "uuid": "3a4fe2cd-9332-4f26-8453-0285e0793fc2"
-  },
-  {
-    "created_at": "2020-04-13T09:00:00",
-    "history": 10,
-    "id": 928,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
-        "role": "HOME",
-        "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
-        "role": "VISITOR",
-        "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
-      }
-    ],
-    "uuid": "8af68e71-bad7-40cc-a11e-96366d87893a"
-  },
-  {
-    "created_at": "2020-04-13T09:00:00",
-    "history": 2,
-    "id": 929,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
-        "role": "VISITOR",
-        "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.977541",
+        "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
         "role": "VISITOR",
-        "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
-    "uuid": "58665084-02bf-47af-ab03-da532263eb0b"
-  },
-  {
-    "created_at": "2020-04-13T09:00:00",
-    "history": 2,
-    "id": 930,
-    "info": "",
-    "users": [
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
-        "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
-      }
-    ],
-    "uuid": "d9ea9c7a-4130-4a8e-97fc-ab629bac5ee4"
+    "uuid": "1a8c623b-af64-46a7-a22c-b89c15c3e216"
   },
   {
     "created_at": "2020-04-13T09:00:00",
     "history": 1,
-    "id": 931,
+    "id": 289,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
-    "uuid": "80e856aa-3879-46c8-b656-1fd14d0fb3cb"
+    "uuid": "df300883-0e91-497d-8a66-f59d32193adc"
+  },
+  {
+    "created_at": "2020-04-13T09:00:00",
+    "history": 1,
+    "id": 290,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "7c142d23-ad21-4155-b7d3-ded6c737b103"
+  },
+  {
+    "created_at": "2020-04-13T09:00:00",
+    "history": 1,
+    "id": 291,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "e9471a56-3fab-474b-a285-01359c251ee5"
+  },
+  {
+    "created_at": "2020-04-13T09:00:00",
+    "history": 1,
+    "id": 292,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      }
+    ],
+    "uuid": "a95ddbdf-19bb-45c3-bca3-daf4d272e97d"
   },
   {
     "created_at": "2020-04-29T13:57:34.555716",
-    "history": 2,
-    "id": 952,
+    "history": 1,
+    "id": 293,
     "info": "53974",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
         "role": "HOME",
         "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
         "role": "HOME",
         "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
-    "uuid": "ce62d613-f257-4062-8b8d-e1910a36b038"
+    "uuid": "f0d0f342-2d0d-446f-bba3-93fc0ecb92fa"
   },
   {
     "created_at": "2020-04-28T13:57:28.373396",
     "history": 2,
-    "id": 941,
+    "id": 294,
     "info": "36069",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
         "role": "HOME",
         "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
-        "created_at": "2020-03-29T02:18:13.969865",
+        "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
         "role": "HOME",
         "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
-    "uuid": "c5d50e5f-739a-450d-a763-c69a9a6cfa29"
+    "uuid": "57ad5a24-b083-4611-83cb-e174eef99c68"
   },
   {
     "created_at": "2020-04-28T15:13:30.178204",
     "history": 10,
-    "id": 942,
+    "id": 295,
     "info": "User Interview summary",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
         "role": "HOME",
         "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
         "role": "VISITOR",
         "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
-    "uuid": "8eb506f0-6519-48d6-be9d-83ecbbb36b1f"
+    "uuid": "b45672be-929b-4993-88c0-819ec44db5ea"
   },
   {
     "created_at": "2020-04-29T13:34:41.962163",
-    "history": 1,
-    "id": 951,
+    "history": 3,
+    "id": 296,
     "info": "59303",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
         "role": "VISITOR",
         "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
         "role": "HOME",
         "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
-    "uuid": "ca0059d9-8593-4648-9cc6-3f3b0b1e044f"
+    "uuid": "2bf8dde4-6fcf-4551-845e-1450a5387b7e"
   },
   {
     "created_at": "2020-04-28T15:25:11.554206",
-    "history": 1,
-    "id": 944,
+    "history": 2,
+    "id": 297,
     "info": "59255",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
         "role": "VISITOR",
         "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
         "role": "HOME",
         "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
-    "uuid": "4b2d343d-5cbf-44d7-b265-74e4e12cd4e6"
+    "uuid": "56cf4ae5-a070-4b00-acae-ba5977faccce"
   },
   {
     "created_at": "2020-04-28T15:23:35.581633",
     "history": 1,
-    "id": 943,
+    "id": 298,
     "info": "59244",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
         "role": "HOME",
         "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
         "role": "VISITOR",
         "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
-    "uuid": "d6a9de49-5706-4f4c-8630-8733329f150f"
+    "uuid": "1feb24ec-487a-40a5-b44f-02484bc11dec"
   },
   {
     "created_at": "2020-04-28T15:27:47.343239",
-    "history": 1,
-    "id": 945,
+    "history": 2,
+    "id": 299,
     "info": "59303 & 59304",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
         "role": "VISITOR",
         "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
         "role": "HOME",
         "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
-    "uuid": "5c1f946e-35d8-4d3f-8984-649bdb60d75a"
+    "uuid": "ce17d6de-e913-4c48-80de-fe59d1a2474f"
   },
   {
     "created_at": "2020-04-30T05:07:06.633310",
     "history": 10,
-    "id": 956,
+    "id": 300,
     "info": "UNPAIRED",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
         "role": "HOME",
         "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
         "role": "VISITOR",
         "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
-        "role": "HOME",
-        "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
+        "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
         "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
         "role": "VISITOR",
         "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
         "role": "VISITOR",
         "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
-    "uuid": "b284e375-bfd5-484c-902f-3d57a9112887"
+    "uuid": "70632fac-4b22-4587-8fc9-4ee03e682d17"
   },
   {
     "created_at": "2020-04-28T18:31:13.783406",
     "history": 1,
-    "id": 947,
+    "id": 301,
     "info": "52409",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.967453",
+        "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
         "role": "HOME",
         "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       }
     ],
-    "uuid": "6c9f6b66-3b6f-429f-8141-3e2597f9ea83"
+    "uuid": "0d323fc9-1cb9-4c62-8ab7-604572caa089"
   },
   {
     "created_at": "2020-04-29T05:02:49.743337",
     "history": 10,
-    "id": 948,
+    "id": 302,
     "info": "UNPAIRED",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
         "role": "HOME",
         "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
         "role": "VISITOR",
         "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
         "role": "HOME",
         "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
         "role": "VISITOR",
         "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
         "role": "VISITOR",
         "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
-    "uuid": "274d3e90-d078-462f-9862-83fce74cf160"
+    "uuid": "e21bd2e2-f7e8-4963-be83-62fecacd2a33"
   },
   {
     "created_at": "2020-04-29T05:02:49.744903",
-    "history": 1,
-    "id": 949,
+    "history": 2,
+    "id": 303,
     "info": "59244",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
         "role": "HOME",
         "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
         "role": "VISITOR",
         "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
-    "uuid": "09f999ec-e39e-48ac-bd01-594c47fedb03"
+    "uuid": "8731610b-a563-4358-ab88-47ab6e3b8e78"
   },
   {
     "created_at": "2020-04-29T12:46:48.218615",
     "history": 1,
-    "id": 950,
+    "id": 304,
     "info": "52409",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.967453",
+        "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
         "role": "HOME",
         "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
         "role": "VISITOR",
         "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
-    "uuid": "b313ff68-c743-450b-931b-f37108ea46eb"
+    "uuid": "2ef043c6-9d17-4ead-8ac1-8e478a414203"
   },
   {
     "created_at": "2020-05-01T15:48:59.180495",
     "history": 1,
-    "id": 972,
+    "id": 305,
     "info": "ADMIN",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
         "role": "HOME",
         "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
-    "uuid": "bc7dcc1e-b2c1-4142-9392-0c519d10c0d1"
+    "uuid": "80cafd96-d74d-4a6e-a946-64c7a2a13c87"
   },
   {
     "created_at": "2020-05-01T13:44:34.309295",
     "history": 2,
-    "id": 967,
+    "id": 306,
     "info": "53974",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
         "role": "HOME",
         "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
         "role": "HOME",
         "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
-    "uuid": "808a26cc-a8e1-475d-9c08-b1a482ac432b"
+    "uuid": "fb31fda1-8ef7-4fdf-835b-1ca7750f4a72"
   },
   {
     "created_at": "2020-04-30T05:07:06.634884",
-    "history": 1,
-    "id": 957,
+    "history": 2,
+    "id": 307,
     "info": "52409",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.967453",
+        "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
         "role": "HOME",
         "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
         "role": "VISITOR",
         "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
-    "uuid": "3979bd31-f7ca-4179-ab47-2d729ceb8ef4"
+    "uuid": "276d53a3-71d1-4d1e-8607-e5c7b50a3408"
   },
   {
     "created_at": "2020-04-30T16:54:22.544749",
     "history": 1,
-    "id": 959,
+    "id": 308,
     "info": "59303",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
         "role": "VISITOR",
         "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       }
     ],
-    "uuid": "79bb678a-c62f-4600-abd1-af90fe8a444d"
+    "uuid": "233d96fa-6d57-4098-be89-ca42396e2100"
   },
   {
     "created_at": "2020-04-30T19:53:37.097079",
-    "history": 1,
-    "id": 961,
+    "history": 2,
+    "id": 309,
     "info": "59255",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
         "role": "VISITOR",
         "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
         "role": "HOME",
         "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
-        "created_at": "2020-03-29T02:18:13.969865",
+        "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
         "role": "HOME",
         "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
-    "uuid": "90127484-4b70-4559-8681-8dc1c9a63a95"
+    "uuid": "f8d4a0db-9eab-4760-bc2a-96fa94467bf2"
   },
   {
     "created_at": "2020-05-01T14:13:23.456395",
     "history": 1,
-    "id": 970,
+    "id": 310,
     "info": "59303",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
         "role": "VISITOR",
         "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
         "role": "VISITOR",
         "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       }
     ],
-    "uuid": "1f4cdf7a-e718-4ae8-b708-daba7f87977a"
+    "uuid": "427f765b-399c-46d6-9618-747e1c76e176"
   },
   {
     "created_at": "2020-05-01T14:58:40.629700",
     "history": 10,
-    "id": 971,
+    "id": 311,
     "info": "Summarize user interview",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
         "role": "HOME",
         "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
         "role": "VISITOR",
         "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
-    "uuid": "1c6972d8-ec0f-4b4e-9ab0-93cf83e63873"
+    "uuid": "a66490b9-f43c-4f1c-8869-38696f476e50"
   },
   {
     "created_at": "2020-05-01T05:08:33.704456",
     "history": 1,
-    "id": 966,
+    "id": 312,
     "info": "56634",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.967453",
+        "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
         "role": "HOME",
         "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
         "role": "VISITOR",
         "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
-    "uuid": "02026594-b122-4773-90ef-fd6c93fe87f1"
+    "uuid": "ec054bbb-9d4e-44c4-b7ce-a0473b0065a8"
   },
   {
     "created_at": "2020-05-01T13:49:34.446721",
     "history": 1,
-    "id": 968,
+    "id": 313,
     "info": "53974",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
         "role": "HOME",
         "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
         "role": "VISITOR",
         "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
-    "uuid": "e83bba5e-d002-4d48-9d3d-74ce8f370174"
+    "uuid": "4ba2a43f-a029-4664-98a6-cad7dcc0beea"
   },
   {
     "created_at": "2020-05-01T14:10:32.172562",
     "history": 1,
-    "id": 969,
+    "id": 314,
     "info": "59255",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.972521",
-        "id": 5,
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
         "role": "HOME",
         "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
-        "created_at": "2020-03-29T02:18:13.969865",
+        "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
         "role": "HOME",
         "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
-    "uuid": "2fab9229-fe77-46f2-afb4-b508081b892b"
+    "uuid": "f446033b-f8a3-4474-b4fb-bc26cb56a40e"
   },
   {
     "created_at": "2020-05-02T06:20:23.110530",
     "history": 10,
-    "id": 973,
+    "id": 315,
     "info": "UNPAIRED",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.985357",
-        "id": 18,
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
         "role": "HOME",
         "username": "ar",
-        "uuid": "0d11d230-7ac5-4c52-b40b-0b7fbd58e259"
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
         "role": "VISITOR",
         "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
-        "created_at": "2020-03-29T02:18:13.980174",
-        "id": 14,
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
         "role": "VISITOR",
         "username": "cp",
-        "uuid": "9527e5bb-dfcb-4eb1-8338-a0d8c8bc654e"
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
-        "created_at": "2020-03-29T02:18:13.967453",
+        "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
         "role": "HOME",
         "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
-        "role": "HOME",
-        "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.971646",
-        "id": 4,
-        "role": "HOME",
-        "username": "jh",
-        "uuid": "fb12ce7d-2f6a-420d-a668-817d797aa9f7"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.979267",
-        "id": 13,
-        "role": "VISITOR",
-        "username": "jl",
-        "uuid": "d6533e9d-7fbd-4fdb-a46c-10c99a45a331"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.984080",
-        "id": 17,
-        "role": "HOME",
-        "username": "jw",
-        "uuid": "c454a780-e78a-49b9-b7f2-607194c77dfb"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.974214",
-        "id": 7,
-        "role": "HOME",
-        "username": "kd",
-        "uuid": "e84c87a0-2bdd-4d30-b281-a83c8a48867b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
-        "role": "HOME",
-        "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
-        "role": "VISITOR",
-        "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
-      },
-      {
-        "created_at": "2020-03-29T02:18:13.972521",
+        "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
         "role": "HOME",
-        "username": "ms",
-        "uuid": "97a7a17b-1512-4ac1-8c76-114ec72fe8af"
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
-        "created_at": "2020-03-29T02:18:13.969865",
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
         "role": "HOME",
         "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       },
       {
-        "created_at": "2020-03-29T02:18:13.978396",
-        "id": 12,
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
         "role": "VISITOR",
         "username": "rj",
-        "uuid": "5445ba6f-86ad-4c13-ae07-5ef6c78a4139"
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
-        "created_at": "2020-03-29T02:18:13.977541",
-        "id": 11,
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
         "role": "VISITOR",
         "username": "rp",
-        "uuid": "2b092e31-871c-4356-bf2c-71dab874d43a"
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
-        "created_at": "2020-03-29T02:18:13.975863",
-        "id": 9,
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
         "role": "VISITOR",
         "username": "tp",
-        "uuid": "26184c3d-1585-4d08-9094-cc5711931f1e"
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
-    "uuid": "6b3b71e3-806e-4d12-88ce-9864f82d1d81"
+    "uuid": "133c256c-d447-4877-881f-61bb6d64932f"
   },
   {
     "created_at": "2020-05-02T06:20:23.113628",
     "history": 0,
-    "id": 974,
+    "id": 316,
     "info": "",
     "users": [],
-    "uuid": "de06efa6-39c1-4962-aed4-fe06a410e6ac"
+    "uuid": "2cd7d2c6-7f31-4773-a228-231b3efb986f"
   },
   {
     "created_at": "2020-04-13T09:00:00",
-    "history": 2,
-    "id": 932,
+    "history": 1,
+    "id": 317,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.982585",
-        "id": 16,
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
         "role": "HOME",
         "username": "mj",
-        "uuid": "ecf0ba3e-2f14-45f8-ba36-30fdbbc7508b"
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
-        "created_at": "2020-03-29T02:18:13.969865",
+        "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
         "role": "HOME",
         "username": "nh",
-        "uuid": "c26a1ccf-f02b-4074-94d9-9b829b173b45"
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
-    "uuid": "aa6a08d0-8458-4a21-8e50-8b9c74b47451"
+    "uuid": "f42c2af4-458d-482b-8aa8-ad0d3d87162b"
   },
   {
     "created_at": "2020-04-13T09:00:00",
     "history": 1,
-    "id": 933,
+    "id": 318,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.967453",
+        "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
         "role": "HOME",
         "username": "eo",
-        "uuid": "30619d67-2939-40df-9446-42a25ae4b617"
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
-        "created_at": "2020-03-29T02:18:13.976718",
-        "id": 10,
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
         "role": "VISITOR",
         "username": "mr",
-        "uuid": "65c9efcd-ea6a-4ca3-a416-51aff139d70d"
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
-    "uuid": "a2e7fe3d-b255-4c15-b9ce-28193a032664"
+    "uuid": "ee410145-7490-4c61-b75d-8fe7d92e3be8"
   },
   {
     "created_at": "2020-04-13T09:00:00",
     "history": 1,
-    "id": 934,
+    "id": 319,
     "info": "",
     "users": [
       {
-        "created_at": "2020-03-29T02:18:13.975025",
-        "id": 8,
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
         "role": "VISITOR",
         "username": "cd",
-        "uuid": "ed2b9a3b-d0c8-4703-bc19-4e722789fe93"
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
-        "created_at": "2020-03-29T02:18:13.973388",
-        "id": 6,
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
         "role": "HOME",
         "username": "es",
-        "uuid": "0c679488-5cd6-41e3-b036-32665e75d4e6"
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       }
     ],
-    "uuid": "33918a54-61a7-4b67-8e4e-e341f8d6e4fe"
+    "uuid": "560843a9-ff1a-44a6-a384-8c0df11361e0"
+  },
+  {
+    "created_at": "2020-05-05T13:16:49.537892",
+    "history": 10,
+    "id": 321,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "97aff993-c774-4957-a3f2-01a4e42b8327"
+  },
+  {
+    "created_at": "2020-05-05T13:30:37.276441",
+    "history": 3,
+    "id": 323,
+    "info": "(SPIKE) 59589",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "e40126d7-c2c8-4964-bfaa-3f4a840a36cc"
+  },
+  {
+    "created_at": "2020-05-05T14:36:03.571232",
+    "history": 2,
+    "id": 326,
+    "info": "54462",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      }
+    ],
+    "uuid": "519ea5c9-54a5-4888-8f27-fa1db5f1d261"
+  },
+  {
+    "created_at": "2020-05-05T14:04:02.287448",
+    "history": 3,
+    "id": 324,
+    "info": "59821",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "726f3ac4-8315-437d-a506-174f4e0ebb71"
+  },
+  {
+    "created_at": "2020-05-05T14:08:12.028879",
+    "history": 2,
+    "id": 325,
+    "info": "59591",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      }
+    ],
+    "uuid": "0e83bc8d-7ae5-4f21-acd5-e71187200460"
+  },
+  {
+    "created_at": "2020-05-05T14:37:29.124158",
+    "history": 2,
+    "id": 327,
+    "info": "59303",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      }
+    ],
+    "uuid": "2cc51e90-75fb-4cb7-b578-0c7e20196fbc"
+  },
+  {
+    "created_at": "2020-05-05T13:16:49.539314",
+    "history": 1,
+    "id": 322,
+    "info": "56239",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "24f0acb9-1565-410a-93dd-2c6f98ba9fbd"
+  },
+  {
+    "created_at": "2020-05-06T11:49:12.371318",
+    "history": 10,
+    "id": 330,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "df653ace-5d00-4ef8-99b8-70247a002b3e"
+  },
+  {
+    "created_at": "2020-05-06T11:49:12.388433",
+    "history": 2,
+    "id": 331,
+    "info": "CR 53974",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "35b19c57-7392-409d-b68f-f38b678bea6c"
+  },
+  {
+    "created_at": "2020-05-04T14:18:49.663390",
+    "history": 1,
+    "id": 208,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "4543862e-f380-4218-b027-686f7be8732c"
+  },
+  {
+    "created_at": "2020-05-04T14:18:49.665532",
+    "history": 10,
+    "id": 209,
+    "info": "Ensuring UI cards existed & are updated, NN review for the Condition Comparison Screen, reviewing UI suggestions from Friday's WWT internal design review",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "688a768c-954f-4ab0-b037-cf792053e8b5"
+  },
+  {
+    "created_at": "2020-04-27T09:00:00",
+    "history": 1,
+    "id": 222,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      }
+    ],
+    "uuid": "3379ab3c-0f0e-4d4f-9751-0ee74b6939c3"
+  },
+  {
+    "created_at": "2020-05-04T14:19:08.623215",
+    "history": 1,
+    "id": 210,
+    "info": "56634",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      }
+    ],
+    "uuid": "dc733dec-a603-4246-ad4c-fb9e4e2cde32"
+  },
+  {
+    "created_at": "2020-04-27T09:00:00",
+    "history": 3,
+    "id": 223,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "6874945c-e79a-4f86-b8bd-d45406c3d38d"
+  },
+  {
+    "created_at": "2020-04-24T09:00:00",
+    "history": 9,
+    "id": 224,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "153d7319-085b-48ab-8eaf-ef42aa207442"
+  },
+  {
+    "created_at": "2020-05-04T14:19:11.630161",
+    "history": 2,
+    "id": 211,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "89c231a2-57d0-4bd5-acd3-55571f1a0271"
+  },
+  {
+    "created_at": "2020-04-24T09:00:00",
+    "history": 2,
+    "id": 225,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "51123123-9a27-457f-b421-4757bdf76df3"
+  },
+  {
+    "created_at": "2020-04-24T09:00:00",
+    "history": 2,
+    "id": 226,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "9e52779e-d037-4b38-9b95-e7ab7f456aea"
+  },
+  {
+    "created_at": "2020-04-24T09:00:00",
+    "history": 2,
+    "id": 227,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      }
+    ],
+    "uuid": "21ba6a7e-80f2-44ed-bf48-a930ed9d5fa7"
+  },
+  {
+    "created_at": "2020-04-24T09:00:00",
+    "history": 2,
+    "id": 228,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "0d734180-574f-4ee9-9db9-76d436bb0fb1"
+  },
+  {
+    "created_at": "2020-04-29T14:29:25.873306",
+    "history": 1,
+    "id": 229,
+    "info": "59255",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "57e06c94-a339-4f15-98df-42399d64f4be"
+  },
+  {
+    "created_at": "2020-04-24T09:00:00",
+    "history": 2,
+    "id": 230,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "98e553f0-c59f-4f24-8175-703146601a58"
+  },
+  {
+    "created_at": "2020-04-24T09:00:00",
+    "history": 2,
+    "id": 231,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      }
+    ],
+    "uuid": "76ac0b2c-05e7-41e9-bf3b-acbf2784c849"
+  },
+  {
+    "created_at": "2020-04-23T09:00:00",
+    "history": 1,
+    "id": 232,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "071cfbbb-2020-4ea8-8026-44ebf6c9c4d7"
+  },
+  {
+    "created_at": "2020-04-28T12:00:25.301819",
+    "history": 3,
+    "id": 233,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "66808605-fb92-47c2-9e81-397d5d0f9a39"
+  },
+  {
+    "created_at": "2020-04-23T09:00:00",
+    "history": 9,
+    "id": 234,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "2be403e2-4185-4eb9-a024-a4da28f01d72"
+  },
+  {
+    "created_at": "2020-04-23T09:00:00",
+    "history": 1,
+    "id": 235,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "fe056108-5ef8-4377-ab0f-6dc2e293e732"
+  },
+  {
+    "created_at": "2020-05-01T05:08:33.702355",
+    "history": 2,
+    "id": 236,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "e87d43df-2ced-49f9-9f16-38c5d67991ab"
+  },
+  {
+    "created_at": "2020-04-23T09:00:00",
+    "history": 1,
+    "id": 237,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "6dfe08d6-a9d8-4567-acdb-62c5cbbe2050"
+  },
+  {
+    "created_at": "2020-04-23T09:00:00",
+    "history": 1,
+    "id": 238,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      }
+    ],
+    "uuid": "a8727bae-0bfe-4ac6-a5eb-b9249adbbb90"
+  },
+  {
+    "created_at": "2020-04-23T09:00:00",
+    "history": 1,
+    "id": 239,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "162f0243-9ed7-425c-842f-9f0ebca9c63d"
+  },
+  {
+    "created_at": "2020-04-23T09:00:00",
+    "history": 1,
+    "id": 240,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "98ad8861-ec12-4bd6-a6bf-9e2ddd4826d1"
+  },
+  {
+    "created_at": "2020-04-23T09:00:00",
+    "history": 1,
+    "id": 241,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      }
+    ],
+    "uuid": "a5c5282b-f78b-415c-aada-05ea8c5fcf9d"
+  },
+  {
+    "created_at": "2020-04-22T09:00:00",
+    "history": 0,
+    "id": 242,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "4b3638ec-bd39-4d14-a0b6-f163ae802505"
+  },
+  {
+    "created_at": "2020-04-22T09:00:00",
+    "history": 8,
+    "id": 243,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "6917b51e-0a9d-40e8-8b0e-53a31a4c903c"
+  },
+  {
+    "created_at": "2020-04-22T09:00:00",
+    "history": 6,
+    "id": 244,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "87ccd9fd-399a-4f43-887d-b31a2dda1d8c"
+  },
+  {
+    "created_at": "2020-04-22T09:00:00",
+    "history": 2,
+    "id": 245,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "a995789f-ef03-4276-ba11-d5aa4e816b47"
+  },
+  {
+    "created_at": "2020-04-22T09:00:00",
+    "history": 2,
+    "id": 246,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "07d7322b-b8f6-48a0-baad-607f5d414f22"
+  },
+  {
+    "created_at": "2020-04-22T09:00:00",
+    "history": 1,
+    "id": 247,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      }
+    ],
+    "uuid": "e0a09f2e-ce5e-4aec-8cb0-c4c530cb18df"
+  },
+  {
+    "created_at": "2020-04-22T09:00:00",
+    "history": 2,
+    "id": 248,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "e30d952d-fa5e-4f8c-bf77-57c2db3ca828"
+  },
+  {
+    "created_at": "2020-04-21T09:00:00",
+    "history": 0,
+    "id": 249,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "196bb5ae-6fee-489c-bb5e-3d212e0a245d"
+  },
+  {
+    "created_at": "2020-04-21T09:00:00",
+    "history": 7,
+    "id": 250,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "ae11ad52-d683-47cc-bdb6-2a68cd7d3df2"
+  },
+  {
+    "created_at": "2020-04-21T09:00:00",
+    "history": 5,
+    "id": 251,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "70330815-a8ca-4a60-9a9d-7065d8a4b1cf"
+  },
+  {
+    "created_at": "2020-04-21T09:00:00",
+    "history": 1,
+    "id": 252,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "ee49b4e2-3235-4c78-b8a0-ac7d53d579c0"
+  },
+  {
+    "created_at": "2020-04-21T09:00:00",
+    "history": 1,
+    "id": 253,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      }
+    ],
+    "uuid": "879719d9-739f-460b-ba24-f24aa6559cd1"
+  },
+  {
+    "created_at": "2020-04-21T09:00:00",
+    "history": 1,
+    "id": 254,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "cdf500dd-4ead-4b83-ba0f-b36776729ba3"
+  },
+  {
+    "created_at": "2020-04-21T09:00:00",
+    "history": 1,
+    "id": 255,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "8f4ca6f5-f6fe-4a22-952e-be6c872899fa"
+  },
+  {
+    "created_at": "2020-04-20T09:00:00",
+    "history": 0,
+    "id": 256,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "ab3561a6-6e8b-49f9-b787-2660838b72bb"
+  },
+  {
+    "created_at": "2020-04-20T09:00:00",
+    "history": 6,
+    "id": 257,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "7e223a2c-0409-4831-9740-9e0a9c5aa509"
+  },
+  {
+    "created_at": "2020-04-20T09:00:00",
+    "history": 4,
+    "id": 258,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "a61e230d-82d5-4717-93e2-e47dec4884d6"
+  },
+  {
+    "created_at": "2020-04-20T09:00:00",
+    "history": 2,
+    "id": 259,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      }
+    ],
+    "uuid": "caec69d4-bcb4-44c1-b71d-d9745a9bbb26"
+  },
+  {
+    "created_at": "2020-04-20T09:00:00",
+    "history": 2,
+    "id": 260,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "66900ef4-892c-45c1-9a36-9d99875fdf75"
+  },
+  {
+    "created_at": "2020-04-20T09:00:00",
+    "history": 1,
+    "id": 261,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      }
+    ],
+    "uuid": "ace7fcb4-b073-4d2a-92e9-df68307f394f"
+  },
+  {
+    "created_at": "2020-04-20T09:00:00",
+    "history": 3,
+    "id": 262,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "b0bbf997-06a2-4343-8e7f-69395bb073a2"
+  },
+  {
+    "created_at": "2020-04-17T09:00:00",
+    "history": 0,
+    "id": 263,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "07120446-0515-420e-a0ee-eb78603a8a30"
+  },
+  {
+    "created_at": "2020-04-17T09:00:00",
+    "history": 5,
+    "id": 264,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "5e890853-11dc-4979-84bd-a4d30b8f1f01"
+  },
+  {
+    "created_at": "2020-04-17T09:00:00",
+    "history": 1,
+    "id": 265,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      }
+    ],
+    "uuid": "6c7e27fd-be93-4332-aab2-1ecc765f80d3"
+  },
+  {
+    "created_at": "2020-05-06T12:56:03.889178",
+    "history": 1,
+    "id": 333,
+    "info": "Updating design for 52937",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "bd74001a-a979-4075-8e7a-99dbb98621fd"
+  },
+  {
+    "created_at": "2020-05-06T14:34:56.216684",
+    "history": 4,
+    "id": 337,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "12211520-43c4-4ff6-8d86-bf9ae0066efb"
+  },
+  {
+    "created_at": "2020-05-06T14:16:16.214643",
+    "history": 1,
+    "id": 335,
+    "info": "54534 & 54462",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      }
+    ],
+    "uuid": "57db7c25-900c-43c9-948b-7171d12e16e1"
+  },
+  {
+    "created_at": "2020-05-06T14:34:46.085972",
+    "history": 1,
+    "id": 336,
+    "info": "59591",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      }
+    ],
+    "uuid": "7af91647-95ba-4536-af2e-2ebd472199ed"
+  },
+  {
+    "created_at": "2020-05-06T14:38:02.597890",
+    "history": 1,
+    "id": 339,
+    "info": "59303",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "ebd655f4-684a-47d3-9dd4-9bbbf0c7d192"
+  },
+  {
+    "created_at": "2020-05-06T14:35:40.827362",
+    "history": 1,
+    "id": 338,
+    "info": "59821",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "e88c6ebf-6b79-47e4-b38c-e9339001b2a0"
+  },
+  {
+    "created_at": "2020-05-07T11:55:53.951679",
+    "history": 10,
+    "id": 369,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "71b769ca-0ebb-499a-8b61-4a682412dff6"
+  },
+  {
+    "created_at": "2020-05-07T13:37:21.581133",
+    "history": 2,
+    "id": 373,
+    "info": "57921 & CR 54462",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "54da7c76-e9bc-4522-83aa-c346c62a7ad2"
+  },
+  {
+    "created_at": "2020-05-07T14:33:09.852086",
+    "history": 2,
+    "id": 375,
+    "info": "54534",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      }
+    ],
+    "uuid": "c5d96156-eb0c-4ab4-a723-5f1d643fcd14"
+  },
+  {
+    "created_at": "2020-05-07T14:29:40.499392",
+    "history": 1,
+    "id": 374,
+    "info": "59591",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      }
+    ],
+    "uuid": "fc3c773c-c845-4eeb-ae7d-05cb0d5f7e85"
+  },
+  {
+    "created_at": "2020-05-07T15:19:03.581349",
+    "history": 5,
+    "id": 376,
+    "info": "59589 (SPIKE)",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "860c91ce-07f5-41ef-b6ca-36ed77c8a2a1"
+  },
+  {
+    "created_at": "2020-05-07T11:55:53.953629",
+    "history": 1,
+    "id": 370,
+    "info": "56634",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "6b1cce66-198d-427a-a17c-3847027fba40"
+  },
+  {
+    "created_at": "2020-05-08T05:03:10.464455",
+    "history": 2,
+    "id": 377,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "5619c10b-0406-48b8-a043-861968fe5d88"
+  },
+  {
+    "created_at": "2020-05-08T14:03:56.427855",
+    "history": 2,
+    "id": 381,
+    "info": "Refining UI for tolerance selection and future KER adjustment",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      }
+    ],
+    "uuid": "4561165d-7900-421e-ba07-6932cb69f771"
+  },
+  {
+    "created_at": "2020-05-08T14:02:54.622450",
+    "history": 1,
+    "id": 380,
+    "info": "Feature Roadmap, scaled side nav, reviewing/editing profile creation",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      }
+    ],
+    "uuid": "61bfa1de-4f47-496c-b3d0-733f15b1b0a6"
+  },
+  {
+    "created_at": "2020-05-08T15:19:14.012323",
+    "history": 3,
+    "id": 382,
+    "info": "59453",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "9c4b7e6e-ddb5-4ec0-b235-eede8fb30c8e"
+  },
+  {
+    "created_at": "2020-05-08T16:49:43.738808",
+    "history": 1,
+    "id": 384,
+    "info": "59303",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "464ce642-9097-427f-9030-4fbf62908e83"
+  },
+  {
+    "created_at": "2020-05-08T17:49:34.294400",
+    "history": 1,
+    "id": 385,
+    "info": "55526",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      }
+    ],
+    "uuid": "fb064054-9706-46c6-aa32-1efd92484fed"
+  },
+  {
+    "created_at": "2020-05-08T05:03:10.467221",
+    "history": 1,
+    "id": 378,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "f5c2e644-1525-429d-9714-925776a215f6"
+  },
+  {
+    "created_at": "2020-05-08T14:02:04.240880",
+    "history": 1,
+    "id": 379,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      }
+    ],
+    "uuid": "0b562158-c239-4c0d-a787-10bca73cf684"
+  },
+  {
+    "created_at": "2020-05-09T05:12:06.247816",
+    "history": 1,
+    "id": 386,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "76bf9500-8293-4227-ba6f-d82660d7bced"
+  },
+  {
+    "created_at": "2020-05-09T05:12:06.255047",
+    "history": 0,
+    "id": 387,
+    "info": "",
+    "users": [],
+    "uuid": "7c53da4a-cca1-4e37-9856-a5f0dff09332"
+  },
+  {
+    "created_at": "2020-05-10T05:08:13.872102",
+    "history": 1,
+    "id": 388,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "4a878034-7ddd-4d9f-ba2d-5b532bbca9c5"
+  },
+  {
+    "created_at": "2020-05-10T05:08:13.874024",
+    "history": 0,
+    "id": 389,
+    "info": "",
+    "users": [],
+    "uuid": "835f82a1-1c79-426d-8b13-99c698f6d3ba"
+  },
+  {
+    "created_at": "2020-05-11T05:04:56.552565",
+    "history": 1,
+    "id": 390,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "d06f5a8b-cef1-46f9-8c58-f27e7101cc50"
+  },
+  {
+    "created_at": "2020-05-11T05:04:56.554296",
+    "history": 1,
+    "id": 391,
+    "info": "55816",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "0adb10be-6e83-43a7-9d08-0fff88a235ba"
+  },
+  {
+    "created_at": "2020-05-11T14:03:16.983144",
+    "history": 1,
+    "id": 393,
+    "info": "",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "2e5fb539-7785-480b-9339-7c1fea6395cb"
+  },
+  {
+    "created_at": "2020-05-11T14:43:02.989881",
+    "history": 1,
+    "id": 394,
+    "info": "59589",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      }
+    ],
+    "uuid": "81921b1e-2d62-488e-b635-68f897867f0e"
+  },
+  {
+    "created_at": "2020-05-11T15:33:12.489338",
+    "history": 1,
+    "id": 395,
+    "info": "59453",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      }
+    ],
+    "uuid": "af1f57b5-53a3-46b0-82e7-12a3b718f380"
+  },
+  {
+    "created_at": "2020-05-11T18:08:56.402478",
+    "history": 1,
+    "id": 396,
+    "info": "59995",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "2e05f813-9195-40d3-89da-aaf804256498"
+  },
+  {
+    "created_at": "2020-05-12T05:33:56.353261",
+    "history": 2,
+    "id": 397,
+    "info": "UNPAIRED",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232944",
+        "id": 16,
+        "role": "VISITOR",
+        "username": "cp",
+        "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.227816",
+        "id": 11,
+        "role": "VISITOR",
+        "username": "tp",
+        "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
+      }
+    ],
+    "uuid": "f3a6f1f8-6bac-4fe8-8a92-9a419feb5c9a"
+  },
+  {
+    "created_at": "2020-05-12T13:43:22.547554",
+    "history": 1,
+    "id": 399,
+    "info": "SOLO, Interviews",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.222991",
+        "id": 6,
+        "role": "HOME",
+        "username": "kd",
+        "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
+      }
+    ],
+    "uuid": "0f3eb3b8-c6f0-4b66-ab87-ae2a7bec3277"
+  },
+  {
+    "created_at": "2020-05-12T13:48:13.741803",
+    "history": 1,
+    "id": 400,
+    "info": "59303",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.221949",
+        "id": 5,
+        "role": "HOME",
+        "username": "es",
+        "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.220843",
+        "id": 4,
+        "role": "HOME",
+        "username": "ms",
+        "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
+      }
+    ],
+    "uuid": "ae410b0c-f818-4f43-9bbc-2290d3dcfae1"
+  },
+  {
+    "created_at": "2020-05-12T13:59:40.422068",
+    "history": 1,
+    "id": 401,
+    "info": "59453",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.219867",
+        "id": 3,
+        "role": "HOME",
+        "username": "jh",
+        "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224007",
+        "id": 7,
+        "role": "HOME",
+        "username": "mj",
+        "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
+      }
+    ],
+    "uuid": "21cd087e-d731-4766-b0e2-810165a0d1ce"
+  },
+  {
+    "created_at": "2020-05-12T14:02:49.392390",
+    "history": 1,
+    "id": 402,
+    "info": "58977",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.226877",
+        "id": 10,
+        "role": "VISITOR",
+        "username": "cd",
+        "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.228835",
+        "id": 12,
+        "role": "VISITOR",
+        "username": "mr",
+        "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
+      }
+    ],
+    "uuid": "3a0e35c6-e803-4114-9199-eda24f2a9198"
+  },
+  {
+    "created_at": "2020-05-12T14:05:44.290360",
+    "history": 1,
+    "id": 403,
+    "info": "59995",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.232039",
+        "id": 15,
+        "role": "VISITOR",
+        "username": "jl",
+        "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.218581",
+        "id": 2,
+        "role": "HOME",
+        "username": "nh",
+        "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
+      }
+    ],
+    "uuid": "8e3905ea-ada8-4dbc-a1a9-13a554593d89"
+  },
+  {
+    "created_at": "2020-05-12T05:33:56.355376",
+    "history": 2,
+    "id": 398,
+    "info": "53971",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.231129",
+        "id": 14,
+        "role": "VISITOR",
+        "username": "rj",
+        "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.229921",
+        "id": 13,
+        "role": "VISITOR",
+        "username": "rp",
+        "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
+      }
+    ],
+    "uuid": "4248eb56-710c-488a-ba1b-23c3b39e8ea5"
+  },
+  {
+    "created_at": "2020-05-12T15:54:26.692211",
+    "history": 1,
+    "id": 404,
+    "info": "Research/Design Sync",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.225852",
+        "id": 9,
+        "role": "HOME",
+        "username": "ar",
+        "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
+      },
+      {
+        "created_at": "2020-05-02T18:26:57.224922",
+        "id": 8,
+        "role": "HOME",
+        "username": "jw",
+        "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
+      }
+    ],
+    "uuid": "04223164-ccd2-47d6-9909-62b2229a6d62"
+  },
+  {
+    "created_at": "2020-05-12T18:41:24.848653",
+    "history": 1,
+    "id": 405,
+    "info": "53973",
+    "users": [
+      {
+        "created_at": "2020-05-02T18:26:57.217057",
+        "id": 1,
+        "role": "HOME",
+        "username": "eo",
+        "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
+      }
+    ],
+    "uuid": "530372f9-d738-4634-88e3-1b0344876022"
   }
 ]
