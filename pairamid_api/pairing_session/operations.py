@@ -1,18 +1,31 @@
 import json
 from pairamid_api.extensions import db
+from pairamid_api.lib.date_helpers import start_of_day, end_of_day
 from pairamid_api.models import User, PairingSession, PairingSessionSchema
 from sqlalchemy import asc
 from datetime import datetime, timedelta
-import pytz
 import time
 
 def run_fetch_all():
-    pairs = _todays_pairs()
+    pairs = PairingSession.query.all()
+    schema = PairingSessionSchema(many=True)
+    display_pairs = schema.dump(pairs)
+
+    return display_pairs
+
+def run_fetch_day():
+    pairs = _todays_pairs().all()
     if not pairs:
         pairs = _daily_refresh_pairs()
 
     schema = PairingSessionSchema(many=True)
     display_pairs = schema.dump(pairs)
+
+    return display_pairs
+
+def run_fetch_week():
+    fetch_date = lambda ago: start_of_day() - timedelta(days=ago)
+    display_pairs = [_build_day(fetch_date(ago)) for ago in reversed(range(5))]
 
     return display_pairs
 
@@ -49,7 +62,7 @@ def run_batch_update(pairs):
     return display_pairs
 
 def _duplicate_users():
-    pair_list = [u.username for pair in _todays_pairs() for u in pair.users if pair.users]
+    pair_list = [u.username for pair in _todays_pairs().all() for u in pair.users if pair.users]
     return len(pair_list) != len(set(pair_list))
 
 def _daily_refresh_pairs():
@@ -64,10 +77,20 @@ def _daily_refresh_pairs():
     db.session.commit()
     return pairs
 
-def _start_of_day():
-    central = datetime.now(pytz.timezone('US/Central'))
-    offset = abs(int(central.utcoffset().total_seconds()/60/60))
-    return datetime(central.year, central.month, central.day, offset, 0)
+def _todays_pairs(current=None):
+    current = current or datetime.now()
+    return (PairingSession.query.filter(PairingSession.created_at >= start_of_day(current))
+                                .filter(PairingSession.created_at < end_of_day(current))
+                                .order_by(asc(PairingSession.created_at)))
 
-def _todays_pairs():
-    return PairingSession.query.filter(PairingSession.created_at >= _start_of_day()).order_by(asc(PairingSession.created_at)).all()
+def _build_day(day):
+    schema = PairingSessionSchema(many=True)
+    pairs = sorted(_todays_pairs(day).filter(PairingSession.info != 'UNPAIRED')
+                                     .filter(PairingSession.users.any()).all(), 
+                                     key=lambda p: p.users and p.users[0].username)
+    return {
+        'weekday': day.strftime('%a'),
+        'day': day.strftime('%d'),
+        'month': day.strftime('%B'),
+        'pairs': schema.dump(pairs)
+    }

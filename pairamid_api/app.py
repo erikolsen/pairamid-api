@@ -1,5 +1,5 @@
-from flask import Flask, jsonify
-from pairamid_api import pairing_session, pair_history, commands
+from flask import Flask, jsonify, current_app
+from pairamid_api import pairing_session, pair_frequency, commands
 from pairamid_api.extensions import ( migrate, db, CORS, socketio )
 
 def create_app(config_object='pairamid_api.config'):
@@ -14,7 +14,7 @@ def create_app(config_object='pairamid_api.config'):
 
 def register_blueprints(app):
     app.register_blueprint(pairing_session.routes.blueprint)
-    app.register_blueprint(pair_history.routes.blueprint)
+    app.register_blueprint(pair_frequency.routes.blueprint)
     return None
 
 def register_extensions(app):
@@ -34,7 +34,7 @@ def register_errorhandlers(app):
 
     @app.errorhandler(Exception)
     def _handle_exception(error):
-        print('Error', error)
+        current_app.log_exception(error)
         return jsonify(status='failed', message=str(error)), 500
 
     return None

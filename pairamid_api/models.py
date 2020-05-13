@@ -1,9 +1,9 @@
 from pairamid_api.extensions import db
+from pairamid_api.lib.date_helpers import end_of_day
 from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime, date
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 from uuid import uuid4
-import random
 #### Tables 
 
 participants = db.Table('participants',
@@ -38,12 +38,7 @@ class User(db.Model):
         return self.username < obj.username
 
     def __repr__(self):
-        return f'<User {self.username} >'
-
-class PairHistory(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    pairs = db.Column(db.String(64))
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+        return f'<User {self.username} {self.role} >'
 
 #### Schemas
 
@@ -61,7 +56,10 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
 
     def counter(self, obj):
         if bool(obj.users):
-            ps = obj.users[0].pairing_sessions.filter(PairingSession.info != 'UNPAIRED').limit(10)
+            ps = (obj.users[0].pairing_sessions
+                              .filter(PairingSession.info != 'UNPAIRED')
+                              .filter(PairingSession.created_at < end_of_day(obj.created_at))
+                              .limit(10))
             count = 0
             for pair in ps:
                 if pair == ps[0]:
@@ -71,11 +69,3 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
             return count
         else:
             return 0
-
-
-
-class PairHistorySchema(SQLAlchemyAutoSchema):
-    class Meta:
-        model = PairHistory
-
-
