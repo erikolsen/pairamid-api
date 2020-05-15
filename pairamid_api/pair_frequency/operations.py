@@ -1,8 +1,10 @@
 from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession
+from pairamid_api.models import User, PairingSession, Role
 from sqlalchemy import asc, desc
 
 def run_build_frequency(primary, secondary):
+    primary = Role.query.filter(Role.name==primary).first()
+    secondary = Role.query.filter(Role.name==secondary).first()
     primary_users = User.query.filter(User.role == primary).order_by(asc(User.username)).all() if primary else User.query.order_by(asc(User.username)).all()
     secondary_users = User.query.filter(User.role == secondary).order_by(asc(User.username)).all() if secondary else User.query.order_by(asc(User.username)).all()
     history = []
