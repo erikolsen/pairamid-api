@@ -8,15 +8,15 @@
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
@@ -31,15 +31,15 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -54,15 +54,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -72,27 +72,27 @@
     "created_at": "2020-05-04T14:27:27.554548",
     "history": 1,
     "id": 212,
-    "info": "59591 (GEOALCHEMY)",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -107,8 +107,8 @@
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -118,20 +118,20 @@
     "created_at": "2020-05-04T14:27:57.889927",
     "history": 2,
     "id": 213,
-    "info": "59589",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -141,20 +141,20 @@
     "created_at": "2020-05-04T14:33:00.223779",
     "history": 1,
     "id": 214,
-    "info": "53794",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
@@ -164,13 +164,13 @@
     "created_at": "2020-05-04T14:34:48.278264",
     "history": 1,
     "id": 215,
-    "info": "59303",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       }
     ],
@@ -185,8 +185,8 @@
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -201,29 +201,29 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -238,15 +238,15 @@
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -261,15 +261,15 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -284,15 +284,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -307,15 +307,15 @@
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -330,15 +330,15 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -353,15 +353,15 @@
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -376,15 +376,15 @@
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -399,15 +399,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -422,15 +422,15 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -445,8 +445,8 @@
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -461,15 +461,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -484,15 +484,15 @@
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -507,15 +507,15 @@
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -530,15 +530,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -553,15 +553,15 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -576,8 +576,8 @@
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -592,15 +592,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -615,15 +615,15 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -638,15 +638,15 @@
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -661,15 +661,15 @@
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -684,15 +684,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -707,15 +707,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       }
     ],
@@ -730,8 +730,8 @@
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -746,15 +746,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -769,15 +769,15 @@
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -792,15 +792,15 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -815,15 +815,15 @@
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -833,20 +833,20 @@
     "created_at": "2020-04-29T13:57:34.555716",
     "history": 1,
     "id": 293,
-    "info": "53974",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
@@ -856,20 +856,20 @@
     "created_at": "2020-04-28T13:57:28.373396",
     "history": 2,
     "id": 294,
-    "info": "36069",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -879,20 +879,20 @@
     "created_at": "2020-04-28T15:13:30.178204",
     "history": 10,
     "id": 295,
-    "info": "User Interview summary",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -902,20 +902,20 @@
     "created_at": "2020-04-29T13:34:41.962163",
     "history": 3,
     "id": 296,
-    "info": "59303",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -925,20 +925,20 @@
     "created_at": "2020-04-28T15:25:11.554206",
     "history": 2,
     "id": 297,
-    "info": "59255",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -948,20 +948,20 @@
     "created_at": "2020-04-28T15:23:35.581633",
     "history": 1,
     "id": 298,
-    "info": "59244",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -971,20 +971,20 @@
     "created_at": "2020-04-28T15:27:47.343239",
     "history": 2,
     "id": 299,
-    "info": "59303 & 59304",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -999,71 +999,71 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -1073,13 +1073,13 @@
     "created_at": "2020-04-28T18:31:13.783406",
     "history": 1,
     "id": 301,
-    "info": "52409",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       }
     ],
@@ -1094,36 +1094,36 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -1133,20 +1133,20 @@
     "created_at": "2020-04-29T05:02:49.744903",
     "history": 2,
     "id": 303,
-    "info": "59244",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -1156,20 +1156,20 @@
     "created_at": "2020-04-29T12:46:48.218615",
     "history": 1,
     "id": 304,
-    "info": "52409",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -1179,13 +1179,13 @@
     "created_at": "2020-05-01T15:48:59.180495",
     "history": 1,
     "id": 305,
-    "info": "ADMIN",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -1200,15 +1200,15 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
@@ -1218,20 +1218,20 @@
     "created_at": "2020-04-30T05:07:06.634884",
     "history": 2,
     "id": 307,
-    "info": "52409",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -1241,13 +1241,13 @@
     "created_at": "2020-04-30T16:54:22.544749",
     "history": 1,
     "id": 308,
-    "info": "59303",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       }
     ],
@@ -1262,22 +1262,22 @@
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -1287,20 +1287,20 @@
     "created_at": "2020-05-01T14:13:23.456395",
     "history": 1,
     "id": 310,
-    "info": "59303",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       }
     ],
@@ -1310,20 +1310,20 @@
     "created_at": "2020-05-01T14:58:40.629700",
     "history": 10,
     "id": 311,
-    "info": "Summarize user interview",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -1333,20 +1333,20 @@
     "created_at": "2020-05-01T05:08:33.704456",
     "history": 1,
     "id": 312,
-    "info": "56634",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -1356,20 +1356,20 @@
     "created_at": "2020-05-01T13:49:34.446721",
     "history": 1,
     "id": 313,
-    "info": "53974",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -1379,20 +1379,20 @@
     "created_at": "2020-05-01T14:10:32.172562",
     "history": 1,
     "id": 314,
-    "info": "59255",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -1407,113 +1407,113 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -1536,15 +1536,15 @@
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -1559,15 +1559,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -1582,15 +1582,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       }
     ],
@@ -1605,29 +1605,29 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -1637,20 +1637,20 @@
     "created_at": "2020-05-05T13:30:37.276441",
     "history": 3,
     "id": 323,
-    "info": "(SPIKE) 59589",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -1660,20 +1660,20 @@
     "created_at": "2020-05-05T14:36:03.571232",
     "history": 2,
     "id": 326,
-    "info": "54462",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
@@ -1683,20 +1683,20 @@
     "created_at": "2020-05-05T14:04:02.287448",
     "history": 3,
     "id": 324,
-    "info": "59821",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -1706,27 +1706,27 @@
     "created_at": "2020-05-05T14:08:12.028879",
     "history": 2,
     "id": 325,
-    "info": "59591",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -1736,13 +1736,13 @@
     "created_at": "2020-05-05T14:37:29.124158",
     "history": 2,
     "id": 327,
-    "info": "59303",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       }
     ],
@@ -1757,15 +1757,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -1780,22 +1780,22 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -1805,20 +1805,20 @@
     "created_at": "2020-05-06T11:49:12.388433",
     "history": 2,
     "id": 331,
-    "info": "CR 53974",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -1833,15 +1833,15 @@
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -1851,20 +1851,20 @@
     "created_at": "2020-05-04T14:18:49.665532",
     "history": 10,
     "id": 209,
-    "info": "Ensuring UI cards existed & are updated, NN review for the Condition Comparison Screen, reviewing UI suggestions from Friday's WWT internal design review",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -1879,15 +1879,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -1897,13 +1897,13 @@
     "created_at": "2020-05-04T14:19:08.623215",
     "history": 1,
     "id": 210,
-    "info": "56634",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       }
     ],
@@ -1918,15 +1918,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -1941,36 +1941,36 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -1985,15 +1985,15 @@
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -2008,15 +2008,15 @@
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -2031,15 +2031,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -2054,15 +2054,15 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -2077,15 +2077,15 @@
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -2095,27 +2095,27 @@
     "created_at": "2020-04-29T14:29:25.873306",
     "history": 1,
     "id": 229,
-    "info": "59255",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -2130,15 +2130,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -2153,8 +2153,8 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       }
     ],
@@ -2169,22 +2169,22 @@
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -2199,36 +2199,36 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -2243,15 +2243,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -2266,15 +2266,15 @@
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -2289,22 +2289,22 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -2319,15 +2319,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -2342,15 +2342,15 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -2365,15 +2365,15 @@
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -2388,15 +2388,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -2411,8 +2411,8 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       }
     ],
@@ -2427,8 +2427,8 @@
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -2443,15 +2443,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -2466,15 +2466,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -2489,15 +2489,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -2512,15 +2512,15 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -2535,15 +2535,15 @@
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -2558,15 +2558,15 @@
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -2581,8 +2581,8 @@
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -2597,15 +2597,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -2620,15 +2620,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -2643,15 +2643,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -2666,15 +2666,15 @@
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       }
     ],
@@ -2689,15 +2689,15 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -2712,15 +2712,15 @@
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -2735,8 +2735,8 @@
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -2751,15 +2751,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -2774,15 +2774,15 @@
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -2797,15 +2797,15 @@
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
@@ -2820,15 +2820,15 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -2843,15 +2843,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -2866,15 +2866,15 @@
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -2889,8 +2889,8 @@
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -2905,15 +2905,15 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -2928,15 +2928,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -2946,13 +2946,13 @@
     "created_at": "2020-05-06T12:56:03.889178",
     "history": 1,
     "id": 333,
-    "info": "Updating design for 52937",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -2967,15 +2967,15 @@
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -2985,20 +2985,20 @@
     "created_at": "2020-05-06T14:16:16.214643",
     "history": 1,
     "id": 335,
-    "info": "54534 & 54462",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -3008,20 +3008,20 @@
     "created_at": "2020-05-06T14:34:46.085972",
     "history": 1,
     "id": 336,
-    "info": "59591",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       }
     ],
@@ -3031,20 +3031,20 @@
     "created_at": "2020-05-06T14:38:02.597890",
     "history": 1,
     "id": 339,
-    "info": "59303",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -3054,20 +3054,20 @@
     "created_at": "2020-05-06T14:35:40.827362",
     "history": 1,
     "id": 338,
-    "info": "59821",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -3082,50 +3082,50 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -3135,20 +3135,20 @@
     "created_at": "2020-05-07T13:37:21.581133",
     "history": 2,
     "id": 373,
-    "info": "57921 & CR 54462",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -3158,20 +3158,20 @@
     "created_at": "2020-05-07T14:33:09.852086",
     "history": 2,
     "id": 375,
-    "info": "54534",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -3181,20 +3181,20 @@
     "created_at": "2020-05-07T14:29:40.499392",
     "history": 1,
     "id": 374,
-    "info": "59591",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       }
     ],
@@ -3204,20 +3204,20 @@
     "created_at": "2020-05-07T15:19:03.581349",
     "history": 5,
     "id": 376,
-    "info": "59589 (SPIKE)",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -3227,13 +3227,13 @@
     "created_at": "2020-05-07T11:55:53.953629",
     "history": 1,
     "id": 370,
-    "info": "56634",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -3248,36 +3248,36 @@
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -3287,13 +3287,13 @@
     "created_at": "2020-05-08T14:03:56.427855",
     "history": 2,
     "id": 381,
-    "info": "Refining UI for tolerance selection and future KER adjustment",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       }
     ],
@@ -3308,8 +3308,8 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       }
     ],
@@ -3319,20 +3319,20 @@
     "created_at": "2020-05-08T15:19:14.012323",
     "history": 3,
     "id": 382,
-    "info": "59453",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -3342,13 +3342,13 @@
     "created_at": "2020-05-08T16:49:43.738808",
     "history": 1,
     "id": 384,
-    "info": "59303",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -3363,15 +3363,15 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       }
     ],
@@ -3386,15 +3386,15 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -3409,15 +3409,15 @@
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       }
     ],
@@ -3432,113 +3432,113 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -3561,113 +3561,113 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       },
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -3690,50 +3690,50 @@
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -3743,20 +3743,20 @@
     "created_at": "2020-05-11T05:04:56.554296",
     "history": 1,
     "id": 391,
-    "info": "55816",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -3771,22 +3771,22 @@
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -3796,20 +3796,20 @@
     "created_at": "2020-05-11T14:43:02.989881",
     "history": 1,
     "id": 394,
-    "info": "59589",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -3819,13 +3819,13 @@
     "created_at": "2020-05-11T15:33:12.489338",
     "history": 1,
     "id": 395,
-    "info": "59453",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
@@ -3840,8 +3840,8 @@
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -3856,15 +3856,15 @@
       {
         "created_at": "2020-05-02T18:26:57.232944",
         "id": 16,
-        "role": "VISITOR",
-        "username": "cp",
+        "role": "pawnee",
+        "username": "PH",
         "uuid": "a78d4dc2-8e09-4ee2-b70c-5e2c4e7bfd86"
       },
       {
         "created_at": "2020-05-02T18:26:57.227816",
         "id": 11,
-        "role": "VISITOR",
-        "username": "tp",
+        "role": "pawnee",
+        "username": "SMT",
         "uuid": "174b2289-16d3-4f4a-b183-39825473f0ba"
       }
     ],
@@ -3874,13 +3874,13 @@
     "created_at": "2020-05-12T13:43:22.547554",
     "history": 1,
     "id": 399,
-    "info": "SOLO, Interviews",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.222991",
         "id": 6,
-        "role": "HOME",
-        "username": "kd",
+        "role": "parks_dept",
+        "username": "GG",
         "uuid": "fbd9bf93-9c33-4242-8803-8a6e6aa39e4c"
       }
     ],
@@ -3895,15 +3895,15 @@
       {
         "created_at": "2020-05-02T18:26:57.221949",
         "id": 5,
-        "role": "HOME",
-        "username": "es",
+        "role": "parks_dept",
+        "username": "DM",
         "uuid": "336b0c95-bd81-4aae-b089-80a71eb03f33"
       },
       {
         "created_at": "2020-05-02T18:26:57.220843",
         "id": 4,
-        "role": "HOME",
-        "username": "ms",
+        "role": "parks_dept",
+        "username": "AL",
         "uuid": "d08a566b-7440-4d5b-a8f2-8d19ae749c29"
       }
     ],
@@ -3913,20 +3913,20 @@
     "created_at": "2020-05-12T13:59:40.422068",
     "history": 1,
     "id": 401,
-    "info": "59453",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.219867",
         "id": 3,
-        "role": "HOME",
-        "username": "jh",
+        "role": "parks_dept",
+        "username": "TH",
         "uuid": "7aef2e87-4aaf-441b-b292-b19130363cd4"
       },
       {
         "created_at": "2020-05-02T18:26:57.224007",
         "id": 7,
-        "role": "HOME",
-        "username": "mj",
+        "role": "parks_dept",
+        "username": "MB",
         "uuid": "1bdf667a-74e1-4ea0-a076-598f125aca85"
       }
     ],
@@ -3936,20 +3936,20 @@
     "created_at": "2020-05-12T14:02:49.392390",
     "history": 1,
     "id": 402,
-    "info": "58977",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.226877",
         "id": 10,
-        "role": "VISITOR",
-        "username": "cd",
+        "role": "pawnee",
+        "username": "BW",
         "uuid": "06d6832e-6d4f-407a-a427-e379a474fa5f"
       },
       {
         "created_at": "2020-05-02T18:26:57.228835",
         "id": 12,
-        "role": "VISITOR",
-        "username": "mr",
+        "role": "pawnee",
+        "username": "JRS",
         "uuid": "ce55f291-ad9f-425a-ab19-eee5ada31c19"
       }
     ],
@@ -3959,20 +3959,20 @@
     "created_at": "2020-05-12T14:05:44.290360",
     "history": 1,
     "id": 403,
-    "info": "59995",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.232039",
         "id": 15,
-        "role": "VISITOR",
-        "username": "jl",
+        "role": "pawnee",
+        "username": "BN",
         "uuid": "13fe9ee0-6add-4892-b8e2-b378c4562d23"
       },
       {
         "created_at": "2020-05-02T18:26:57.218581",
         "id": 2,
-        "role": "HOME",
-        "username": "nh",
+        "role": "parks_dept",
+        "username": "LK",
         "uuid": "98e0bc7f-9be9-4605-9632-6181d07e065c"
       }
     ],
@@ -3982,20 +3982,20 @@
     "created_at": "2020-05-12T05:33:56.355376",
     "history": 2,
     "id": 398,
-    "info": "53971",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.231129",
         "id": 14,
-        "role": "VISITOR",
-        "username": "rj",
+        "role": "pawnee",
+        "username": "CT",
         "uuid": "a8240109-80c2-43f3-87c8-0715e9548d08"
       },
       {
         "created_at": "2020-05-02T18:26:57.229921",
         "id": 13,
-        "role": "VISITOR",
-        "username": "rp",
+        "role": "pawnee",
+        "username": "JC",
         "uuid": "a6396f28-1d1c-4b50-9d82-e1a89f6a5ad8"
       }
     ],
@@ -4005,20 +4005,20 @@
     "created_at": "2020-05-12T15:54:26.692211",
     "history": 1,
     "id": 404,
-    "info": "Research/Design Sync",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.225852",
         "id": 9,
-        "role": "HOME",
-        "username": "ar",
+        "role": "parks_dept",
+        "username": "AD",
         "uuid": "5828a436-4016-4feb-952f-f2f37767dc98"
       },
       {
         "created_at": "2020-05-02T18:26:57.224922",
         "id": 8,
-        "role": "HOME",
-        "username": "jw",
+        "role": "parks_dept",
+        "username": "AP",
         "uuid": "dff80028-5f3f-400c-a0e5-c85c33313206"
       }
     ],
@@ -4028,13 +4028,13 @@
     "created_at": "2020-05-12T18:41:24.848653",
     "history": 1,
     "id": 405,
-    "info": "53973",
+    "info": "",
     "users": [
       {
         "created_at": "2020-05-02T18:26:57.217057",
         "id": 1,
-        "role": "HOME",
-        "username": "eo",
+        "role": "parks_dept",
+        "username": "RS",
         "uuid": "841a398f-67cf-416a-8f70-bdee08561f14"
       }
     ],

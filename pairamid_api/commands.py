@@ -1,5 +1,5 @@
 from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, PairingSession
+from pairamid_api.models import User, PairingSession, PairingSession, Role
 import click
 from flask.cli import with_appcontext
 import datetime
@@ -35,33 +35,23 @@ def add_pairs():
 @with_appcontext
 def add_users():
     '''Seeds the db with Users and Pairing Sessions'''
+    parks_dept = Role(name='parks_dept', color='#7F9CF5')
+    pawnee = Role(name='pawnee', color='#63B3ED')
+    parks_users = ['LK', 'TH', 'RS', 'AL', 'DM', 'GG']
+    pawnee_users = ['MB', 'AP', 'AD', 'BW', 'CT', 'SMT', 'JRS', 'JC', 'BN', 'PH']
+    db.session.add(parks_dept)
+    db.session.add(pawnee)
 
     if User.query.count():
         print('Database base has already been seeded.')
         return None
 
-    eo = User(username='eo', role='HOME')
-    nh = User(username='nh', role='HOME')
-    jh = User(username='jh', role='HOME')
-    ms = User(username='ms', role='HOME')
-    es = User(username='es', role='HOME')
-    kd = User(username='kd', role='HOME')
-    mj = User(username='mj', role='HOME')
-    jw = User(username='jw', role='HOME')
-    ar = User(username='ar', role='HOME')
+    for username in parks_users:
+        user = User(username=username, role=parks_dept)
+        db.session.add(user)
 
-    cd = User(username='cd', role='VISITOR')
-    tp = User(username='tp', role='VISITOR')
-    mr = User(username='mr', role='VISITOR')
-    rp = User(username='rp', role='VISITOR')
-    rj = User(username='rj', role='VISITOR')
-    jl = User(username='jl', role='VISITOR')
-    cp = User(username='cp', role='VISITOR')
-
-    home = [eo, nh, jh, ms, es, kd, mj, jw, ar]
-    visitor = [cd, tp, mr, rp, rj, jl, cp]
-
-    for user in home + visitor:
+    for username in pawnee_users:
+        user = User(username=username, role=pawnee)
         db.session.add(user)
 
     db.session.commit()
