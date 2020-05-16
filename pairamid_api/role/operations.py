@@ -17,7 +17,7 @@ def run_update(id, data):
     return schema.dump(role)
 
 def run_create(data):
-    role = Role(name= data['name'], color= data['color'])
+    role = Role()
     db.session.add(role)
     db.session.commit()
     schema = RoleSchema()
