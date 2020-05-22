@@ -29,7 +29,12 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     username = db.Column(db.String(64))
-    role = db.Column(db.String(64))
+    first_name = db.Column(db.String(64))
+    last_name = db.Column(db.String(64))
+    role = db.relationship("Role", uselist=False)
+    role_id = db.Column(db.Integer, db.ForeignKey('role.id'))
+    team = db.relationship("Team", uselist=False)
+    team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     pairing_sessions = db.relationship('PairingSession', secondary=participants,
         order_by="desc(PairingSession.created_at)", lazy='dynamic')
@@ -38,13 +43,38 @@ class User(db.Model):
         return self.username < obj.username
 
     def __repr__(self):
-        return f'<User {self.username} {self.role} >'
+        return f'<User {self.username} {self.role.name} >'
+
+class Role(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64))
+    color = db.Column(db.String(64), default='#7F9CF5')
+    team = db.relationship("Team", uselist=False)
+    team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f'<Role {self.name} >'
+
+class Team(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    users = db.relationship("User", backref='user')
+
+    def __repr__(self):
+        return f'<Team {self.name} >'
 
 #### Schemas
+class RoleSchema(SQLAlchemyAutoSchema):
+    class Meta: 
+        model = Role
 
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta: 
         model = User
+
+    role = fields.Nested(RoleSchema)
 
 class PairingSessionSchema(SQLAlchemyAutoSchema):
     class Meta: 

@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, current_app
-from pairamid_api import pairing_session, pair_frequency, commands
+from pairamid_api import pairing_session, pair_frequency, role, user, commands
 from pairamid_api.extensions import ( migrate, db, CORS, socketio )
 
 def create_app(config_object='pairamid_api.config'):
@@ -15,6 +15,8 @@ def create_app(config_object='pairamid_api.config'):
 def register_blueprints(app):
     app.register_blueprint(pairing_session.routes.blueprint)
     app.register_blueprint(pair_frequency.routes.blueprint)
+    app.register_blueprint(role.routes.blueprint)
+    app.register_blueprint(user.routes.blueprint)
     return None
 
 def register_extensions(app):
