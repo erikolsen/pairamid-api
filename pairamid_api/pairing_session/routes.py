@@ -9,7 +9,6 @@ def index(team_uuid):
 
 @blueprint.route('/team/<team_uuid>/pairing_sessions/daily', methods=["GET"])
 def daily(team_uuid):
-    print('uuid', team_uuid)
     return jsonify(operations.run_fetch_day(team_uuid))
 
 @blueprint.route('/team/<team_uuid>/pairing_sessions/weekly', methods=["GET"])

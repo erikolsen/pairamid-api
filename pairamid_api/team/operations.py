@@ -26,9 +26,9 @@ def run_create(data):
     team = Team(name=data['name'])
     role = Role(name='Default')
     team.roles = [role]
-    print('Team', team)
-    # db.session.add(team)
-    # db.session.commit()
+    db.session.add(team)
+    db.session.add(role)
+    db.session.commit()
     schema = TeamSchema()
     return schema.dump(team)
 
