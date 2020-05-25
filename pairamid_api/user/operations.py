@@ -1,9 +1,10 @@
-from pairamid_api.models import User, UserSchema, Role
+from pairamid_api.models import User, UserSchema, Role, Team
 from pairamid_api.extensions import db
 from sqlalchemy import asc, desc
 
-def run_fetch_all():
-    users = User.query.order_by(asc(User.username)).all()
+def run_fetch_all(team_uuid):
+    team = Team.query.filter(Team.uuid==team_uuid).first()
+    users = team.users.order_by(asc(User.username)).all()
     schema = UserSchema(many=True)
     return schema.dump(users) 
 
@@ -17,8 +18,9 @@ def run_update(id, data):
     schema = UserSchema()
     return schema.dump(user)
 
-def run_create(data):
-    user = User()
+def run_create(team_uuid, data):
+    team = Team.query.filter(Team.uuid==team_uuid).first()
+    user = User(team=team)
     db.session.add(user)
     db.session.commit()
     schema = UserSchema()

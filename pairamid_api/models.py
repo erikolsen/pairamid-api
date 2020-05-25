@@ -16,6 +16,8 @@ class PairingSession(db.Model):
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     info = db.Column(db.Text, default='')
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    team = db.relationship("Team", uselist=False)
+    team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     users = db.relationship('User', secondary=participants, passive_deletes=True, 
         order_by="User.username")
 
@@ -58,12 +60,15 @@ class Role(db.Model):
 
 class Team(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    users = db.relationship("User", backref='user')
+    users = db.relationship("User", backref='user', lazy='dynamic')
+    pairing_sessions = db.relationship("PairingSession", backref='pairing_session', lazy='dynamic')
+    roles = db.relationship("Role", backref='role', lazy='dynamic')
 
     def __repr__(self):
-        return f'<Team {self.name} >'
+        return f'<Team {self.name} {self.uuid} >'
 
 #### Schemas
 class RoleSchema(SQLAlchemyAutoSchema):
@@ -75,6 +80,12 @@ class UserSchema(SQLAlchemyAutoSchema):
         model = User
 
     role = fields.Nested(RoleSchema)
+
+class TeamSchema(SQLAlchemyAutoSchema):
+    class Meta: 
+        model = Team
+
+    roles = fields.Nested(RoleSchema, many=True)
 
 class PairingSessionSchema(SQLAlchemyAutoSchema):
     class Meta: 

@@ -3,17 +3,18 @@ from . import operations
 
 blueprint = Blueprint('pairing_session', __name__)
 
-@blueprint.route('/pairing_sessions', methods=["GET"])
-def index():
-    return jsonify(operations.run_fetch_all())
+@blueprint.route('/team/<team_uuid>/pairing_sessions', methods=["GET"])
+def index(team_uuid):
+    return jsonify(operations.run_fetch_all(team_uuid))
 
-@blueprint.route('/pairing_sessions/daily', methods=["GET"])
-def daily():
-    return jsonify(operations.run_fetch_day())
+@blueprint.route('/team/<team_uuid>/pairing_sessions/daily', methods=["GET"])
+def daily(team_uuid):
+    print('uuid', team_uuid)
+    return jsonify(operations.run_fetch_day(team_uuid))
 
-@blueprint.route('/pairing_sessions/weekly', methods=["GET"])
-def weekly():
-    return jsonify(operations.run_fetch_week())
+@blueprint.route('/team/<team_uuid>/pairing_sessions/weekly', methods=["GET"])
+def weekly(team_uuid):
+    return jsonify(operations.run_fetch_week(team_uuid))
 
 # @blueprint.route('/pairing_sessions/batch', methods=["PUT"])
 # def batch_update():

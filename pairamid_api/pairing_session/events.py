@@ -4,7 +4,7 @@ from . import operations
 
 @socketio.on('add pair')
 def create(json, methods=['GET', 'POST']):
-    new_pair = operations.run_create()
+    new_pair = operations.run_create(json['teamId'])
     socketio.emit('add pair', new_pair)
     return True
 
