@@ -30,7 +30,7 @@ def register_extensions(app):
 def register_commands(app):
     app.cli.add_command(commands.add_users)
     app.cli.add_command(commands.add_pairs)
-    app.cli.add_command(commands.clear_pairs)
+    app.cli.add_command(commands.update_all)
     return None
 
 def register_errorhandlers(app):

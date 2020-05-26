@@ -7,6 +7,27 @@ import json
 
 @click.command()
 @with_appcontext
+def update_all():
+    '''Updates all the things'''
+    team = Team(name='Mighty Ducks')
+    db.session.add(team)
+    for pair in PairingSession.query.all():
+        pair.team = team
+        db.session.add(pair)
+
+    for user in User.query.all():
+        user.team = team
+        db.session.add(user)
+
+    for role in Role.query.all():
+        role.team = team
+        db.session.add(role)
+
+    db.session.commit()
+    print(f'Updated to team: {team.uuid} pairs: {team.pairing_sessions.count()} roles: {team.roles.count()} users: {team.users.count()}.')
+
+@click.command()
+@with_appcontext
 def clear_pairs():
     '''Removes all pairs from the db'''
     initial_count = PairingSession.query.count()
