@@ -3,9 +3,9 @@ from . import operations
 
 blueprint = Blueprint('team', __name__)
 
-# @blueprint.route("/teams", methods=["GET"])
-# def index():
-#     return jsonify(operations.run_fetch_all())
+@blueprint.route("/teams", methods=["GET"])
+def index():
+    return jsonify(operations.run_fetch_all())
 
 @blueprint.route("/team", methods=["POST"])
 def create():

@@ -86,6 +86,13 @@ class TeamSchema(SQLAlchemyAutoSchema):
         model = Team
 
     roles = fields.Nested(RoleSchema, many=True)
+    members = fields.fields.Method('member_count')
+
+    def member_count(self, obj):
+        if bool(obj.users):
+            return obj.users.count()
+
+        return 0
 
 class PairingSessionSchema(SQLAlchemyAutoSchema):
     class Meta: 
