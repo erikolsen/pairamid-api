@@ -1,4 +1,4 @@
-from pairamid_api.models import Team, TeamSchema, Role
+from pairamid_api.models import Team, TeamSchema, Role, User
 from pairamid_api.extensions import db
 from sqlalchemy import asc, desc
 
@@ -25,9 +25,12 @@ def run_fetch(uuid):
 def run_create(data):
     team = Team(name=data['name'])
     role = Role(name='Default')
+    user = User(team=team, role=role)
     team.roles = [role]
+    team.users = [user]
     db.session.add(team)
     db.session.add(role)
+    db.session.add(user)
     db.session.commit()
     schema = TeamSchema()
     return schema.dump(team)

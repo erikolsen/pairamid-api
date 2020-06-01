@@ -6,6 +6,12 @@ from sqlalchemy import asc
 from datetime import datetime, timedelta
 import time
 
+def add_user_to_available(user):
+    available = _todays_pairs(user.team.uuid).filter(PairingSession.info == 'UNPAIRED').first()
+    if available:
+        available.users.append(user)
+
+
 def run_fetch_all(team_uuid):
     team = Team.query.filter(Team.uuid==team_uuid).first()
     pairs = team.pairing_sessions

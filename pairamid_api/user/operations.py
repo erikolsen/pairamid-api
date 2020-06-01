@@ -1,5 +1,6 @@
 from pairamid_api.models import User, UserSchema, Role, Team
 from pairamid_api.extensions import db
+from pairamid_api.pairing_session.operations import add_user_to_available
 from sqlalchemy import asc, desc
 
 def run_fetch_all(team_uuid):
@@ -20,8 +21,10 @@ def run_update(id, data):
 
 def run_create(team_uuid, data):
     team = Team.query.filter(Team.uuid==team_uuid).first()
-    user = User(team=team)
+    role = team.roles.first()
+    user = User(team=team, role=role)
     db.session.add(user)
+    add_user_to_available(user)
     db.session.commit()
     schema = UserSchema()
     return schema.dump(user)
