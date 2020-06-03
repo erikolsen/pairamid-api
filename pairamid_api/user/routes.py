@@ -3,18 +3,18 @@ from . import operations
 
 blueprint = Blueprint('user', __name__)
 
-@blueprint.route("/users", methods=["GET"])
-def index():
-    return jsonify(operations.run_fetch_all())
+@blueprint.route("/team/<team_uuid>/users", methods=["GET"])
+def index(team_uuid):
+    return jsonify(operations.run_fetch_all(team_uuid))
 
-@blueprint.route("/user", methods=["POST"])
-def create():
-    return jsonify(operations.run_create(request.json))
+@blueprint.route("/team/<team_uuid>/user", methods=["POST"])
+def create(team_uuid):
+    return jsonify(operations.run_create(team_uuid, request.json))
 
-@blueprint.route("/user/<id>", methods=["PUT"])
-def update(id):
+@blueprint.route("/team/<team_uuid>/user/<id>", methods=["PUT"])
+def update(team_uuid, id):
     return jsonify(operations.run_update(id, request.json))
 
-@blueprint.route("/user/<id>", methods=["DELETE"])
-def delete(id):
+@blueprint.route("/team/<team_uuid>/user/<id>", methods=["DELETE"])
+def delete(team_uuid, id):
     return jsonify(operations.run_delete(id))
