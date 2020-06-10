@@ -6,7 +6,7 @@ import datetime
 import json
 
 def spacer(word):
-    space = (19 - len(word)) * ' ' 
+    space = (20 - len(word)) * ' ' 
     return word + space + '|'
 
 mighty_ducks = '4ba3a90e-a900-4368-859d-da8cae450d16'
@@ -19,10 +19,10 @@ SAFE_TEAMS= [mighty_ducks, learning_team, parks]
 def display_teams():
     '''Displays all team data'''
     print('Safe Teams', SAFE_TEAMS)
-    print(spacer('Name'), spacer('Id'), spacer('Users'), spacer('Roles'), spacer('UUID'))
+    print(spacer('Name'), spacer('Id'), spacer('Users'), spacer('Roles'), spacer('Pairs'), spacer('UUID'))
     for team in Team.query.all():
-        print(spacer(team.name), spacer(str(team.id)), spacer(str(len(team.users.all()))), spacer(str(len(team.roles.all()))), str(team.uuid))
-    print(spacer(f'Total-{Team.query.count()}'), spacer('-'), spacer(str(User.query.count())), spacer(str(Role.query.count())), '-')
+        print(spacer(team.name), spacer(str(team.id)), spacer(str(len(team.users.all()))), spacer(str(len(team.roles.all()))),spacer(str(len(team.pairing_sessions.all()))), str(team.uuid))
+    print(spacer(f'Total-{Team.query.count()}'), spacer('-'), spacer(str(User.query.count())), spacer(str(Role.query.count())), spacer(str(PairingSession.query.count())), '-')
 
 @click.command()
 @click.argument('team_id')
