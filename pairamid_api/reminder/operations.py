@@ -3,18 +3,14 @@ from pairamid_api.extensions import db
 from sqlalchemy import asc, desc
 import arrow
 
-# def run_fetch_all():
-#     teams = Team.query.order_by(asc(Team.name)).all()
-#     schema = TeamSchema(many=True)
-#     return schema.dump(teams)
-
-def run_fetch_all(team_uuid, start_date, end_date):
+def fetch_reminders(team, start_date, end_date):
     start_date = arrow.get(start_date).to('utc').floor('day').naive
     end_date = arrow.get(end_date).to('utc').ceil('day').naive
-    print('Start',  start_date)
-    print('End',  end_date)
+    return team.reminders.filter(Reminder.start_date >= start_date).filter(Reminder.end_date <= end_date )
+
+def run_fetch_all(team_uuid, start_date, end_date):
     team = Team.query.filter(Team.uuid == team_uuid).first()
-    reminders = team.reminders.filter(Reminder.start_date >= start_date).filter(Reminder.end_date <= end_date )
+    reminders = fetch_reminders(team, start_date, end_date)
     schema = ReminderSchema(many=True)
     return schema.dump(reminders) 
 
