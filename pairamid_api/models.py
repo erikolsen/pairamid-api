@@ -83,7 +83,7 @@ class Reminder(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
-        return f'<Reminder >'
+        return f'<Reminder {self.start_date} {self.end_date} {self.team.name}>'
 
 #### Schemas
 class RoleSchema(SQLAlchemyAutoSchema):
