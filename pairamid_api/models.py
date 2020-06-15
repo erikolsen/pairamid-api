@@ -4,6 +4,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime, date
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 from uuid import uuid4
+import arrow
 #### Tables 
 
 participants = db.Table('participants',
@@ -77,6 +78,7 @@ class Reminder(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
+    recuring_weekday = db.Column(db.Integer)
     message = db.Column(db.Text())
     start_date = db.Column(db.DateTime)
     end_date = db.Column(db.DateTime)
@@ -99,11 +101,19 @@ class UserSchema(SQLAlchemyAutoSchema):
 class ReminderSchema(SQLAlchemyAutoSchema):
     started_at = fields.fields.DateTime()
     ended_at = fields.fields.DateTime()
+    # start_date = fields.fields.Method('to_local_start')
+    # end_date = fields.fields.Method('to_local_end')
     user = fields.Nested(UserSchema)
 
     class Meta: 
         model = Reminder
         datetimeformat = '%m/%d/%Y'
+
+    # def to_local_start(self, obj):
+    #     return arrow.get(obj.start_date).to('US/Central').format('MM/DD/YYYY')
+
+    # def to_local_end(self, obj):
+    #     return arrow.get(obj.end_date).to('US/Central').format('MM/DD/YYYY')
 
 
 class TeamSchema(SQLAlchemyAutoSchema):

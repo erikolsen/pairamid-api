@@ -13,12 +13,6 @@ def index(team_uuid):
 def create(team_uuid):
     return jsonify(operations.run_create(team_uuid, request.json))
 
-@blueprint.route("/team/<team_uuid>/reminder/<id>", methods=["PUT"])
-def update(team_uuid, id):
-    print('Got here')
-    return jsonify(operations.run_update(id, request.json))
-
 @blueprint.route("/team/<uuid>/reminder/<id>", methods=["DELETE"])
 def delete(uuid, id):
-    print('Here')
     return jsonify(operations.run_delete(id))
