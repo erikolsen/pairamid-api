@@ -8,7 +8,9 @@ from datetime import datetime, timedelta
 import time
 
 def todays_ooo(team):
-    return [reminder.user for reminder in fetch_reminders(team, datetime.today(), datetime.today()) if reminder.user]
+    out_of_office = lambda reminder:  reminder.user and 'Out of Office' in reminder.message
+    today = datetime.today()
+    return [reminder.user for reminder in filter(out_of_office, fetch_reminders(team, today, today))]
 
 def add_user_to_available(user):
     available = _todays_pairs(user.team.uuid).filter(PairingSession.info == 'UNPAIRED').first()
