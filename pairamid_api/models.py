@@ -21,6 +21,7 @@ class PairingSession(db.Model):
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     users = db.relationship('User', secondary=participants, passive_deletes=True, 
         order_by="User.username")
+    streak = db.Column(db.Integer, default=0)
 
     def __lt__(self, obj):
         return self.created_at.date() < obj.created_at.date()
@@ -137,20 +138,3 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
         include_relationships = True
     
     users = fields.Nested(UserSchema, many=True)
-    history = fields.fields.Method('counter')
-
-    def counter(self, obj):
-        if bool(obj.users):
-            ps = (obj.users[0].pairing_sessions
-                              .filter(PairingSession.info != 'UNPAIRED')
-                              .filter(PairingSession.created_at < end_of_day(obj.created_at))
-                              .limit(10))
-            count = 0
-            for pair in ps:
-                if pair == ps[0]:
-                    count += 1 
-                else:
-                    break
-            return count
-        else:
-            return 0

@@ -4,11 +4,12 @@ from sqlalchemy import asc, desc, and_, not_, or_
 import arrow
 
 def weekday_range(day1, day2):
-    valid = list(range(0, 7))
-    diff = day2.day - day1.day
-    if diff > 7: 
+    days_in_a_week = 7
+    valid = list(range(0, days_in_a_week))
+    diff = (day2 - day1).days + 1
+    if diff > days_in_a_week:
         return valid
-    weekdays = { valid[day % 7] for day in range(day1.weekday(), day1.weekday() + diff + 1)}
+    weekdays = { valid[day % days_in_a_week] for day in range(day1.weekday(), day1.weekday() + diff)}
     return list(weekdays)
 
 def fetch_reminders(team, start_date, end_date):
