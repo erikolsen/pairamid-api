@@ -4,6 +4,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime, date
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 from uuid import uuid4
+import arrow
 #### Tables 
 
 participants = db.Table('participants',
@@ -64,11 +65,27 @@ class Team(db.Model):
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     users = db.relationship("User", backref='user', lazy='dynamic')
+    reminders = db.relationship("Reminder", backref='reminder', lazy='dynamic')
     pairing_sessions = db.relationship("PairingSession", backref='pairing_session', lazy='dynamic')
     roles = db.relationship("Role", backref='role', lazy='dynamic')
 
     def __repr__(self):
         return f'<Team {self.name} {self.uuid} >'
+
+class Reminder(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user = db.relationship("User", uselist=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    team = db.relationship("Team", uselist=False)
+    team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
+    recuring_weekday = db.Column(db.Integer)
+    message = db.Column(db.Text())
+    start_date = db.Column(db.DateTime)
+    end_date = db.Column(db.DateTime)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f'<Reminder {self.start_date} {self.end_date} {self.team.name}>'
 
 #### Schemas
 class RoleSchema(SQLAlchemyAutoSchema):
@@ -81,11 +98,31 @@ class UserSchema(SQLAlchemyAutoSchema):
 
     role = fields.Nested(RoleSchema)
 
+class ReminderSchema(SQLAlchemyAutoSchema):
+    started_at = fields.fields.DateTime()
+    ended_at = fields.fields.DateTime()
+    # start_date = fields.fields.Method('to_local_start')
+    # end_date = fields.fields.Method('to_local_end')
+    user = fields.Nested(UserSchema)
+
+    class Meta: 
+        model = Reminder
+        datetimeformat = '%m/%d/%Y'
+
+    # def to_local_start(self, obj):
+    #     return arrow.get(obj.start_date).to('US/Central').format('MM/DD/YYYY')
+
+    # def to_local_end(self, obj):
+    #     return arrow.get(obj.end_date).to('US/Central').format('MM/DD/YYYY')
+
+
 class TeamSchema(SQLAlchemyAutoSchema):
     class Meta: 
         model = Team
 
     roles = fields.Nested(RoleSchema, many=True)
+    users = fields.Nested(UserSchema, many=True)
+    reminders = fields.Nested(ReminderSchema, many=True)
     members = fields.fields.Method('member_count')
 
     def member_count(self, obj):

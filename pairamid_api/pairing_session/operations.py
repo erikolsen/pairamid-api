@@ -1,10 +1,16 @@
 import json
 from pairamid_api.extensions import db
 from pairamid_api.lib.date_helpers import start_of_day, end_of_day, is_weekday
+from pairamid_api.reminder.operations import fetch_reminders
 from pairamid_api.models import User, PairingSession, PairingSessionSchema, Team
 from sqlalchemy import asc
 from datetime import datetime, timedelta
 import time
+
+def todays_ooo(team):
+    out_of_office = lambda reminder:  reminder.user and 'Out of Office' in reminder.message
+    today = datetime.today()
+    return [reminder.user for reminder in filter(out_of_office, fetch_reminders(team, today, today))]
 
 def add_user_to_available(user):
     available = _todays_pairs(user.team.uuid).filter(PairingSession.info == 'UNPAIRED').first()
@@ -62,24 +68,20 @@ def run_batch_update(pairs):
         db.session.add(pairing_session)
         display_pairs.append({'index': data['index'], 'pair': schema.dump(pairing_session)})
 
-    # if _duplicate_users():
-    #     raise Exception('An error occured. Refresh page and try again.')
     db.session.commit()
     return display_pairs
 
-# def _duplicate_users():
-#     pair_list = [u.username for pair in _todays_pairs().all() for u in pair.users if pair.users]
-#     return len(pair_list) != len(set(pair_list))
 
 def _daily_refresh_pairs(team_uuid):
     team = Team.query.filter_by(uuid=team_uuid).first()
-    all_users = team.users.order_by(asc(User.username)).all()
-    unpaired = PairingSession(users=all_users, info='UNPAIRED', team=team)
+    all_users = set(team.users.order_by(asc(User.username)).all())
+    ooo_users = set(todays_ooo(team))
+    unpaired = PairingSession(users=list(all_users - ooo_users), info='UNPAIRED', team=team)
+    ooo = PairingSession(users=list(ooo_users), info='OUT_OF_OFFICE', team=team)
     new = PairingSession(team=team)
-    pairs = [unpaired, new]
-    # if _duplicate_users():
-    #     raise Exception('An error occured. Refresh page and try again.')
+    pairs = [unpaired, new, ooo]
     db.session.add(unpaired)
+    db.session.add(ooo)
     db.session.add(new)
     db.session.commit()
     return pairs
