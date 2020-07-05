@@ -7,6 +7,23 @@ from sqlalchemy import asc
 from datetime import datetime, timedelta
 import time
 
+def streak(session):
+    if not bool(session.users):
+        return 0
+    ps = (session.users[0]
+                 .pairing_sessions
+                 .filter(PairingSession.info != 'UNPAIRED')
+                 .filter(PairingSession.info != 'OUT_OF_OFFICE')
+                 .filter(PairingSession.created_at < end_of_day(session.created_at))
+                 .limit(10))
+    count = 0
+    for pair in ps:
+        if pair == ps[0]:
+            count += 1 
+        else:
+            break
+    return count
+
 def todays_ooo(team):
     out_of_office = lambda reminder:  reminder.user and 'Out of Office' in reminder.message
     today = datetime.today()
@@ -16,7 +33,6 @@ def add_user_to_available(user):
     available = _todays_pairs(user.team.uuid).filter(PairingSession.info == 'UNPAIRED').first()
     if available:
         available.users.append(user)
-
 
 def run_fetch_all(team_uuid):
     team = Team.query.filter(Team.uuid==team_uuid).first()
@@ -65,6 +81,7 @@ def run_batch_update(pairs):
         pairing_session = PairingSession.query.get(pair['id'])
         pairing_session.info = pair['info']
         pairing_session.users = list(users)
+        pairing_session.streak = streak(pairing_session)
         db.session.add(pairing_session)
         display_pairs.append({'index': data['index'], 'pair': schema.dump(pairing_session)})
 
@@ -96,6 +113,7 @@ def _todays_pairs(team_uuid, current=None):
 def _build_day(team_uuid, day):
     schema = PairingSessionSchema(many=True)
     pairs = sorted(_todays_pairs(team_uuid, day).filter(PairingSession.info != 'UNPAIRED')
+                                                .filter(PairingSession.info != 'OUT_OF_OFFICE') 
                                                 .filter(PairingSession.users.any()).all(), 
                                                 key=lambda p: p.users and p.users[0].username)
     return {

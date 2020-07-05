@@ -32,7 +32,7 @@ def register_commands(app):
     app.cli.add_command(commands.add_users)
     app.cli.add_command(commands.add_pairs)
     app.cli.add_command(commands.display_teams)
-    app.cli.add_command(commands.clear_pairs)
+    app.cli.add_command(commands.set_streak)
     return None
 
 def register_errorhandlers(app):
