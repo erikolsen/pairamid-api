@@ -11,11 +11,11 @@ def streak(session):
     if not bool(session.users):
         return 0
     ps = (session.users[0]
-                    .pairing_sessions
-                    .filter(PairingSession.info != 'UNPAIRED')
-                    .filter(PairingSession.info != 'OUT_OF_OFFICE')
-                    .filter(PairingSession.created_at < end_of_day(session.created_at))
-                    .limit(10))
+                 .pairing_sessions
+                 .filter(PairingSession.info != 'UNPAIRED')
+                 .filter(PairingSession.info != 'OUT_OF_OFFICE')
+                 .filter(PairingSession.created_at < end_of_day(session.created_at))
+                 .limit(10))
     count = 0
     for pair in ps:
         if pair == ps[0]:

@@ -7,10 +7,11 @@ from uuid import uuid4
 import arrow
 #### Tables 
 
-participants = db.Table('participants',
-    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True),
-    db.Column('pairing_session_id', db.Integer, db.ForeignKey('pairing_session.id'), primary_key=True)
-)
+class Participants(db.Model):
+    user_id = db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True)
+    pairing_session_id = db.Column('pairing_session_id', db.Integer, db.ForeignKey('pairing_session.id'), primary_key=True)
+    user = db.relationship('User')
+    pairing_session = db.relationship('PairingSession')
 
 class PairingSession(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -19,7 +20,7 @@ class PairingSession(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
-    users = db.relationship('User', secondary=participants, passive_deletes=True, 
+    users = db.relationship('User', secondary='participants', passive_deletes=True, 
         order_by="User.username")
     streak = db.Column(db.Integer, default=0)
 
@@ -40,7 +41,7 @@ class User(db.Model):
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    pairing_sessions = db.relationship('PairingSession', secondary=participants,
+    pairing_sessions = db.relationship('PairingSession', secondary='participants',
         order_by="desc(PairingSession.created_at)", lazy='dynamic')
 
     def __lt__(self, obj):

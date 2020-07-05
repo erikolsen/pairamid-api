@@ -86,17 +86,17 @@ def add_users():
 
     print(f'Database has been seeded with Users on team {team.name}: {User.query.count()}')
 
-@click.command()
-@with_appcontext
-def clear_pairs():
-    '''Removes all pairs from the db'''
-    initial_count = PairingSession.query.count()
-    for pair in PairingSession.query.all():
-        pair.users = []
-        PairingSession.query.filter(PairingSession.uuid == pair.uuid).delete()
+# @click.command()
+# @with_appcontext
+# def clear_pairs():
+#     '''Removes all pairs from the db'''
+#     initial_count = PairingSession.query.count()
+#     for pair in PairingSession.query.all():
+#         pair.users = []
+#         PairingSession.query.filter(PairingSession.uuid == pair.uuid).delete()
 
-    db.session.commit()
-    print(f'Current Pair Count: {PairingSession.query.count()}. {initial_count} deleted.')
+#     db.session.commit()
+#     print(f'Current Pair Count: {PairingSession.query.count()}. {initial_count} deleted.')
 
 # @click.command()
 # @click.argument('team_id')
