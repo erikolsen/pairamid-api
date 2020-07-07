@@ -2,15 +2,18 @@ from pairamid_api.models import Team, TeamSchema, Role, User
 from pairamid_api.extensions import db
 from sqlalchemy import asc, desc
 
+
 def run_fetch_all():
     teams = Team.query.order_by(asc(Team.name)).all()
     schema = TeamSchema(many=True)
     return schema.dump(teams)
 
+
 def run_fetch(uuid):
     team = Team.query.filter(Team.uuid == uuid).first()
     schema = TeamSchema()
-    return schema.dump(team) 
+    return schema.dump(team)
+
 
 # def run_update(id, data):
 #     user = User.query.get(id)
@@ -22,9 +25,10 @@ def run_fetch(uuid):
 #     schema = UserSchema()
 #     return schema.dump(user)
 
+
 def run_create(data):
-    team = Team(name=data['name'])
-    role = Role(name='Default')
+    team = Team(name=data["name"])
+    role = Role(name="Default")
     user = User(team=team, role=role)
     team.roles = [role]
     team.users = [user]
@@ -34,6 +38,7 @@ def run_create(data):
     db.session.commit()
     schema = TeamSchema()
     return schema.dump(team)
+
 
 # def run_delete(id):
 #     User.query.filter(User.id == id).delete()
