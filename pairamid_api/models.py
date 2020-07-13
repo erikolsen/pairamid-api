@@ -87,13 +87,15 @@ class Team(db.Model):
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    users = db.relationship("User", backref="user", lazy="dynamic", order_by="asc(User.username)")
+    users = db.relationship(
+        "User", backref="user", lazy="dynamic", order_by="asc(User.username)"
+    )
     reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
     pairing_sessions = db.relationship(
         "PairingSession", backref="pairing_session", lazy="dynamic"
     )
     roles = db.relationship("Role", backref="role", lazy="dynamic")
-                                  
+
     def __repr__(self):
         return f"<Team {self.name} {self.uuid} >"
 
