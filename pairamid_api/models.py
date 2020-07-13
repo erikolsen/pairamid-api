@@ -24,6 +24,8 @@ class Participants(db.Model):
 
 
 class PairingSession(db.Model):
+    FILTERED = ["UNPAIRED", "OUT_OF_OFFICE"]
+
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     info = db.Column(db.Text, default="")
@@ -74,6 +76,7 @@ class Role(db.Model):
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey("team.id"))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    users = db.relationship("User", lazy="dynamic", order_by="asc(User.username)")
 
     def __repr__(self):
         return f"<Role {self.name} >"
@@ -84,13 +87,13 @@ class Team(db.Model):
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    users = db.relationship("User", backref="user", lazy="dynamic")
+    users = db.relationship("User", backref="user", lazy="dynamic", order_by="asc(User.username)")
     reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
     pairing_sessions = db.relationship(
         "PairingSession", backref="pairing_session", lazy="dynamic"
     )
     roles = db.relationship("Role", backref="role", lazy="dynamic")
-
+                                  
     def __repr__(self):
         return f"<Team {self.name} {self.uuid} >"
 
