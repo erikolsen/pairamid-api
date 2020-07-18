@@ -1,7 +1,24 @@
 from pairamid_api.extensions import db
 from pairamid_api.models import User, PairingSession, Role, Team, Participants
 from sqlalchemy import asc, desc
+from sqlalchemy.orm import load_only
 
+def session_ids_for(user):
+    return [
+        ps.id
+        for ps in user.pairing_sessions.filter(
+            ~PairingSession.info.in_(PairingSession.FILTERED)
+        )
+    ]
+
+def number_of_times_paired(user1, user2):
+    return [
+        p.user.username
+        for p in Participants.query.filter(
+            Participants.pairing_session_id.in_(session_ids_for(user1))
+        )
+        if p is not user1
+    ].count(user2.username)
 
 def run_build_frequency(team_uuid, primary, secondary):
     team = Team.query.filter(Team.uuid == team_uuid).first()
@@ -11,25 +28,12 @@ def run_build_frequency(team_uuid, primary, secondary):
     secondary_users = secondary.users.all() if secondary else team.users.all()
 
     history = []
-    for user in primary_users:
-        sessions = [
-            ps.id
-            for ps in user.pairing_sessions.filter(
-                ~PairingSession.info.in_(PairingSession.FILTERED)
-            )
-        ]
-        paired_users = [
-            p.user.username
-            for p in Participants.query.filter(
-                Participants.pairing_session_id.in_(sessions)
-            )
-            if p is not user
-        ]
+    for user1 in primary_users:
         history.append(
-            [user.username]
+            [user1.username]
             + [
-                "-" if user.username is u.username else paired_users.count(u.username)
-                for u in secondary_users
+                "-" if user1.username is user2.username else number_of_times_paired(user1, user2)
+                for user2 in secondary_users
             ]
         )
     return {
