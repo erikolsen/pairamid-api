@@ -34,6 +34,6 @@ def run_create(team_uuid, data):
 
 
 def run_delete(id):
-    User.query.filter(User.id == id).delete()
-    db.session.commit()
+    user = User.query.get(id)
+    user.soft_delete()
     return id

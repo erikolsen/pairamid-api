@@ -1,15 +1,59 @@
+from datetime import datetime, date
+from uuid import uuid4
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import and_
+from flask_sqlalchemy import BaseQuery
+from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
+import arrow
 from pairamid_api.extensions import db
 from pairamid_api.lib.date_helpers import end_of_day
-from sqlalchemy.dialects.postgresql import UUID
-from datetime import datetime, date
-from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
-from uuid import uuid4
-import arrow
+from sqlalchemy.ext.hybrid import hybrid_property, hybrid_method
+
 
 #### Tables
+class QueryWithSoftDelete(BaseQuery):
+    _with_deleted = False
+
+    def __new__(cls, *args, **kwargs):
+        obj = super(QueryWithSoftDelete, cls).__new__(cls)
+        obj._with_deleted = kwargs.pop('_with_deleted', False)
+        if len(args) > 0:
+            super(QueryWithSoftDelete, obj).__init__(*args, **kwargs)
+            return obj.filter_by(deleted=False) if not obj._with_deleted else obj
+        return obj
+
+    def __init__(self, *args, **kwargs):
+        pass
+
+    def with_deleted(self):
+        return self.__class__(db.class_mapper(self._mapper_zero().class_),
+                              session=db.session(), _with_deleted=True)
+
+    def _get(self, *args, **kwargs):
+        # this calls the original query.get function from the base class
+        return super(QueryWithSoftDelete, self).get(*args, **kwargs)
+
+    def get(self, *args, **kwargs):
+        # the query.get method does not like it if there is a filter clause
+        # pre-loaded, so we need to implement it using a workaround
+        obj = self.with_deleted()._get(*args, **kwargs)
+        return obj if obj is None or self._with_deleted or not obj.deleted else None
 
 
-class Participants(db.Model):
+class SoftDeleteMixin:
+    deleted = db.Column(db.Boolean(), default=False)
+    query_class = QueryWithSoftDelete
+
+    def soft_delete(self):
+        self.deleted = True
+        db.session.commit()
+
+    def revive(self):
+        self.deleted = False
+        db.session.commit()
+
+
+class Participants(SoftDeleteMixin, db.Model):
     user_id = db.Column(
         "user_id", db.Integer, db.ForeignKey("user.id"), primary_key=True
     )
@@ -23,7 +67,7 @@ class Participants(db.Model):
     pairing_session = db.relationship("PairingSession")
 
 
-class PairingSession(db.Model):
+class PairingSession(SoftDeleteMixin, db.Model):
     FILTERED = ["UNPAIRED", "OUT_OF_OFFICE"]
 
     id = db.Column(db.Integer, primary_key=True)
@@ -44,7 +88,7 @@ class PairingSession(db.Model):
         return sorted(self.users) == sorted(obj.users)
 
 
-class User(db.Model):
+class User(SoftDeleteMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     username = db.Column(db.String(64))
@@ -55,6 +99,7 @@ class User(db.Model):
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey("team.id"))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    reminders = db.relationship("Reminder", lazy="dynamic")
     pairing_sessions = db.relationship(
         "PairingSession",
         secondary="participants",
@@ -67,6 +112,33 @@ class User(db.Model):
 
     def __repr__(self):
         return f"<User {self.username} {self.role.name} >"
+
+    def soft_delete(self):
+        for pair in self.pairing_sessions:
+            # todays pairs?
+            if pair.info in PairingSession.FILTERED:
+                # OUT_OF_OFFICE
+                # UNPAIRED
+                pair.users.remove(self)
+            else:
+                Participants.query.filter(
+                    Participants.pairing_session==pair
+                ).update({Participants.deleted: True})
+                pair.soft_delete()
+
+        self.reminders.update({Reminder.deleted: True})
+        super().soft_delete()
+
+    def revive(self):
+        for pair in self.pairing_sessions:
+            # add to available
+            Participants.query.with_deleted().filter(
+                Participants.pairing_session==pair
+            ).update({Participants.deleted: False})
+            pair.revive()
+        self.reminders.update({Reminder.deleted: False})
+        super().revive()
+        
 
 
 class Role(db.Model):
@@ -87,20 +159,44 @@ class Team(db.Model):
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    users = db.relationship(
+    _users = db.relationship(
         "User", backref="user", lazy="dynamic", order_by="asc(User.username)"
     )
-    reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
-    pairing_sessions = db.relationship(
+    _reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
+    _pairing_sessions = db.relationship(
         "PairingSession", backref="pairing_session", lazy="dynamic"
     )
     roles = db.relationship("Role", backref="role", lazy="dynamic")
+
+    @hybrid_property
+    def users(self):
+        return self._users.filter(User.deleted==False)
+
+    @users.setter
+    def users(self, users):
+        self._users = users
+
+    @hybrid_property
+    def pairing_sessions(self):
+        return self._pairing_sessions.filter(PairingSession.deleted==False)
+
+    @pairing_sessions.setter
+    def pairing_sessions(self, pairing_sessions):
+        self._pairing_sessions = pairing_sessions
+
+    @hybrid_property
+    def reminders(self):
+        return self._reminders.filter(Reminder.deleted==False)
+
+    @reminders.setter
+    def reminders(self, reminders):
+        self._reminders = reminders
 
     def __repr__(self):
         return f"<Team {self.name} {self.uuid} >"
 
 
-class Reminder(db.Model):
+class Reminder(SoftDeleteMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user = db.relationship("User", uselist=False)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
@@ -132,19 +228,11 @@ class UserSchema(SQLAlchemyAutoSchema):
 class ReminderSchema(SQLAlchemyAutoSchema):
     started_at = fields.fields.DateTime()
     ended_at = fields.fields.DateTime()
-    # start_date = fields.fields.Method('to_local_start')
-    # end_date = fields.fields.Method('to_local_end')
     user = fields.Nested(UserSchema)
 
     class Meta:
         model = Reminder
         datetimeformat = "%m/%d/%Y"
-
-    # def to_local_start(self, obj):
-    #     return arrow.get(obj.start_date).to('US/Central').format('MM/DD/YYYY')
-
-    # def to_local_end(self, obj):
-    #     return arrow.get(obj.end_date).to('US/Central').format('MM/DD/YYYY')
 
 
 class TeamSchema(SQLAlchemyAutoSchema):

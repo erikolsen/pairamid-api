@@ -1,7 +1,8 @@
 from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, Role, Team, Participants
+from pairamid_api.models import User, PairingSession, Role, Team, Participants, Reminder
 import random
 import functools
+import arrow
 
 def generate_username():
     letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -39,6 +40,17 @@ class TeamFactory:
         db.session.add_all(users)
         db.session.commit()
         return sorted(tuple(users))
+
+    def mark_ooo(self, user):
+        reminder = Reminder(
+            team=self.team,
+            start_date=arrow.utcnow().format(),
+            end_date=arrow.utcnow().format(),
+            message="OUT_OF_OFFICE",
+            user=user
+        )
+        db.session.add(reminder)
+        db.session.commit()
 
     def add_pair(self, users, info=None):
         pair = PairingSession(team=self.team, users=users, info=info)
