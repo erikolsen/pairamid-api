@@ -1,11 +1,11 @@
 import json
+import time
+from datetime import datetime, timedelta
+from sqlalchemy import asc
 from pairamid_api.extensions import db
 from pairamid_api.lib.date_helpers import start_of_day, end_of_day, is_weekday
 from pairamid_api.reminder.operations import fetch_reminders
 from pairamid_api.models import User, PairingSession, PairingSessionSchema, Team
-from sqlalchemy import asc
-from datetime import datetime, timedelta
-import time
 
 
 def streak(session):
@@ -121,7 +121,7 @@ def _daily_refresh_pairs(team_uuid):
     )
     ooo = PairingSession(users=list(ooo_users), info="OUT_OF_OFFICE", team=team)
     new = PairingSession(team=team)
-    pairs = [unpaired, new, ooo]
+    pairs = [unpaired, ooo, new]
     db.session.add(unpaired)
     db.session.add(ooo)
     db.session.add(new)

@@ -6,7 +6,7 @@ from flask_sqlalchemy import BaseQuery
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 import arrow
 from pairamid_api.extensions import db
-from pairamid_api.lib.date_helpers import end_of_day
+from pairamid_api.lib.date_helpers import end_of_day, start_of_day
 from sqlalchemy.ext.hybrid import hybrid_property, hybrid_method
 
 
@@ -68,7 +68,7 @@ class Participants(SoftDeleteMixin, db.Model):
 
 
 class PairingSession(SoftDeleteMixin, db.Model):
-    FILTERED = ["UNPAIRED", "OUT_OF_OFFICE"]
+    FILTERED = {"UNPAIRED", "OUT_OF_OFFICE"}
 
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
@@ -115,10 +115,7 @@ class User(SoftDeleteMixin, db.Model):
 
     def soft_delete(self):
         for pair in self.pairing_sessions:
-            # todays pairs?
-            if pair.info in PairingSession.FILTERED:
-                # OUT_OF_OFFICE
-                # UNPAIRED
+            if arrow.get(pair.created_at).to("US/Central") >= arrow.now("US/Central").floor("days"):
                 pair.users.remove(self)
             else:
                 Participants.query.filter(

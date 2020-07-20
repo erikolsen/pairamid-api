@@ -1,8 +1,9 @@
-from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, Role, Team, Participants, Reminder
 import random
 import functools
 import arrow
+from pairamid_api.extensions import db
+from pairamid_api.models import User, PairingSession, Role, Team, Participants, Reminder
+from pairamid_api.pairing_session.operations import _daily_refresh_pairs, _todays_pairs
 
 def generate_username():
     letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -13,6 +14,10 @@ class TeamFactory:
         self.name = name
         self.role_count = role_count
         self.user_count = user_count
+
+    def start_day_pairs(self):
+        """Adds the UNPAIRED and OUT_OF_OFFICE pairs"""
+        return _daily_refresh_pairs(self.team.uuid)
 
     @property
     @functools.lru_cache
@@ -52,10 +57,12 @@ class TeamFactory:
         db.session.add(reminder)
         db.session.commit()
 
-    def add_pair(self, users, info=None):
+    def add_pair(self, users, info=None, date_offset=0):
         pair = PairingSession(team=self.team, users=users, info=info)
+        pair.created_at = arrow.now("US/Central").shift(days=date_offset).format()
         db.session.add(pair)
         db.session.commit()
+        return pair
 
     def update_roles(self, role_name, *users):
         for user in users:

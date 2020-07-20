@@ -17,13 +17,40 @@ class SoftDeleteCase(unittest.TestCase):
         db.drop_all()
         self.app_context.pop()
 
-    def test_user_soft_delete(self):
+    def test_user_soft_delete_today_removes_user_from_pairs(self):
+        # arrange
+        factory = TeamFactory(user_count=3)
+        _team = factory.team
+        u1, u2, _u3 = factory.users
+        pair = factory.add_pair([u1, u2])
+        # act
+        u1.soft_delete()
+        # assert
+        self.assertNotIn(u1, pair.users)
+        self.assertIn(u2, pair.users)
+
+    def test_user_soft_delete_today_removes_users_from_default_pairs(self):
+        # arrange
+        factory = TeamFactory(user_count=3)
+        _team = factory.team
+        u1, u2, _u3 = factory.users
+        factory.mark_ooo(u2)
+        unpaired, ooo, _empty = factory.start_day_pairs()
+        # act
+        u1.soft_delete()
+        u2.soft_delete()
+        # assert
+        self.assertNotIn(u1, unpaired.users)
+        self.assertEqual(len(unpaired.users), 1)
+        self.assertNotIn(u2, ooo.users)
+
+    def test_user_soft_delete_filters_by_default(self):
         # arrange
         factory = TeamFactory(user_count=3)
         team = factory.team
         u1, u2, u3 = factory.users
-        factory.add_pair([u1, u2])
-        factory.add_pair([u2, u3])
+        factory.add_pair([u1, u2], date_offset=-7)
+        factory.add_pair([u2, u3], date_offset=-7)
         factory.mark_ooo(u1)
         factory.mark_ooo(u2)
         # act
@@ -37,28 +64,32 @@ class SoftDeleteCase(unittest.TestCase):
         self.assertEqual(Reminder.query.count(), 1)
         self.assertEqual(team.reminders.count(), 1)
 
-    def test_user_soft_delete_with_deleted(self):
+    def test_user_soft_delete_with_deleted_shows_all_user_records(self):
         # arrange
         factory = TeamFactory(user_count=3)
+        team = factory.team
         u1, u2, u3 = factory.users
-        factory.add_pair([u1, u2])
-        factory.add_pair([u2, u3])
+        factory.add_pair([u1, u2], date_offset=-7)
+        factory.add_pair([u2, u3], date_offset=-7)
         factory.mark_ooo(u1)
         factory.mark_ooo(u2)
         # act
         u1.soft_delete()
         # assert
         self.assertEqual(User.query.with_deleted().count(), 3)
+        self.assertEqual(team._users.count(), 3)
         self.assertEqual(PairingSession.query.with_deleted().count(), 2)
+        self.assertEqual(team._pairing_sessions.count(), 2)
         self.assertEqual(Participants.query.with_deleted().count(), 4)
         self.assertEqual(Reminder.query.with_deleted().count(), 2)
+        self.assertEqual(team._reminders.count(), 2)
 
     def test_user_revive(self):
         # arrange
         factory = TeamFactory(user_count=3)
         u1, u2, u3 = factory.users
-        factory.add_pair([u1, u2])
-        factory.add_pair([u2, u3])
+        factory.add_pair([u1, u2], date_offset=-7)
+        factory.add_pair([u2, u3], date_offset=-7)
         factory.mark_ooo(u1)
         factory.mark_ooo(u2)
         # act
@@ -69,8 +100,3 @@ class SoftDeleteCase(unittest.TestCase):
         self.assertEqual(PairingSession.query.count(), 2)
         self.assertEqual(Participants.query.count(), 4)
         self.assertEqual(Reminder.query.count(), 2)
-
-
-
-
-

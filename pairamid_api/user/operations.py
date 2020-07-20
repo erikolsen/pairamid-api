@@ -6,7 +6,7 @@ from sqlalchemy import asc, desc
 
 def run_fetch_all(team_uuid):
     team = Team.query.filter(Team.uuid == team_uuid).first()
-    users = team.users.order_by(asc(User.username)).all()
+    users = team._users.order_by(asc(User.username)).all() # includes soft deleted
     schema = UserSchema(many=True)
     return schema.dump(users)
 
@@ -36,4 +36,5 @@ def run_create(team_uuid, data):
 def run_delete(id):
     user = User.query.get(id)
     user.soft_delete()
-    return id
+    schema = UserSchema()
+    return schema.dump(user)
