@@ -38,3 +38,9 @@ def run_delete(id):
     user.soft_delete()
     schema = UserSchema()
     return schema.dump(user)
+
+def run_revive(id):
+    user = User.query.with_deleted().get(id)
+    user.revive()
+    schema = UserSchema()
+    return schema.dump(user)

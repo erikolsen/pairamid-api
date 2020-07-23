@@ -128,11 +128,19 @@ class User(SoftDeleteMixin, db.Model):
 
     def revive(self):
         for pair in self.pairing_sessions:
-            # add to available
             Participants.query.with_deleted().filter(
                 Participants.pairing_session==pair
             ).update({Participants.deleted: False})
             pair.revive()
+        today_unpaired = (
+            self.team.pairing_sessions
+            .filter(PairingSession.created_at >= start_of_day(datetime.now()))
+            .filter(PairingSession.created_at < end_of_day(datetime.now()))
+            .filter(PairingSession.info == 'UNPAIRED')
+            .first()
+        )
+                                           
+        today_unpaired.users.append(self)
         self.reminders.update({Reminder.deleted: False})
         super().revive()
         

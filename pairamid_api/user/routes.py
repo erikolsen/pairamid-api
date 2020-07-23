@@ -22,3 +22,7 @@ def update(team_uuid, id):
 @blueprint.route("/team/<team_uuid>/user/<id>", methods=["DELETE"])
 def delete(team_uuid, id):
     return jsonify(operations.run_delete(id))
+
+@blueprint.route("/team/<team_uuid>/user/<id>/revive", methods=["PUT"])
+def revive(team_uuid, id):
+    return jsonify(operations.run_revive(id))
