@@ -77,17 +77,18 @@ class SoftDeleteCase(unittest.TestCase):
         u1.soft_delete()
         # assert
         self.assertEqual(User.query.with_deleted().count(), 3)
-        self.assertEqual(team._users.count(), 3)
+        self.assertEqual(team.all_users.count(), 3)
         self.assertEqual(PairingSession.query.with_deleted().count(), 2)
-        self.assertEqual(team._pairing_sessions.count(), 2)
+        self.assertEqual(team.all_pairing_sessions.count(), 2)
         self.assertEqual(Participants.query.with_deleted().count(), 4)
         self.assertEqual(Reminder.query.with_deleted().count(), 2)
-        self.assertEqual(team._reminders.count(), 2)
+        self.assertEqual(team.all_reminders.count(), 2)
 
     def test_user_revive(self):
         # arrange
         factory = TeamFactory(user_count=3)
         u1, u2, u3 = factory.users
+        unpaired, _ooo, _new = factory.start_day_pairs()
         factory.add_pair([u1, u2], date_offset=-7)
         factory.add_pair([u2, u3], date_offset=-7)
         factory.mark_ooo(u1)
@@ -97,6 +98,7 @@ class SoftDeleteCase(unittest.TestCase):
         u1.revive()
         # assert
         self.assertEqual(User.query.count(), 3)
-        self.assertEqual(PairingSession.query.count(), 2)
-        self.assertEqual(Participants.query.count(), 4)
+        self.assertIn(u1, unpaired.users)
+        self.assertEqual(PairingSession.query.count(), 5)
+        self.assertEqual(Participants.query.count(), 7)
         self.assertEqual(Reminder.query.count(), 2)

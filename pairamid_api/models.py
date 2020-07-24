@@ -30,12 +30,9 @@ class QueryWithSoftDelete(BaseQuery):
                               session=db.session(), _with_deleted=True)
 
     def _get(self, *args, **kwargs):
-        # this calls the original query.get function from the base class
         return super(QueryWithSoftDelete, self).get(*args, **kwargs)
 
     def get(self, *args, **kwargs):
-        # the query.get method does not like it if there is a filter clause
-        # pre-loaded, so we need to implement it using a workaround
         obj = self.with_deleted()._get(*args, **kwargs)
         return obj if obj is None or self._with_deleted or not obj.deleted else None
 
@@ -132,7 +129,8 @@ class User(SoftDeleteMixin, db.Model):
                 Participants.pairing_session==pair
             ).update({Participants.deleted: False})
             pair.revive()
-        today_unpaired = (
+
+        todays_unpaired = (
             self.team.pairing_sessions
             .filter(PairingSession.created_at >= start_of_day(datetime.now()))
             .filter(PairingSession.created_at < end_of_day(datetime.now()))
@@ -140,7 +138,7 @@ class User(SoftDeleteMixin, db.Model):
             .first()
         )
                                            
-        today_unpaired.users.append(self)
+        todays_unpaired.users.append(self)
         self.reminders.update({Reminder.deleted: False})
         super().revive()
         
@@ -164,38 +162,38 @@ class Team(db.Model):
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    _users = db.relationship(
+    all_users = db.relationship(
         "User", backref="user", lazy="dynamic", order_by="asc(User.username)"
     )
-    _reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
-    _pairing_sessions = db.relationship(
+    all_reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
+    all_pairing_sessions = db.relationship(
         "PairingSession", backref="pairing_session", lazy="dynamic"
     )
     roles = db.relationship("Role", backref="role", lazy="dynamic")
 
     @hybrid_property
     def users(self):
-        return self._users.filter(User.deleted==False)
+        return self.all_users.filter(User.deleted==False)
 
     @users.setter
     def users(self, users):
-        self._users = users
+        self.all_users = users
 
     @hybrid_property
     def pairing_sessions(self):
-        return self._pairing_sessions.filter(PairingSession.deleted==False)
+        return self.all_pairing_sessions.filter(PairingSession.deleted==False)
 
     @pairing_sessions.setter
     def pairing_sessions(self, pairing_sessions):
-        self._pairing_sessions = pairing_sessions
+        self.all_pairing_sessions = pairing_sessions
 
     @hybrid_property
     def reminders(self):
-        return self._reminders.filter(Reminder.deleted==False)
+        return self.all_reminders.filter(Reminder.deleted==False)
 
     @reminders.setter
     def reminders(self, reminders):
-        self._reminders = reminders
+        self.all_reminders = reminders
 
     def __repr__(self):
         return f"<Team {self.name} {self.uuid} >"
