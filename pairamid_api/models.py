@@ -151,7 +151,15 @@ class Role(db.Model):
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey("team.id"))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    users = db.relationship("User", lazy="dynamic", order_by="asc(User.username)")
+    all_users = db.relationship("User", lazy="dynamic", order_by="asc(User.username)")
+
+    @hybrid_property
+    def users(self):
+        return self.all_users.filter(User.deleted==False)
+
+    @users.setter
+    def users(self, users):
+        self.all_users = users
 
     def __repr__(self):
         return f"<Role {self.name} >"
