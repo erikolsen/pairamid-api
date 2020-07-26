@@ -114,7 +114,7 @@ class User(SoftDeleteMixin, db.Model):
         row = []
         for pair in self.pairing_sessions.filter(~PairingSession.info.in_(PairingSession.FILTERED)):
             members = ','.join([user.username for user in pair.users if user is not self])
-            row.append(f'{self.username},{pair.created_at.strftime("%m/%d/%y")},{pair.info},{members}')
+            row.append(f"{self.username},{pair.created_at.strftime('%m/%d/%y')},{pair.info.replace(',', ' ')},{members}")
         return '\n'.join(row)
 
     def soft_delete(self):
