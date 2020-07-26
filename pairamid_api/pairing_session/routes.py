@@ -1,4 +1,4 @@
-from flask import jsonify, request, Blueprint
+from flask import jsonify, request, Blueprint, Response
 from . import operations
 
 blueprint = Blueprint("pairing_session", __name__)
@@ -18,17 +18,10 @@ def daily(team_uuid):
 def weekly(team_uuid):
     return jsonify(operations.run_fetch_week(team_uuid))
 
-
-# @blueprint.route('/pairing_sessions/batch', methods=["PUT"])
-# def batch_update():
-#     operations.run_batch_update(request.data)
-#     return jsonify(status='success')
-
-# @blueprint.route('/pairing_sessions', methods=["POST"])
-# def create():
-#     return jsonify(operations.run_create())
-
-# @blueprint.route("/pairing_sessions/<uuid>", methods=["DELETE"])
-# def delete(uuid):
-#     operations.run_delete(uuid)
-#     return jsonify(status='success')
+@blueprint.route("/team/<team_uuid>/pairing_sessions/report", methods=["GET"])
+def report(team_uuid):
+    return Response(
+        operations.build_csv(team_uuid),
+        mimetype="text/csv",
+        headers={"Content-disposition":
+                "attachment; filename=pairs.csv"})
