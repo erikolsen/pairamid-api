@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import jsonify, request, Blueprint, Response
 from . import operations
 
@@ -20,8 +21,10 @@ def weekly(team_uuid):
 
 @blueprint.route("/team/<team_uuid>/pairing_sessions/report", methods=["GET"])
 def report(team_uuid):
+
+    filename = f'pairing_report_{datetime.today().strftime("%m_%d_%y")}.csv'
     return Response(
         operations.build_csv(team_uuid),
         mimetype="text/csv",
         headers={"Content-disposition":
-                "attachment; filename=pairs.csv"})
+                f"attachment; filename={filename}"})
