@@ -158,9 +158,5 @@ def _build_day(team_uuid, day):
 
 def build_csv(team_uuid):
     team = Team.query.filter(Team.uuid == team_uuid).first()
-    header = 'date,info,streak,Member1,Member2,Member3,Member4,Member5,Member6\n'
-    pairs = '\n'.join([pair.csv_row() for pair in team.pairing_sessions.filter(
-            ~PairingSession.info.in_(PairingSession.FILTERED)
-        )])
-    
-    return header + pairs
+    header = 'User,Date,Info,Pair1,Pair2,Pair3,Pair4\n'
+    return header + '\n'.join([user.csv_row() for user in team.users])

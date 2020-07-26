@@ -78,10 +78,6 @@ class PairingSession(SoftDeleteMixin, db.Model):
     )
     streak = db.Column(db.Integer, default=0)
 
-    def csv_row(self):
-        members = ','.join([user.username for user in self.users])
-        return f'{self.created_at.strftime("%m/%d/%y")},{self.info},{self.streak},{members}'
-
     def __lt__(self, obj):
         return self.created_at.date() < obj.created_at.date()
 
@@ -113,6 +109,13 @@ class User(SoftDeleteMixin, db.Model):
 
     def __repr__(self):
         return f"<User {self.username} {self.role.name} >"
+
+    def csv_row(self):
+        row = []
+        for pair in self.pairing_sessions.filter(~PairingSession.info.in_(PairingSession.FILTERED)):
+            members = ','.join([user.username for user in pair.users if user is not self])
+            row.append(f'{self.username},{pair.created_at.strftime("%m/%d/%y")},{pair.info},{members}')
+        return '\n'.join(row)
 
     def soft_delete(self):
         for pair in self.pairing_sessions:
