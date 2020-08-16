@@ -21,6 +21,8 @@ class PairFrequencyCase(unittest.TestCase):
         factory = TeamFactory(user_count=4)
         team = factory.team
         u1, u2, u3, u4 = factory.users
+        factory.add_pair([u1])
+        factory.add_pair([u4])
         factory.add_pair([u1, u2])
         factory.add_pair([u1, u2])
         factory.add_pair([u1, u2])
@@ -30,10 +32,10 @@ class PairFrequencyCase(unittest.TestCase):
         expected = {
             "header": [" ", u1.username, u2.username, u3.username, u4.username],
             "pairs": [
-                [u1.username, "-", 3, 0, 0],
-                [u2.username, 3, "-", 1, 0],
-                [u3.username, 0, 1, "-", 1],
-                [u4.username, 0, 0, 1, "-"],
+                [u1.username, 1, 3, 0, 0],
+                [u2.username, 3, 0, 1, 0],
+                [u3.username, 0, 1, 0, 1],
+                [u4.username, 0, 0, 1, 1],
             ],
         }
 

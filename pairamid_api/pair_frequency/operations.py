@@ -12,12 +12,14 @@ def session_ids_for(user):
     ]
 
 def number_of_times_paired(user1, user2):
+    if user1 is user2:
+        return len([p for p in user1.pairing_sessions if len(p.users) == 1])
+
     return [
         p.user.username
         for p in Participants.query.filter(
             Participants.pairing_session_id.in_(session_ids_for(user1))
         )
-        if p is not user1
     ].count(user2.username)
 
 def run_build_frequency(team_uuid, primary, secondary):
@@ -32,7 +34,7 @@ def run_build_frequency(team_uuid, primary, secondary):
         history.append(
             [user1.username]
             + [
-                "-" if user1.username is user2.username else number_of_times_paired(user1, user2)
+                number_of_times_paired(user1, user2)
                 for user2 in secondary_users
             ]
         )
