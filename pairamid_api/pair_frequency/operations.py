@@ -13,7 +13,9 @@ def session_ids_for(user):
 
 def number_of_times_paired(user1, user2):
     if user1 is user2:
-        return len([p for p in user1.pairing_sessions if len(p.users) == 1])
+        return len([p for p in user1.pairing_sessions.filter(
+            ~PairingSession.info.in_(PairingSession.FILTERED)
+        ) if len(p.users) == 1])
 
     return [
         p.user.username
