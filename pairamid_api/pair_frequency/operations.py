@@ -4,8 +4,8 @@ from collections import Counter
 
 def frequencies_for_user(user, group):
     sessions = user.pairing_sessions.filter(~PairingSession.info.in_(PairingSession.FILTERED))
-    counts = Counter([u.username for pair in sessions for u in pair.users])
-    counts[user.username] = len([p for p in user.pairing_sessions if len(p.users) == 1])
+    counts = Counter([u.username for pair in sessions for u in pair.users if u is not user])
+    counts[user.username] = len([p for p in sessions if len(p.users) == 1])
     return [user.username, *[counts.get(u.username, 0) for u in group]]
 
 def run_build_frequency(team_uuid, primary, secondary):
