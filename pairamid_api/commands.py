@@ -51,17 +51,17 @@ def display_teams():
         print(
             spacer(team.name),
             spacer(str(team.id)),
-            spacer(str(len(team.users.all()))),
+            spacer(str(len(team.all_users.all()))),
             spacer(str(len(team.roles.all()))),
-            spacer(str(len(team.pairing_sessions.all()))),
+            spacer(str(len(team.all_pairing_sessions.all()))),
             str(team.uuid),
         )
     print(
         spacer(f"Total-{Team.query.count()}"),
         spacer("-"),
-        spacer(str(User.query.count())),
+        spacer(str(User.query.with_deleted().count())),
         spacer(str(Role.query.count())),
-        spacer(str(PairingSession.query.count())),
+        spacer(str(PairingSession.query.with_deleted().count())),
         "-",
     )
 
@@ -131,43 +131,30 @@ def add_users():
         f"Database has been seeded with Users on team {team.name}: {User.query.count()}"
     )
 
-
 # @click.command()
+# @click.argument('team_id')
 # @with_appcontext
-# def clear_pairs():
-#     '''Removes all pairs from the db'''
-#     initial_count = PairingSession.query.count()
-#     for pair in PairingSession.query.all():
-#         pair.users = []
-#         PairingSession.query.filter(PairingSession.uuid == pair.uuid).delete()
+# def delete_all(team_id):
+#     '''Deletes all the things'''
+#     team = Team.query.get(team_id)
+#     if str(team.uuid) in SAFE_TEAMS:
+#         print('Cannot delete', team.name)
+#         return
 
+#     print('Deleting', team.name)
+#     for ps in team.pairing_sessions:
+#         ps.users = []
+#         db.session.delete(ps)
+
+#     for user in team.users:
+#         user.role = None
+#         db.session.delete(user)
+
+#     for role in team.roles:
+#         db.session.delete(role)
+
+#     print('Pairs Deleted', team.pairing_sessions.count() == 0)
+#     print('Users Deleted', team.users.count() == 0)
+#     print('Roles Deleted', team.roles.count() == 0)
+#     db.session.delete(team)
 #     db.session.commit()
-#     print(f'Current Pair Count: {PairingSession.query.count()}. {initial_count} deleted.')
-
-@click.command()
-@click.argument('team_id')
-@with_appcontext
-def delete_all(team_id):
-    '''Deletes all the things'''
-    team = Team.query.get(team_id)
-    if str(team.uuid) in SAFE_TEAMS:
-        print('Cannot delete', team.name)
-        return
-
-    print('Deleting', team.name)
-    for ps in team.pairing_sessions:
-        ps.users = []
-        db.session.delete(ps)
-
-    for user in team.users:
-        user.role = None
-        db.session.delete(user)
-
-    for role in team.roles:
-        db.session.delete(role)
-
-    print('Pairs Deleted', team.pairing_sessions.count() == 0)
-    print('Users Deleted', team.users.count() == 0)
-    print('Roles Deleted', team.roles.count() == 0)
-    db.session.delete(team)
-    db.session.commit()
