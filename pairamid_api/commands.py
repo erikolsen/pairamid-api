@@ -51,10 +51,11 @@ def pair_row(team):
     return f"{active} ({archived})"
 
 def last_pair_date(team):
-    date = team.pairing_sessions.order_by(asc(PairingSession.created_at)).first()
-    if not date:
-        return ''
-    return date.created_at.strftime("%x")
+    first = team.pairing_sessions.order_by(asc(PairingSession.created_at)).first()
+    if first:
+        last  = team.pairing_sessions.order_by(asc(PairingSession.created_at))[-1]
+        return f"{first.created_at.strftime('%x')}-{last.created_at.strftime('%x')}"
+    return ''
 
 @click.command()
 @with_appcontext
