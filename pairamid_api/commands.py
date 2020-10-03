@@ -17,7 +17,21 @@ def spacer(word):
 mighty_ducks = "4ba3a90e-a900-4368-859d-da8cae450d16"
 learning_team = "d0f657f4-6ec8-42b8-95ad-c11fbec774aa"
 parks = "1810de41-4ce9-44fd-954e-e4504378fbb7"
-SAFE_TEAMS = [mighty_ducks, learning_team, parks]
+icrm = "2db8ed65-4561-4574-8129-acd8b06d2ddf"
+pwc = "9e701519-6cc2-4ed9-ae39-7b02299d1394"
+qualla = "5917f863-4918-4892-ac51-f835ecfa18b0"
+freestyle = "19780537-420d-4b8b-8337-93579123c6cc"
+mercury = "c894e213-38d2-4d0a-912b-deed1e269238"
+SAFE_TEAMS = [
+    mighty_ducks, 
+    icrm, 
+    pwc, 
+    qualla, 
+    freestyle, 
+    mercury, 
+    learning_team, 
+    parks
+]
 
 
 @click.command()
@@ -130,30 +144,30 @@ def add_users():
 #     db.session.commit()
 #     print(f'Current Pair Count: {PairingSession.query.count()}. {initial_count} deleted.')
 
-# @click.command()
-# @click.argument('team_id')
-# @with_appcontext
-# def delete_all(team_id):
-#     '''Deletes all the things'''
-#     team = Team.query.get(team_id)
-#     if str(team.uuid) in SAFE_TEAMS:
-#         print('Cannot delete', team.name)
-#         return
+@click.command()
+@click.argument('team_id')
+@with_appcontext
+def delete_all(team_id):
+    '''Deletes all the things'''
+    team = Team.query.get(team_id)
+    if str(team.uuid) in SAFE_TEAMS:
+        print('Cannot delete', team.name)
+        return
 
-#     print('Deleting', team.name)
-#     for ps in team.pairing_sessions:
-#         ps.users = []
-#         db.session.delete(ps)
+    print('Deleting', team.name)
+    for ps in team.pairing_sessions:
+        ps.users = []
+        db.session.delete(ps)
 
-#     for user in team.users:
-#         user.role = None
-#         db.session.delete(user)
+    for user in team.users:
+        user.role = None
+        db.session.delete(user)
 
-#     for role in team.roles:
-#         db.session.delete(role)
+    for role in team.roles:
+        db.session.delete(role)
 
-#     print('Pairs Deleted', team.pairing_sessions.count() == 0)
-#     print('Users Deleted', team.users.count() == 0)
-#     print('Roles Deleted', team.roles.count() == 0)
-#     db.session.delete(team)
-#     db.session.commit()
+    print('Pairs Deleted', team.pairing_sessions.count() == 0)
+    print('Users Deleted', team.users.count() == 0)
+    print('Roles Deleted', team.roles.count() == 0)
+    db.session.delete(team)
+    db.session.commit()
