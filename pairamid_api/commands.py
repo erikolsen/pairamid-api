@@ -1,16 +1,17 @@
+import arrow
+import click
+import datetime
+import json
+from random import shuffle
+from flask.cli import with_appcontext
+from sqlalchemy import asc
 from pairamid_api.extensions import db
 from pairamid_api.models import User, PairingSession, PairingSession, Role, Team
 from pairamid_api.pairing_session.operations import streak
-import click
-from flask.cli import with_appcontext
-import datetime
-import json
-import arrow
-from random import shuffle
 
 
 def spacer(word):
-    space = (22 - len(word)) * " "
+    space = (20 - len(word)) * " "
     return word + space + "|"
 
 
@@ -33,6 +34,27 @@ SAFE_TEAMS = [
     parks
 ]
 
+def user_row(team):
+    full_count = team.all_users.count()
+    active     = team.users.count()
+    archived   = full_count - active 
+    if archived == 0:
+        return str(full_count)
+    return f"{active} ({archived})"
+
+def pair_row(team):
+    full_count = team.all_pairing_sessions.count()
+    active     = team.pairing_sessions.count()
+    archived   = full_count - active 
+    if archived == 0:
+        return str(full_count)
+    return f"{active} ({archived})"
+
+def last_pair_date(team):
+    date = team.pairing_sessions.order_by(asc(PairingSession.created_at)).first()
+    if not date:
+        return ''
+    return date.created_at.strftime("%x")
 
 @click.command()
 @with_appcontext
@@ -42,18 +64,20 @@ def display_teams():
     print(
         spacer("Name"),
         spacer("Id"),
-        spacer("Users"),
+        spacer("Users(archived)"),
         spacer("Roles"),
-        spacer("Pairs"),
+        spacer("Pairs(archived)"),
+        spacer("Last Paired"),
         spacer("UUID"),
     )
     for team in Team.query.all():
         print(
             spacer(team.name),
             spacer(str(team.id)),
-            spacer(str(len(team.all_users.all()))),
+            spacer(user_row(team)),
             spacer(str(len(team.roles.all()))),
-            spacer(str(len(team.all_pairing_sessions.all()))),
+            spacer(pair_row(team)),
+            spacer(last_pair_date(team)),
             str(team.uuid),
         )
     print(
@@ -62,7 +86,8 @@ def display_teams():
         spacer(str(User.query.with_deleted().count())),
         spacer(str(Role.query.count())),
         spacer(str(PairingSession.query.with_deleted().count())),
-        "-",
+        spacer("-"),
+        spacer("-"),
     )
 
 
