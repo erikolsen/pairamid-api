@@ -274,3 +274,4 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
 
 class FullUserSchema(UserSchema):
     pairing_sessions = fields.Nested(PairingSessionSchema, many=True)
+    team = fields.Nested(TeamSchema)
