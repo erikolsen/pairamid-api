@@ -166,6 +166,23 @@ def add_users():
     )
 
 # @click.command()
+# @click.argument('user_uuid')
+# @with_appcontext
+# def delete_user(user_uuid):
+#     '''Hard deletes a user'''
+#     user = User.query.filter(User.uuid == user_uuid).first()
+
+#     print('Deleting', user.username)
+#     for ps in user.pairing_sessions:
+#         ps.users.remove(user)
+#         db.session.add(ps)
+#     db.session.commit()
+#     user.role = None
+#     db.session.delete(user)
+#     db.session.commit()
+
+
+# @click.command()
 # @click.argument('team_id')
 # @with_appcontext
 # def delete_all(team_id):
