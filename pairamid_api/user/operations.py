@@ -38,7 +38,7 @@ def run_create(team_uuid, data):
 
 
 def run_delete(id):
-    user = User.query.get(id)
+    user = User.query.with_deleted().get(id)
     user.soft_delete()
     schema = UserSchema()
     return schema.dump(user)

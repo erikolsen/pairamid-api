@@ -128,7 +128,12 @@ class User(SoftDeleteMixin, db.Model):
                 pair.soft_delete()
 
         self.reminders.update({Reminder.deleted: True})
-        super().soft_delete()
+        if self.pairing_sessions.filter(PairingSession.info != "UNPAIRED").count() == 0:
+            self.role = None
+            db.session.delete(self)
+            db.session.commit()
+        else:
+            super().soft_delete()
 
     def revive(self):
         for pair in self.pairing_sessions:
