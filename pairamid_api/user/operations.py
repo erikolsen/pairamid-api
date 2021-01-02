@@ -1,8 +1,12 @@
-from pairamid_api.models import User, UserSchema, Role, Team
+from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team
 from pairamid_api.extensions import db
 from pairamid_api.pairing_session.operations import add_user_to_available
 from sqlalchemy import asc, desc
 
+def run_fetch(user_uuid):
+    user = User.query.filter(User.uuid == user_uuid).first()
+    schema = FullUserSchema()
+    return schema.dump(user)
 
 def run_fetch_all(team_uuid):
     team = Team.query.filter(Team.uuid == team_uuid).first()

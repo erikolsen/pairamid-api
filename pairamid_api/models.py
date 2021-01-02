@@ -235,13 +235,11 @@ class RoleSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Role
 
-
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = User
 
     role = fields.Nested(RoleSchema)
-
 
 class ReminderSchema(SQLAlchemyAutoSchema):
     started_at = fields.fields.DateTime()
@@ -251,7 +249,6 @@ class ReminderSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Reminder
         datetimeformat = "%m/%d/%Y"
-
 
 class TeamSchema(SQLAlchemyAutoSchema):
     class Meta:
@@ -268,10 +265,13 @@ class TeamSchema(SQLAlchemyAutoSchema):
 
         return 0
 
-
 class PairingSessionSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = PairingSession
         include_relationships = True
 
     users = fields.Nested(UserSchema, many=True)
+
+class FullUserSchema(UserSchema):
+    pairing_sessions = fields.Nested(PairingSessionSchema, many=True)
+    team = fields.Nested(TeamSchema)
