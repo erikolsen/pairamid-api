@@ -1,4 +1,4 @@
-from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team
+from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team, PairingSession
 from pairamid_api.extensions import db
 from pairamid_api.pairing_session.operations import add_user_to_available
 from sqlalchemy import asc, desc
@@ -39,9 +39,16 @@ def run_create(team_uuid, data):
 
 def run_delete(id):
     user = User.query.with_deleted().get(id)
-    user.soft_delete()
     schema = UserSchema()
-    return schema.dump(user)
+    if user.pairing_sessions.filter(PairingSession.info != "UNPAIRED").count() == 0:
+        hard_delete = True
+        user.hard_delete()
+    else:
+        hard_delete = False
+        user.soft_delete()
+    dump = schema.dump(user)
+    dump['hardDelete'] = hard_delete
+    return dump 
 
 def run_revive(id):
     user = User.query.with_deleted().get(id)

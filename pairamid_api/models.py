@@ -117,6 +117,14 @@ class User(SoftDeleteMixin, db.Model):
             row.append(f"{self.username},{pair.created_at.strftime('%m/%d/%y')},{pair.info.replace(',', ' ')},{members}")
         return '\n'.join(row)
 
+    def hard_delete(self):
+        for pair in self.pairing_sessions:
+            pair.users.remove(self)
+        db.session.commit()
+        self.role = None
+        db.session.delete(self)
+        db.session.commit()
+
     def soft_delete(self):
         for pair in self.pairing_sessions:
             if arrow.get(pair.created_at).to("US/Central") >= arrow.now("US/Central").floor("days"):
@@ -128,12 +136,7 @@ class User(SoftDeleteMixin, db.Model):
                 pair.soft_delete()
 
         self.reminders.update({Reminder.deleted: True})
-        if self.pairing_sessions.filter(PairingSession.info != "UNPAIRED").count() == 0:
-            self.role = None
-            db.session.delete(self)
-            db.session.commit()
-        else:
-            super().soft_delete()
+        super().soft_delete()
 
     def revive(self):
         for pair in self.pairing_sessions:

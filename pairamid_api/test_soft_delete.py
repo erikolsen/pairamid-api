@@ -17,13 +17,13 @@ class SoftDeleteCase(unittest.TestCase):
         db.drop_all()
         self.app_context.pop()
 
-    def test_user_soft_delete_with_hard_delete_users_who_have_not_paired(self):
+    def test_user_hard_delete_deletes_users_who_have_not_paired(self):
         # arrange
         factory = TeamFactory(user_count=3)
         team = factory.team
         u1, u2, _u3 = factory.users
         # act
-        u1.soft_delete()
+        u1.hard_delete()
         # assert
         self.assertNotIn(u1, User.query.with_deleted().all())
 
