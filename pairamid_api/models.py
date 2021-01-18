@@ -243,6 +243,14 @@ class RoleSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Role
 
+    total_members = fields.fields.Method('_total_members')
+
+    def _total_members(self, obj):
+        if bool(obj.users):
+            return obj.users.count()
+
+        return 0
+
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = User

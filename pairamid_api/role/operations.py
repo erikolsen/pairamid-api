@@ -1,4 +1,4 @@
-from pairamid_api.models import Role, RoleSchema, Team
+from pairamid_api.models import Role, RoleSchema, Team, Reminder
 from pairamid_api.extensions import db
 from sqlalchemy import asc, desc
 
