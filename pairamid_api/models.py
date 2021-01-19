@@ -258,8 +258,8 @@ class UserSchema(SQLAlchemyAutoSchema):
     role = fields.Nested(RoleSchema)
 
 class ReminderSchema(SQLAlchemyAutoSchema):
-    started_at = fields.fields.DateTime()
-    ended_at = fields.fields.DateTime()
+    start_date = fields.fields.DateTime()
+    end_date = fields.fields.DateTime()
     user = fields.Nested(UserSchema)
 
     class Meta:
