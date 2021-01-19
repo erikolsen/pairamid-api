@@ -27,18 +27,18 @@ def fetch_reminders(team, start_date, end_date):
         if r.recuring_weekday in weekday_range(start_date, end_date)
     ]
 
-    date_within_reminder_range = and_(
-        Reminder.start_date >= start_date.format(),
-        Reminder.end_date <= end_date.format(),
-    )
-    reminder_within_date_range = and_(
-        Reminder.start_date <= start_date.format(),
-        Reminder.end_date >= end_date.format(),
+    completely_before = and_(
+        Reminder.start_date < start_date.format(),
+        Reminder.end_date < start_date.format(),
     )
 
+    completely_after = and_(
+        Reminder.start_date > end_date.format(),
+        Reminder.end_date > end_date.format(),
+    )
     range_includes_date = (
         team.reminders.filter(Reminder.recuring_weekday == None)
-        .filter(or_(date_within_reminder_range, reminder_within_date_range))
+        .filter(~or_(completely_before, completely_after))
         .all()
     )
 
