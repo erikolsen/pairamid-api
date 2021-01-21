@@ -272,7 +272,7 @@ class ReminderSchema(SQLAlchemyAutoSchema):
 class TeamSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Team
-        fields = ('name', 'uuid', 'roles', 'users', 'reminders')
+        fields = ('name', 'uuid', 'roles', 'users')
 
     roles = fields.Nested(RoleSchema, many=True)
     users = fields.Nested(UserSchema, many=True)
