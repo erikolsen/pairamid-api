@@ -242,6 +242,7 @@ class Reminder(SoftDeleteMixin, db.Model):
 class RoleSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Role
+        fields = ('color', 'name', 'id')
 
     total_members = fields.fields.Method('_total_members')
 
@@ -254,6 +255,7 @@ class RoleSchema(SQLAlchemyAutoSchema):
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = User
+        fields = ('username', 'role', 'uuid', 'created_at', 'id')
 
     role = fields.Nested(RoleSchema)
 
@@ -264,11 +266,13 @@ class ReminderSchema(SQLAlchemyAutoSchema):
 
     class Meta:
         model = Reminder
+        fields = ('start_date', 'end_date', 'message', 'user', 'id')
         datetimeformat = "%m/%d/%Y"
 
 class TeamSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Team
+        fields = ('name', 'uuid', 'roles', 'users', 'reminders')
 
     roles = fields.Nested(RoleSchema, many=True)
     users = fields.Nested(UserSchema, many=True)
@@ -285,9 +289,12 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = PairingSession
         include_relationships = True
+        fields = ('info', 'streak', 'users', 'uuid', 'id')
 
     users = fields.Nested(UserSchema, many=True)
 
 class FullUserSchema(UserSchema):
     pairing_sessions = fields.Nested(PairingSessionSchema, many=True)
     team = fields.Nested(TeamSchema)
+    class Meta:
+        fields = ('pairing_sessions', 'team', 'username')
