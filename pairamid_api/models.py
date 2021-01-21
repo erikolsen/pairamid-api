@@ -242,7 +242,7 @@ class Reminder(SoftDeleteMixin, db.Model):
 class RoleSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Role
-        fields = ('color', 'name', 'id')
+        fields = ('color', 'name', 'id', 'total_members')
 
     total_members = fields.fields.Method('_total_members')
 
