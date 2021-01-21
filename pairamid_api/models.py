@@ -110,6 +110,10 @@ class User(SoftDeleteMixin, db.Model):
     def __repr__(self):
         return f"<User {self.username} {self.role.name} >"
 
+    @property
+    def active_pairing_sessions(self):
+        return self.pairing_sessions.filter(~PairingSession.info.in_(PairingSession.FILTERED)).all()
+
     def csv_row(self):
         row = []
         for pair in self.pairing_sessions.filter(~PairingSession.info.in_(PairingSession.FILTERED)):
@@ -289,12 +293,14 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = PairingSession
         include_relationships = True
-        fields = ('info', 'streak', 'users', 'uuid', 'id')
+        fields = ('info', 'streak', 'users', 'uuid', 'id', 'created_at')
 
     users = fields.Nested(UserSchema, many=True)
 
 class FullUserSchema(UserSchema):
-    pairing_sessions = fields.Nested(PairingSessionSchema, many=True)
+    active_pairing_sessions = fields.Nested(PairingSessionSchema, many=True)
     team = fields.Nested(TeamSchema)
+
     class Meta:
-        fields = ('pairing_sessions', 'team', 'username')
+        fields = ('active_pairing_sessions', 'team', 'username')
+
