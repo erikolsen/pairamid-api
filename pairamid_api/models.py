@@ -259,7 +259,7 @@ class RoleSchema(SQLAlchemyAutoSchema):
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = User
-        fields = ('username', 'role', 'uuid', 'created_at', 'id')
+        fields = ('username', 'role', 'uuid', 'created_at', 'id', 'deleted')
 
     role = fields.Nested(RoleSchema)
 
