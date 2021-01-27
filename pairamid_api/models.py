@@ -1,7 +1,7 @@
 from datetime import datetime, date
 from uuid import uuid4
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy import and_
+from sqlalchemy import and_, desc
 from flask_sqlalchemy import BaseQuery
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 import arrow
@@ -276,12 +276,24 @@ class ReminderSchema(SQLAlchemyAutoSchema):
 class TeamSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Team
-        fields = ('name', 'uuid', 'roles', 'users')
+        fields = ('name', 'uuid', 'roles', 'users', 'members', 'lastActive')
 
     roles = fields.Nested(RoleSchema, many=True)
     users = fields.Nested(UserSchema, many=True)
     reminders = fields.Nested(ReminderSchema, many=True)
     members = fields.fields.Method("member_count")
+    lastActive = fields.fields.Method("last_active")
+    
+    def last_active(self, obj):
+        pairing_session = (obj.pairing_sessions
+                .order_by(desc(PairingSession.created_at))
+                .filter(PairingSession.users.any())
+                .filter(
+                    ~PairingSession.info.in_(
+                        PairingSession.FILTERED)
+                ).first())
+        if pairing_session:
+            return pairing_session.created_at
 
     def member_count(self, obj):
         if bool(obj.users):
