@@ -10,7 +10,6 @@ from pairamid_api.lib.date_helpers import end_of_day, start_of_day
 from sqlalchemy.ext.hybrid import hybrid_property, hybrid_method
 
 
-#### Tables
 class QueryWithSoftDelete(BaseQuery):
     _with_deleted = False
 
@@ -37,6 +36,7 @@ class QueryWithSoftDelete(BaseQuery):
         return obj if obj is None or self._with_deleted or not obj.deleted else None
 
 
+#### Tables
 class SoftDeleteMixin:
     deleted = db.Column(db.Boolean(), default=False)
     query_class = QueryWithSoftDelete
@@ -89,8 +89,6 @@ class User(SoftDeleteMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     username = db.Column(db.String(64))
-    first_name = db.Column(db.String(64))
-    last_name = db.Column(db.String(64))
     role = db.relationship("Role", uselist=False)
     role_id = db.Column(db.Integer, db.ForeignKey("role.id"))
     team = db.relationship("Team", uselist=False)
@@ -104,11 +102,32 @@ class User(SoftDeleteMixin, db.Model):
         lazy="dynamic",
     )
 
+    email = db.Column(db.String(64), index=True, unique=True)
+    password = db.Column(db.Text)
+    full_name = db.Column(db.String(64))
+    ### flask praetorian ###
+    @classmethod
+    def lookup(cls, email):
+        return cls.query.filter_by(email=email).one_or_none()
+
+    @classmethod
+    def identify(cls, id):
+        return cls.query.get(id)
+
+    @property
+    def identity(self):
+        return self.id
+
+    @property # not currently used but required by flask-praetorian
+    def rolenames(self):
+        return []
+    ### flask praetorian ###
+
     def __lt__(self, obj):
         return self.username < obj.username
 
     def __repr__(self):
-        return f"<User {self.username} {self.role.name} >"
+        return f"<User {self.username} {self.role and self.role.name or 'No Role'} >"
 
     @property
     def active_pairing_sessions(self):

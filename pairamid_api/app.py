@@ -8,7 +8,8 @@ from pairamid_api import (
     commands,
     reminder,
 )
-from pairamid_api.extensions import migrate, db, CORS, socketio
+from pairamid_api.extensions import migrate, db, CORS, socketio, guard
+from pairamid_api.models import User
 
 
 def create_app(config_object="pairamid_api.config"):
@@ -37,6 +38,10 @@ def register_extensions(app):
     db.init_app(app)
     migrate.init_app(app, db)
     socketio.init_app(app, cors_allowed_origins="*")
+    guard.init_app(
+        app,
+        User,
+    )
     return None
 
 
