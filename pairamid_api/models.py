@@ -333,5 +333,5 @@ class FullUserSchema(UserSchema):
     team = fields.Nested(TeamSchema)
 
     class Meta:
-        fields = ('active_pairing_sessions', 'team', 'username')
+        fields = ('active_pairing_sessions', 'team', 'username', 'full_name')
 

@@ -19,6 +19,7 @@ def run_sign_up(data):
     try:
         new_user = User(
             email=email,
+            full_name=full_name,
             username=initials_from(full_name),
             password=guard.hash_password(password),
         )
