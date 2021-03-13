@@ -12,7 +12,6 @@ def initials_from(full_name):
     return full_name[0].upper()
 
 def run_sign_up(data):
-    print('data: ', data)
     email = data.get("email", None)
     password = data.get("password", None)
     full_name = data.get("fullName", None)
@@ -35,6 +34,7 @@ def run_sign_up(data):
 
 def run_fetch(user_uuid):
     user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
+    print('user: ', user.full_name)
     schema = FullUserSchema()
     return schema.dump(user)
 

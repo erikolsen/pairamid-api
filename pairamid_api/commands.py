@@ -6,8 +6,66 @@ from random import shuffle
 from flask.cli import with_appcontext
 from sqlalchemy import asc
 from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, PairingSession, Role, Team
+from pairamid_api.models import User, PairingSession, PairingSession, Role, Team, Feedback, FeedbackTag, FeedbackTagGroup
 from pairamid_api.pairing_session.operations import streak
+
+@click.command()
+@with_appcontext
+def seed_feedback():
+    """Sets initial feedback"""
+    count = 0
+    user_uuid = '126e99cc-d7f9-4f51-9f46-ed3b9993c37a'
+    user = User.query.filter(User.uuid == user_uuid).first()
+    if user.feedback_received.count() > 0:
+        print('Feedback already created.')
+        return 
+
+    with open('../feedback.json') as f:
+        data = json.load(f)
+
+    def tag_for(name):
+        return FeedbackTag.query.filter(FeedbackTag.name == name).first()
+    
+    for feedback in data:
+        fb = Feedback(
+            message=feedback['text'],
+            sender_name=feedback['from']['name'],
+            tags=[tag_for(tag['name']) for tag in feedback['tags']],
+            recipient=user
+        )
+        db.session.add(fb)
+
+    db.session.commit() 
+    count = user.feedback_received.count()
+    print(f"{count} feedbacks have been set")
+
+@click.command()
+@with_appcontext
+def seed_feedback_groups():
+    """Sets initial feedback groups"""
+    count = 0
+    user_uuid = '126e99cc-d7f9-4f51-9f46-ed3b9993c37a'
+    user = User.query.filter(User.uuid == user_uuid).first()
+    if user.feedback_tag_groups.count() > 0:
+        print('Already seeded groups')
+        return 
+
+    with open('../feedback_groups.json') as f:
+        data = json.load(f)
+    
+    for group in data:
+        fb_group = FeedbackTagGroup(name=group['name'], user=user)
+        db.session.add(fb_group)
+        for tag in group['tags']:
+            new_tag = FeedbackTag(
+                name=tag['name'],
+                description=tag.get('title', ''),
+                group=fb_group
+            )
+            db.session.add(new_tag)
+    db.session.commit()
+    print(f"{count} groups have been set")
+
 
 
 def spacer(word):
