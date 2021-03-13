@@ -7,6 +7,7 @@ from pairamid_api import (
     team,
     commands,
     reminder,
+    feedback,
 )
 from pairamid_api.extensions import migrate, db, CORS, socketio, guard
 from pairamid_api.models import User
@@ -30,6 +31,7 @@ def register_blueprints(app):
     app.register_blueprint(user.routes.blueprint)
     app.register_blueprint(team.routes.blueprint)
     app.register_blueprint(reminder.routes.blueprint)
+    app.register_blueprint(feedback.routes.blueprint)
     return None
 
 

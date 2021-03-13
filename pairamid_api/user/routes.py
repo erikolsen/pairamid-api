@@ -32,18 +32,12 @@ def delete(team_uuid, id):
 def revive(team_uuid, id):
     return jsonify(operations.run_revive(id))
 
-#### FEEDBACK #####
-@blueprint.route("/users/<id>/feedback/new", methods=["GET"])
-def user_new_feedback(id):
-    # this should just return uuid, full_name, feedback groups
-    return jsonify(operations.run_fetch(id))
 
 #### USER #####
 @blueprint.route("/users/<id>", methods=["GET"])
 @flask_praetorian.auth_required
 def user_show(id):
     user = flask_praetorian.current_user()
-    print('user: ', user.feedback_tag_groups)
     if str(user.uuid) == id:
         return jsonify(operations.run_fetch(id))
     raise Exception('Please login to continue.')

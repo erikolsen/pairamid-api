@@ -96,16 +96,18 @@ class User(SoftDeleteMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     reminders = db.relationship("Reminder", lazy="dynamic")
     feedback_tag_groups = db.relationship("FeedbackTagGroup", lazy="dynamic")
-    feedback_sent = db.relationship(
+    feedback_authored = db.relationship(
         'Feedback',
-        foreign_keys='Feedback.sender_id',
+        foreign_keys='Feedback.author_id',
         backref='author',
+        order_by="desc(Feedback.created_at)",
         lazy='dynamic'
     )
     feedback_received = db.relationship(
         'Feedback',
         foreign_keys='Feedback.recipient_id',
         backref='recipient',
+        order_by="desc(Feedback.created_at)",
         lazy='dynamic'
     )
     pairing_sessions = db.relationship(
@@ -320,10 +322,8 @@ class FeedbackTagGroup(db.Model):
 
 class Feedback(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    # sender = db.relationship("User", uselist=False)
-    sender_id = db.Column(db.Integer, db.ForeignKey("user.id"))
-    sender_name = db.Column(db.String(64))
-    # recipient = db.relationship("User", uselist=False)
+    author_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    author_name = db.Column(db.String(64))
     recipient_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     message = db.Column(db.Text())
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
@@ -354,7 +354,7 @@ class RoleSchema(SQLAlchemyAutoSchema):
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = User
-        fields = ('username', 'role', 'uuid', 'created_at', 'id', 'deleted')
+        fields = ('username', 'role', 'uuid', 'created_at', 'id', 'deleted', 'full_name')
 
     role = fields.Nested(RoleSchema)
 
@@ -423,7 +423,7 @@ class FeedbackSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = PairingSession
         include_relationships = True
-        fields = ('id', 'sender_name', 'message', 'created_at', 'tags')
+        fields = ('id', 'author_name', 'message', 'created_at', 'tags')
 
     tags = fields.Nested(FeedbackTagSchema, many=True)
 
@@ -436,3 +436,9 @@ class FullUserSchema(UserSchema):
     class Meta:
         fields = ('active_pairing_sessions', 'team', 'username', 'full_name', 'uuid', 'feedback_received', 'feedback_tag_groups')
 
+
+class FeedbackRequestUserSchema(UserSchema):
+    feedback_tag_groups = fields.Nested(FeedbackTagGroupSchema, many=True)
+
+    class Meta:
+        fields = ('username', 'full_name', 'feedback_tag_groups', 'id')

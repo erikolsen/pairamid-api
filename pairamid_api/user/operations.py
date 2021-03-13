@@ -34,7 +34,6 @@ def run_sign_up(data):
 
 def run_fetch(user_uuid):
     user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
-    print('user: ', user.full_name)
     schema = FullUserSchema()
     return schema.dump(user)
 

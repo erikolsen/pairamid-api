@@ -14,7 +14,7 @@ from pairamid_api.pairing_session.operations import streak
 def seed_feedback():
     """Sets initial feedback"""
     count = 0
-    user_uuid = '126e99cc-d7f9-4f51-9f46-ed3b9993c37a'
+    user_uuid = '63d3fff2-dc62-4516-9386-aec5936e158a'
     user = User.query.filter(User.uuid == user_uuid).first()
     if user.feedback_received.count() > 0:
         print('Feedback already created.')
@@ -29,7 +29,7 @@ def seed_feedback():
     for feedback in data:
         fb = Feedback(
             message=feedback['text'],
-            sender_name=feedback['from']['name'],
+            author_name=feedback['from']['name'],
             tags=[tag_for(tag['name']) for tag in feedback['tags']],
             recipient=user
         )
@@ -44,7 +44,7 @@ def seed_feedback():
 def seed_feedback_groups():
     """Sets initial feedback groups"""
     count = 0
-    user_uuid = '126e99cc-d7f9-4f51-9f46-ed3b9993c37a'
+    user_uuid = '63d3fff2-dc62-4516-9386-aec5936e158a'
     user = User.query.filter(User.uuid == user_uuid).first()
     if user.feedback_tag_groups.count() > 0:
         print('Already seeded groups')
