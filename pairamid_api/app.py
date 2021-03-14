@@ -8,6 +8,7 @@ from pairamid_api import (
     commands,
     reminder,
     feedback,
+    feedback_tag,
     feedback_tag_group,
 )
 from pairamid_api.extensions import migrate, db, CORS, socketio, guard
@@ -34,6 +35,7 @@ def register_blueprints(app):
     app.register_blueprint(reminder.routes.blueprint)
     app.register_blueprint(feedback.routes.blueprint)
     app.register_blueprint(feedback_tag_group.routes.blueprint)
+    app.register_blueprint(feedback_tag.routes.blueprint)
     return None
 
 

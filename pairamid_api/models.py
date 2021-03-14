@@ -292,8 +292,8 @@ class TaggedFeedback(db.Model):
 
 class FeedbackTag(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64))
-    description = db.Column(db.Text())
+    name = db.Column(db.String(64), default='')
+    description = db.Column(db.Text(), default='')
     group = db.relationship("FeedbackTagGroup", uselist=False)
     group_id = db.Column(db.Integer, db.ForeignKey("feedback_tag_group.id"))
     feedbacks = db.relationship(
