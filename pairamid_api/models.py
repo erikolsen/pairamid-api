@@ -434,7 +434,7 @@ class FullUserSchema(UserSchema):
     feedback_tag_groups = fields.Nested(FeedbackTagGroupSchema, many=True)
 
     class Meta:
-        fields = ('active_pairing_sessions', 'team', 'username', 'full_name', 'uuid', 'feedback_received', 'feedback_tag_groups')
+        fields = ('id', 'active_pairing_sessions', 'team', 'username', 'full_name', 'uuid', 'feedback_received', 'feedback_tag_groups')
 
 
 class FeedbackRequestUserSchema(UserSchema):

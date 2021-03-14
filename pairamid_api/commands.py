@@ -176,7 +176,7 @@ def set_streak():
 
 @click.command()
 @with_appcontext
-def add_pairs():
+def seed_pairs():
     """Seeds the db with past Pairing Sessions from json dump"""
     end = arrow.get(datetime.datetime.now()).shift(days=-1)
     start = end.shift(months=-1)
@@ -195,7 +195,7 @@ def add_pairs():
 
 @click.command()
 @with_appcontext
-def add_users():
+def seed_users():
     """Seeds the db with Users and Pairing Sessions"""
     if User.query.count():
         print("Database base has already been seeded.")
