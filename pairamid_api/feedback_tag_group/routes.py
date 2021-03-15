@@ -7,7 +7,6 @@ blueprint = Blueprint("feedback-tag-groups", __name__)
 
 @blueprint.route("/feedback-tag-groups", methods=["POST"])
 def create():
-    print('request.json: ', request.json)
     return jsonify(operations.run_create(request.json))
 
 @blueprint.route("/feedback-tag-groups/<id>", methods=["POST"])
