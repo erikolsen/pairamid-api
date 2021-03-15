@@ -1,7 +1,22 @@
-from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team, PairingSession
+from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag
 from pairamid_api.extensions import db, guard
 from pairamid_api.pairing_session.operations import add_user_to_available
 from sqlalchemy import asc, desc
+from .initial_feedback_groups import INITIAL_FEEDBACK_GROUPS
+
+
+def build_feedback_tag_groups_for(user):
+    for group in INITIAL_FEEDBACK_GROUPS:
+        fb_group = FeedbackTagGroup(name=group['name'], user=user)
+        db.session.add(fb_group)
+        for tag in group['tags']:
+            new_tag = FeedbackTag(
+                name=tag['name'],
+                description=tag['description'],
+                group=fb_group
+            )
+            db.session.add(new_tag)
+    return True
 
 def initials_from(full_name):
     split_name = full_name.split(' ')
@@ -23,6 +38,7 @@ def run_sign_up(data):
             password=guard.hash_password(password),
         )
         db.session.add(new_user)
+        build_feedback_tag_groups_for(new_user)
         db.session.commit()
         return {
             "access_token": guard.encode_jwt_token(new_user),
