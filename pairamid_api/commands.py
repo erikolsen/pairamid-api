@@ -6,33 +6,12 @@ from random import shuffle
 from flask.cli import with_appcontext
 from sqlalchemy import asc
 from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, PairingSession, Role, Team
+from pairamid_api.models import User, PairingSession, PairingSession, Role, Team, Feedback, FeedbackTag, FeedbackTagGroup
 from pairamid_api.pairing_session.operations import streak
-
 
 def spacer(word):
     space = (20 - len(word)) * " "
     return word + space + "|"
-
-
-mighty_ducks = "4ba3a90e-a900-4368-859d-da8cae450d16"
-learning_team = "d0f657f4-6ec8-42b8-95ad-c11fbec774aa"
-parks = "1810de41-4ce9-44fd-954e-e4504378fbb7"
-icrm = "2db8ed65-4561-4574-8129-acd8b06d2ddf"
-pwc = "9e701519-6cc2-4ed9-ae39-7b02299d1394"
-qualla = "5917f863-4918-4892-ac51-f835ecfa18b0"
-freestyle = "19780537-420d-4b8b-8337-93579123c6cc"
-mercury = "c894e213-38d2-4d0a-912b-deed1e269238"
-SAFE_TEAMS = [
-    mighty_ducks, 
-    icrm, 
-    pwc, 
-    qualla, 
-    freestyle, 
-    mercury, 
-    learning_team, 
-    parks
-]
 
 def user_row(team):
     full_count = team.all_users.count()
@@ -69,7 +48,6 @@ def last_pair_date(team):
 @with_appcontext
 def display_teams():
     """Displays all team data"""
-    print("Safe Teams", SAFE_TEAMS)
     print(
         spacer("Name"),
         spacer("Id"),
@@ -99,11 +77,9 @@ def display_teams():
         spacer("-"),
     )
 
-
 def groups_of_2(l):
     for i in range(0, len(l), 2):
         yield l[i : i + 2]
-
 
 @click.command()
 @with_appcontext
@@ -118,7 +94,7 @@ def set_streak():
 
 @click.command()
 @with_appcontext
-def add_pairs():
+def seed_pairs():
     """Seeds the db with past Pairing Sessions from json dump"""
     end = arrow.get(datetime.datetime.now()).shift(days=-1)
     start = end.shift(months=-1)
@@ -137,7 +113,7 @@ def add_pairs():
 
 @click.command()
 @with_appcontext
-def add_users():
+def seed_users():
     """Seeds the db with Users and Pairing Sessions"""
     if User.query.count():
         print("Database base has already been seeded.")
@@ -164,48 +140,3 @@ def add_users():
     print(
         f"Database has been seeded with Users on team {team.name}: {User.query.count()}"
     )
-
-# @click.command()
-# @click.argument('user_uuid')
-# @with_appcontext
-# def delete_user(user_uuid):
-#     '''Hard deletes a user'''
-#     user = User.query.filter(User.uuid == user_uuid).first()
-
-#     print('Deleting', user.username)
-#     for ps in user.pairing_sessions:
-#         ps.users.remove(user)
-#         db.session.add(ps)
-#     db.session.commit()
-#     user.role = None
-#     db.session.delete(user)
-#     db.session.commit()
-
-
-# @click.command()
-# @click.argument('team_id')
-# @with_appcontext
-# def delete_all(team_id):
-#     '''Deletes all the things'''
-#     team = Team.query.get(team_id)
-#     if str(team.uuid) in SAFE_TEAMS:
-#         print('Cannot delete', team.name)
-#         return
-
-#     print('Deleting', team.name)
-#     for ps in team.pairing_sessions:
-#         ps.users = []
-#         db.session.delete(ps)
-
-#     for user in team.users:
-#         user.role = None
-#         db.session.delete(user)
-
-#     for role in team.roles:
-#         db.session.delete(role)
-
-#     print('Pairs Deleted', team.pairing_sessions.count() == 0)
-#     print('Users Deleted', team.users.count() == 0)
-#     print('Roles Deleted', team.roles.count() == 0)
-#     db.session.delete(team)
-#     db.session.commit()

@@ -1,7 +1,52 @@
-from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team, PairingSession
-from pairamid_api.extensions import db
+from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag
+from pairamid_api.extensions import db, guard
 from pairamid_api.pairing_session.operations import add_user_to_available
 from sqlalchemy import asc, desc
+from .initial_feedback_groups import INITIAL_FEEDBACK_GROUPS
+
+
+def build_feedback_tag_groups_for(user):
+    for group in INITIAL_FEEDBACK_GROUPS:
+        fb_group = FeedbackTagGroup(name=group['name'], user=user)
+        db.session.add(fb_group)
+        for tag in group['tags']:
+            new_tag = FeedbackTag(
+                name=tag['name'],
+                description=tag['description'],
+                group=fb_group
+            )
+            db.session.add(new_tag)
+    return True
+
+def initials_from(full_name):
+    split_name = full_name.split(' ')
+    if len(full_name) <= 3 and len(full_name) > 0:
+        return full_name.upper()
+    if len(split_name) <= 3 and len(split_name) > 0:
+        return ''.join([name[0] for name in split_name]).upper()
+    return full_name[0].upper()
+
+def run_sign_up(data):
+    email = data.get("email", None)
+    password = data.get("password", None)
+    full_name = data.get("fullName", None)
+    try:
+        new_user = User(
+            email=email,
+            full_name=full_name,
+            username=initials_from(full_name),
+            password=guard.hash_password(password),
+        )
+        db.session.add(new_user)
+        build_feedback_tag_groups_for(new_user)
+        db.session.commit()
+        return {
+            "access_token": guard.encode_jwt_token(new_user),
+            "uuid": new_user.uuid,
+        }
+    except Exception as e:
+        raise e
+
 
 def run_fetch(user_uuid):
     user = User.query.with_deleted().filter(User.uuid == user_uuid).first()

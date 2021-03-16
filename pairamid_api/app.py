@@ -7,8 +7,12 @@ from pairamid_api import (
     team,
     commands,
     reminder,
+    feedback,
+    feedback_tag,
+    feedback_tag_group,
 )
-from pairamid_api.extensions import migrate, db, CORS, socketio
+from pairamid_api.extensions import migrate, db, CORS, socketio, guard
+from pairamid_api.models import User
 
 
 def create_app(config_object="pairamid_api.config"):
@@ -29,6 +33,9 @@ def register_blueprints(app):
     app.register_blueprint(user.routes.blueprint)
     app.register_blueprint(team.routes.blueprint)
     app.register_blueprint(reminder.routes.blueprint)
+    app.register_blueprint(feedback.routes.blueprint)
+    app.register_blueprint(feedback_tag_group.routes.blueprint)
+    app.register_blueprint(feedback_tag.routes.blueprint)
     return None
 
 
@@ -37,14 +44,18 @@ def register_extensions(app):
     db.init_app(app)
     migrate.init_app(app, db)
     socketio.init_app(app, cors_allowed_origins="*")
+    guard.init_app(
+        app,
+        User,
+    )
     return None
 
 
 def register_commands(app):
-    app.cli.add_command(commands.add_users)
-    app.cli.add_command(commands.add_pairs)
     app.cli.add_command(commands.display_teams)
     app.cli.add_command(commands.set_streak)
+    app.cli.add_command(commands.seed_users)
+    app.cli.add_command(commands.seed_pairs)
     return None
 
 

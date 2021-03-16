@@ -10,7 +10,6 @@ from pairamid_api.lib.date_helpers import end_of_day, start_of_day
 from sqlalchemy.ext.hybrid import hybrid_property, hybrid_method
 
 
-#### Tables
 class QueryWithSoftDelete(BaseQuery):
     _with_deleted = False
 
@@ -37,6 +36,7 @@ class QueryWithSoftDelete(BaseQuery):
         return obj if obj is None or self._with_deleted or not obj.deleted else None
 
 
+#### Tables
 class SoftDeleteMixin:
     deleted = db.Column(db.Boolean(), default=False)
     query_class = QueryWithSoftDelete
@@ -89,14 +89,27 @@ class User(SoftDeleteMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     username = db.Column(db.String(64))
-    first_name = db.Column(db.String(64))
-    last_name = db.Column(db.String(64))
     role = db.relationship("Role", uselist=False)
     role_id = db.Column(db.Integer, db.ForeignKey("role.id"))
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey("team.id"))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     reminders = db.relationship("Reminder", lazy="dynamic")
+    feedback_tag_groups = db.relationship("FeedbackTagGroup", lazy="dynamic")
+    feedback_authored = db.relationship(
+        'Feedback',
+        foreign_keys='Feedback.author_id',
+        backref='author',
+        order_by="desc(Feedback.created_at)",
+        lazy='dynamic'
+    )
+    feedback_received = db.relationship(
+        'Feedback',
+        foreign_keys='Feedback.recipient_id',
+        backref='recipient',
+        order_by="desc(Feedback.created_at)",
+        lazy='dynamic'
+    )
     pairing_sessions = db.relationship(
         "PairingSession",
         secondary="participants",
@@ -104,11 +117,32 @@ class User(SoftDeleteMixin, db.Model):
         lazy="dynamic",
     )
 
+    email = db.Column(db.String(64), index=True, unique=True)
+    password = db.Column(db.Text)
+    full_name = db.Column(db.String(64))
+    ### start flask praetorian ###
+    @classmethod
+    def lookup(cls, email):
+        return cls.query.filter_by(email=email).one_or_none()
+
+    @classmethod
+    def identify(cls, id):
+        return cls.query.get(id)
+
+    @property
+    def identity(self):
+        return self.id
+
+    @property # not currently used but required by flask-praetorian
+    def rolenames(self):
+        return []
+    ### end flask praetorian ###
+
     def __lt__(self, obj):
         return self.username < obj.username
 
     def __repr__(self):
-        return f"<User {self.username} {self.role.name} >"
+        return f"<User {self.username} {self.role and self.role.name or 'No Role'} >"
 
     @property
     def active_pairing_sessions(self):
@@ -242,6 +276,67 @@ class Reminder(SoftDeleteMixin, db.Model):
         return f"<Reminder {self.start_date} {self.end_date} {self.team.name}>"
 
 
+class TaggedFeedback(db.Model):
+    feedback_id = db.Column(
+        "feedback_id", db.Integer, db.ForeignKey("feedback.id"), primary_key=True
+    )
+    feedback_tag_id = db.Column(
+        "feedback_tag_id",
+        db.Integer,
+        db.ForeignKey("feedback_tag.id"),
+        primary_key=True,
+    )
+    feedback = db.relationship("Feedback")
+    tag = db.relationship("FeedbackTag")
+
+
+class FeedbackTag(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), default='')
+    description = db.Column(db.Text(), default='')
+    group = db.relationship("FeedbackTagGroup", uselist=False)
+    group_id = db.Column(db.Integer, db.ForeignKey("feedback_tag_group.id"))
+    feedbacks = db.relationship(
+        "Feedback",
+        secondary="tagged_feedback",
+        order_by="asc(Feedback.created_at)",
+        lazy="dynamic",
+    )
+
+    def __repr__(self):
+        return f"<FeedbackTag {self.name}>"
+
+class FeedbackTagGroup(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64))
+    user = db.relationship("User", uselist=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    tags = db.relationship(
+        "FeedbackTag",
+        order_by="asc(FeedbackTag.name)",
+        lazy="dynamic",
+    )
+
+    def __repr__(self):
+        return f"<FeedbackTagGroup {self.name}>"
+
+class Feedback(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    author_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    author_name = db.Column(db.String(64))
+    recipient_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    message = db.Column(db.Text())
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    tags = db.relationship(
+        "FeedbackTag", 
+        secondary="tagged_feedback", 
+        passive_deletes=True, 
+        order_by="FeedbackTag.name"
+    )
+
+    def __repr__(self):
+        return f"<Feedback {self.id}>"
+
 #### Schemas
 class RoleSchema(SQLAlchemyAutoSchema):
     class Meta:
@@ -259,7 +354,7 @@ class RoleSchema(SQLAlchemyAutoSchema):
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = User
-        fields = ('username', 'role', 'uuid', 'created_at', 'id', 'deleted')
+        fields = ('username', 'role', 'uuid', 'created_at', 'id', 'deleted', 'full_name')
 
     role = fields.Nested(RoleSchema)
 
@@ -309,10 +404,41 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
 
     users = fields.Nested(UserSchema, many=True)
 
+class FeedbackTagSchema(SQLAlchemyAutoSchema):
+    class Meta:
+        model = FeedbackTag
+        fields = ('id', 'name', 'description', 'group_id')
+
+class FeedbackTagGroupSchema(SQLAlchemyAutoSchema):
+    class Meta:
+        model = PairingSession
+        include_relationships = True
+        fields = ('id', 'name', 'tags')
+
+    tags = fields.Nested(FeedbackTagSchema, many=True)
+
+class FeedbackSchema(SQLAlchemyAutoSchema):
+    # created_at = fields.fields.DateTime(format='%m/%d-%Y')
+    created_at = fields.fields.DateTime()
+    class Meta:
+        model = PairingSession
+        include_relationships = True
+        fields = ('id', 'author_name', 'message', 'created_at', 'tags')
+
+    tags = fields.Nested(FeedbackTagSchema, many=True)
+
 class FullUserSchema(UserSchema):
     active_pairing_sessions = fields.Nested(PairingSessionSchema, many=True)
     team = fields.Nested(TeamSchema)
+    feedback_received = fields.Nested(FeedbackSchema, many=True)
+    feedback_tag_groups = fields.Nested(FeedbackTagGroupSchema, many=True)
 
     class Meta:
-        fields = ('active_pairing_sessions', 'team', 'username')
+        fields = ('id', 'active_pairing_sessions', 'team', 'username', 'full_name', 'uuid', 'feedback_received', 'feedback_tag_groups')
 
+
+class FeedbackRequestUserSchema(UserSchema):
+    feedback_tag_groups = fields.Nested(FeedbackTagGroupSchema, many=True)
+
+    class Meta:
+        fields = ('username', 'full_name', 'feedback_tag_groups', 'id')
