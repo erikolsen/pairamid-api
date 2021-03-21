@@ -3,6 +3,7 @@ arrow==0.15.6
 astroid==2.3.3
 attrs==20.3.0
 autopep8==1.5.2
+bidict==0.21.2
 blinker==1.4
 certifi==2019.11.28
 cffi==1.14.5
@@ -18,9 +19,9 @@ Flask-Cors==3.0.8
 Flask-Mail==0.9.1
 Flask-Migrate==2.5.3
 flask-praetorian==1.1.0
-Flask-SocketIO==4.2.1
+Flask-SocketIO==5.0.1
 Flask-SQLAlchemy==2.4.1
-greenlet==0.4.15
+greenlet==1.0.0
 gunicorn==20.0.4
 idna==2.9
 inflection==0.3.1
@@ -50,8 +51,8 @@ pyparsing==2.4.7
 pytest==6.2.2
 python-dateutil==2.8.1
 python-editor==1.0.4
-python-engineio==3.12.1
-python-socketio==4.5.1
+python-engineio==4.0.1
+python-socketio==5.1.0
 pytz==2019.3
 pytzdata==2020.1
 requests==2.23.0
