@@ -3,6 +3,8 @@ from pairamid_api.extensions import db
 
 def run_update(id, data):
     feedback = Feedback.query.get(id)
+    feedback.author_name = data.get('authorName', '')
+    feedback.message = data.get('message', '')
     feedback.tags = FeedbackTag.query.filter(
         FeedbackTag.id.in_(data.get('tags', []))
     ).all()
