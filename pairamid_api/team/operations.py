@@ -5,7 +5,13 @@ from datetime import datetime, timedelta
 
 def run_fetch_active():
     ago = datetime.today() - timedelta(days=14)
-    teams = {ps.team for ps in PairingSession.query.filter(PairingSession.created_at > ago)}
+    teams = {
+        ps.team for ps in
+        PairingSession.query
+        .filter(PairingSession.created_at > ago)
+        .filter(PairingSession.info != "UNPAIRED")
+        .filter(PairingSession.info != "OUT_OF_OFFICE")
+    }
     schema = TeamSchema(many=True)
     return schema.dump(teams)
 
