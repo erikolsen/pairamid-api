@@ -16,3 +16,11 @@ def create():
 @blueprint.route("/feedbacks/<id>", methods=["POST"])
 def update(id):
     return jsonify(operations.run_update(id, request.json))
+
+@blueprint.route("/feedbacks/<id>", methods=["DELETE"])
+def delete(id):
+    return jsonify(operations.run_delete(id))
+
+@blueprint.route("/feedbacks/<id>/duplicate", methods=["POST"])
+def duplicate(id):
+    return jsonify(operations.run_duplicate(id))
