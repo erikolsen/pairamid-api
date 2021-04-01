@@ -6,7 +6,7 @@ blueprint = Blueprint("team", __name__)
 
 @blueprint.route("/teams", methods=["GET"])
 def index():
-    return jsonify(operations.run_fetch_all())
+    return jsonify(operations.run_fetch_active())
 
 
 @blueprint.route("/team", methods=["POST"])

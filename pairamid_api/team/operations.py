@@ -1,7 +1,13 @@
-from pairamid_api.models import Team, TeamSchema, Role, User
+from pairamid_api.models import Team, TeamSchema, Role, User, PairingSession
 from pairamid_api.extensions import db
 from sqlalchemy import asc, desc
+from datetime import datetime, timedelta
 
+def run_fetch_active():
+    ago = datetime.today() - timedelta(days=7)
+    teams = {ps.team for ps in PairingSession.query.filter(PairingSession.created_at > ago)}
+    schema = TeamSchema(many=True)
+    return schema.dump(teams)
 
 def run_fetch_all():
     teams = Team.query.order_by(asc(Team.name)).all()
