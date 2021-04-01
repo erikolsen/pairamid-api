@@ -4,7 +4,7 @@ from sqlalchemy import asc, desc
 from datetime import datetime, timedelta
 
 def run_fetch_active():
-    ago = datetime.today() - timedelta(days=7)
+    ago = datetime.today() - timedelta(days=14)
     teams = {ps.team for ps in PairingSession.query.filter(PairingSession.created_at > ago)}
     schema = TeamSchema(many=True)
     return schema.dump(teams)
