@@ -6,7 +6,7 @@ blueprint = Blueprint("team", __name__)
 
 @blueprint.route("/teams", methods=["GET"])
 def index():
-    return jsonify(operations.run_fetch_active())
+    return jsonify(operations.fetch_from_ids(request.args.get('teamIds')))
 
 
 @blueprint.route("/team", methods=["POST"])
@@ -17,12 +17,3 @@ def create():
 @blueprint.route("/team/<uuid>", methods=["GET"])
 def show(uuid):
     return jsonify(operations.run_fetch(uuid))
-
-
-# @blueprint.route("/team/<uuid>", methods=["PUT"])
-# def update(uuid):
-#     return jsonify(operations.run_update(id, request.json))
-
-# @blueprint.route("/team/<uuid>", methods=["DELETE"])
-# def delete(uuid):
-#     return jsonify(operations.run_delete(id))

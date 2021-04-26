@@ -3,6 +3,12 @@ from pairamid_api.extensions import db
 from sqlalchemy import asc, desc
 from datetime import datetime, timedelta
 
+def fetch_from_ids(id_string):
+    ids = id_string.split(',')
+    teams = Team.query.filter(Team.uuid.in_(ids)).all()
+    schema = TeamSchema(many=True)
+    return schema.dump(teams)
+
 def run_fetch_active():
     ago = datetime.today() - timedelta(days=14)
     teams = {
