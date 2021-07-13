@@ -56,6 +56,7 @@ def register_commands(app):
     app.cli.add_command(commands.set_streak)
     app.cli.add_command(commands.seed_users)
     app.cli.add_command(commands.seed_pairs)
+    app.cli.add_command(commands.purge_team)
     return None
 
 

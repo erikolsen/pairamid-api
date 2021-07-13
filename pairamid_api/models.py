@@ -224,7 +224,7 @@ class Team(db.Model):
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     all_users = db.relationship(
-        "User", backref="user", lazy="dynamic", order_by="asc(User.username)"
+        "User", backref="user", lazy="dynamic"
     )
     all_reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
     all_pairing_sessions = db.relationship(
