@@ -1,4 +1,4 @@
-from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag, Feedback
+from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag, Feedback, TeamUserProfile
 from pairamid_api.extensions import db, guard
 from pairamid_api.pairing_session.operations import add_user_to_available
 from sqlalchemy import asc, desc
@@ -63,10 +63,14 @@ def run_sign_up(data):
     except Exception as e:
         raise e
 
-
 def run_fetch(user_uuid):
     user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
     schema = FullUserSchema()
+    return schema.dump(user)
+
+def run_fetch_team_user(user_uuid):
+    user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
+    schema = TeamUserProfile()
     return schema.dump(user)
 
 def run_fetch_all(team_uuid):

@@ -1,34 +1,48 @@
 from datetime import datetime
 import pendulum
-from pairamid_api.lib.date_helpers import start_of_day, end_of_day
-from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, Role, Team
+from pairamid_api.models import User, Team
 from collections import Counter
+from sqlalchemy import asc
+from pairamid_api.extensions import db
 
-def parse_date(iso_date_string):
-    return datetime.strptime(iso_date_string, '%Y-%m-%d')
+def fetch_pairs(team_id, start, end): 
+    """Fetches user names for all active pairs during a time period."""
 
-def frequencies_for_user(user, group, start=None, end=None):
-    today = pendulum.now()
-    start = start_of_day(parse_date(start or today.to_date_string()))
-    end = end_of_day(parse_date(end or today.add(days=1).to_date_string() ))
-    sessions = (user.pairing_sessions
-                    .filter(~PairingSession.info.in_(PairingSession.FILTERED))
-                    .filter(PairingSession.created_at >= start)
-                    .filter(PairingSession.created_at <= end)
-    )
-    counts = Counter([u.username for pair in sessions for u in pair.users if u is not user])
-    counts[user.username] = len([p for p in sessions if len(p.users) == 1])
-    return [user.username, *[counts.get(u.username, 0) for u in group]]
+    sql = f"""
+            SELECT ARRAY_AGG(public.user.username ORDER BY public.user.username ASC)
+            FROM pairing_session
+            INNER JOIN participants
+            ON participants.pairing_session_id = pairing_session.id
+            INNER JOIN public.user
+            ON participants.user_id = public.user.id
+            WHERE pairing_session.info NOT IN ('UNPAIRED', 'OUT_OF_OFFICE')
+            AND pairing_session.team_id = {team_id}
+            AND pairing_session.created_at >= '{start}'::date
+            AND pairing_session.created_at <= '{end}'::date
+            GROUP BY pairing_session.id
+        """ 
+    with db.engine.connect() as conn:
+        resultproxy = conn.execute(sql)
 
-def run_build_frequency(team_uuid, primary, secondary, start=None, end=None):
+    return [value for rowproxy in resultproxy for _, value in rowproxy.items()]
+
+def frequencies_for_user(user, sessions):
+    counts = Counter([u for pair in sessions for u in pair if u != user and user in pair])
+    counts[user] = len([p for p in sessions if len(p) == 1 and user in p])
+    return counts
+
+def run_build_frequency(team_uuid, start=None, end=None):
     team = Team.query.filter(Team.uuid == team_uuid).first()
-    primary = team.roles.filter(Role.name == primary).first()
-    secondary = team.roles.filter(Role.name == secondary).first()
-    primary_users = primary.users.all() if primary else team.users.all()
-    secondary_users = secondary.users.all() if secondary else team.users.all()
- 
-    return {
-        "header": [" "] + [u.username for u in secondary_users],
-        "pairs": [frequencies_for_user(user, secondary_users, start, end) for user in primary_users],
-    }
+    today = pendulum.now()
+    start_date = pendulum.parse(start, tz="US/Central").to_iso8601_string() if start else today.subtract(years=99).to_iso8601_string()
+    end_date = pendulum.parse(end, tz="US/Central").add(days=1).to_iso8601_string() if end else today.add(days=1).to_iso8601_string()
+    sessions = fetch_pairs(team.id, start=start_date, end=end_date)
+
+    return [
+        {
+            'username': u.username,
+            'roleName': u.role.name,
+            'frequencies': frequencies_for_user(u.username, sessions)
+        } for u in team.users.order_by(asc(User.username)).all()
+    ]
+

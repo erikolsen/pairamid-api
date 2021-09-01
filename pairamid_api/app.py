@@ -11,6 +11,7 @@ from pairamid_api import (
     feedback_tag,
     feedback_tag_group,
 )
+from pairamid_api import models
 from pairamid_api.extensions import migrate, db, CORS, socketio, guard
 from pairamid_api.models import User
 
@@ -18,11 +19,13 @@ from pairamid_api.models import User
 def create_app(config_object="pairamid_api.config"):
     app = Flask(__name__)
     app.config["SECRET_KEY"] = "a_super_secret_key"
+    # app.config["SQLALCHEMY_ECHO"] = True # echos db logs
     app.config.from_object(config_object)
     register_extensions(app)
     register_blueprints(app)
     register_commands(app)
     register_errorhandlers(app)
+    register_shellcontext(app)
     return app
 
 
@@ -67,3 +70,12 @@ def register_errorhandlers(app):
         return jsonify(status="failed", message=str(error)), 500
 
     return None
+
+def register_shellcontext(app: Flask):
+    def make_shell_context():
+        return {
+            'db': db,
+            'models': models,
+        }
+
+    app.shell_context_processor(make_shell_context)

@@ -418,7 +418,6 @@ class FeedbackTagGroupSchema(SQLAlchemyAutoSchema):
     tags = fields.Nested(FeedbackTagSchema, many=True)
 
 class FeedbackSchema(SQLAlchemyAutoSchema):
-    # created_at = fields.fields.DateTime(format='%m/%d-%Y')
     created_at = fields.fields.DateTime()
     class Meta:
         model = PairingSession
@@ -436,9 +435,41 @@ class FullUserSchema(UserSchema):
     class Meta:
         fields = ('id', 'active_pairing_sessions', 'team', 'username', 'full_name', 'uuid', 'feedback_received', 'feedback_tag_groups')
 
-
+# faster team user profile page
 class FeedbackRequestUserSchema(UserSchema):
     feedback_tag_groups = fields.Nested(FeedbackTagGroupSchema, many=True)
 
     class Meta:
         fields = ('username', 'full_name', 'feedback_tag_groups', 'id')
+
+class NestedRoleSchema(SQLAlchemyAutoSchema):
+    class Meta:
+        model = Role
+        fields = ('color', 'name')
+
+class NestedUserSchema(SQLAlchemyAutoSchema):
+    class Meta:
+        model = User
+        fields = ('username', 'role')
+
+    role = fields.Nested(NestedRoleSchema)
+
+class ProfilePairingSessionSchema(SQLAlchemyAutoSchema):
+    class Meta:
+        model = PairingSession
+        include_relationships = True
+        fields = ('users', 'created_at')
+
+    users = fields.Nested(NestedUserSchema, many=True)
+
+class NestedTeamSchema(SQLAlchemyAutoSchema):
+    class Meta:
+        model = Team
+        fields = ('name', 'uuid')
+
+class TeamUserProfile(UserSchema):
+    active_pairing_sessions = fields.Nested(ProfilePairingSessionSchema, many=True)
+    team = fields.Nested(NestedTeamSchema)
+
+    class Meta:
+        fields = ('id', 'active_pairing_sessions', 'username', 'full_name', 'uuid', 'team')

@@ -1,23 +1,5 @@
 from pairamid_api.models import User, Feedback, FeedbackSchema, FeedbackTag, FeedbackTagGroup, FeedbackRequestUserSchema
 from pairamid_api.extensions import db
-INITIAL_FEEDBACK = [ 
-    {
-        'message': "Consider checking out some of pairamid's team features to you and your team pair more efficiently. Thanks for trying out pairamid!",
-        'author_name': 'Pairamid Team', 
-        'tags': []
-    },
-    {
-        'message': 'Once you have added some personal goals feel free to share your feedback form and start collecting feedback. You can also use that feedback form to enter feedback you receive outside of pairamid.',
-        'author_name': 'Pairamid Team', 
-        'tags': ['Feedback', 'Glow']
-    },
-    {
-        'message': 'Managing your tags will allow you to set Personal Goals. Additional groups can be added to incorporate team or company values.These groups and their tags can help others give you more targeted feedback.',
-        'author_name': 'Pairamid Team', 
-        'tags': ['Feedback', 'Grow']
-    },
-
- ]
 
 def fetch_feedback_user(user_uuid):
     user = User.query.with_deleted().filter(User.uuid == user_uuid).first()

@@ -7,7 +7,19 @@ from random import shuffle
 from flask.cli import with_appcontext
 from sqlalchemy import asc
 from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, PairingSession, Role, Team, Feedback, FeedbackTag, FeedbackTagGroup, Reminder, Participants
+from pairamid_api.models import (
+    TeamUserProfile,
+    User, 
+    PairingSession, 
+    PairingSession, 
+    Role, 
+    Team, 
+    Feedback, 
+    FeedbackTag, 
+    FeedbackTagGroup, 
+    Reminder, 
+    Participants,
+)
 from pairamid_api.pairing_session.operations import streak
 
 def spacer(word):
@@ -96,9 +108,9 @@ def set_streak():
 @click.command()
 @with_appcontext
 def seed_pairs():
-    """Seeds the db with past Pairing Sessions from json dump"""
-    end = arrow.get(datetime.datetime.now()).shift(days=-1)
-    start = end.shift(months=-1)
+    """Seeds the db with past Pairing Sessions for the last month"""
+    end = arrow.get(datetime.datetime.now()).shift(days=-31)
+    start = end.shift(months=-11)
     team = Team.query.filter_by(name="Parks and Rec").first()
     for r in arrow.Arrow.range("day", start, end):
         members = team.users.all()

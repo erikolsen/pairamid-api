@@ -22,7 +22,7 @@ def update(team_uuid, id):
 
 @blueprint.route("/team/<team_uuid>/user/<id>", methods=["GET"])
 def show(team_uuid, id):
-    return jsonify(operations.run_fetch(id))
+    return jsonify(operations.run_fetch_team_user(id))
 
 @blueprint.route("/team/<team_uuid>/user/<id>", methods=["DELETE"])
 def delete(team_uuid, id):
@@ -45,7 +45,6 @@ def user_show(id):
 @blueprint.route("/users", methods=["POST"])
 def user_create():
     return jsonify(operations.run_sign_up(request.json))
-
 
 @blueprint.route("/login", methods=["POST"])
 def user_login():
