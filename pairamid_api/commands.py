@@ -1,7 +1,7 @@
 import time
 import arrow
 import click
-import datetime
+from datetime import datetime, timedelta
 import json
 from random import shuffle
 from flask.cli import with_appcontext
@@ -22,8 +22,8 @@ from pairamid_api.models import (
 )
 from pairamid_api.pairing_session.operations import streak
 
-def spacer(word):
-    space = (25 - len(word)) * " "
+def spacer(word, offset=20):
+    space = (offset - len(word)) * " "
     return word + space + "|"
 
 def user_row(team):
@@ -54,7 +54,8 @@ def last_pair_date(team):
                     .filter(
                         ~PairingSession.info.in_(PairingSession.FILTERED)
                     )[-1])
-        return f"{first.created_at.strftime('%x')}-{last.created_at.strftime('%x')}"
+        end = ' *' if arrow.get(last.created_at) > arrow.get(datetime.now()).shift(days=-7) else ''
+        return f"{first.created_at.strftime('%x')}-{last.created_at.strftime('%x')}{end}"
     return ''
 
 @click.command()
@@ -62,32 +63,32 @@ def last_pair_date(team):
 def display_teams():
     """Displays all team data"""
     print(
-        spacer("Name"),
-        spacer("Id"),
-        spacer("Users(archived)"),
-        spacer("Roles"),
-        spacer("Pairs(archived)"),
-        spacer("Last Paired"),
-        spacer("UUID"),
+        spacer("Name", offset=25),
+        spacer("Id", offset=5),
+        spacer("Users(del)", offset=12),
+        spacer("Roles", offset=7),
+        spacer("Pairs(del)", offset=12),
+        spacer("Last Paired(active)", 20),
+        spacer("UUID", offset=40),
     )
     for team in Team.query.all():
         print(
-            spacer(team.name),
-            spacer(str(team.id)),
-            spacer(user_row(team)),
-            spacer(str(len(team.roles.all()))),
-            spacer(pair_row(team)),
-            spacer(last_pair_date(team)),
-            str(team.uuid),
+            spacer(team.name, offset=25),
+            spacer(str(team.id), offset=5),
+            spacer(user_row(team), offset=12),
+            spacer(str(len(team.roles.all())), offset=7),
+            spacer(pair_row(team), offset=12),
+            spacer(last_pair_date(team), 20),
+            spacer(str(team.uuid), 40),
         )
     print(
-        spacer(f"Total-{Team.query.count()}"),
-        spacer("-"),
-        spacer(str(User.query.with_deleted().count())),
-        spacer(str(Role.query.count())),
-        spacer(str(PairingSession.query.with_deleted().count())),
-        spacer("-"),
-        spacer("-"),
+        spacer(f"Total-{Team.query.count()}", offset=25),
+        spacer("-", 5),
+        spacer(str(User.query.with_deleted().count()), 12),
+        spacer(str(Role.query.count()), 7),
+        spacer(str(PairingSession.query.with_deleted().count()), 12),
+        spacer("-", 20),
+        spacer("-", 40),
     )
 
 def groups_of_2(l):
@@ -109,7 +110,7 @@ def set_streak():
 @with_appcontext
 def seed_pairs():
     """Seeds the db with past Pairing Sessions for the last month"""
-    end = arrow.get(datetime.datetime.now()).shift(days=-31)
+    end = arrow.get(datetime.now()).shift(days=-31)
     start = end.shift(months=-11)
     team = Team.query.filter_by(name="Parks and Rec").first()
     for r in arrow.Arrow.range("day", start, end):
