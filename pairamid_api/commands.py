@@ -23,7 +23,7 @@ from pairamid_api.models import (
 from pairamid_api.pairing_session.operations import streak
 
 def spacer(word):
-    space = (20 - len(word)) * " "
+    space = (25 - len(word)) * " "
     return word + space + "|"
 
 def user_row(team):
