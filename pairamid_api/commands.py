@@ -54,7 +54,9 @@ def last_pair_date(team):
                     .filter(
                         ~PairingSession.info.in_(PairingSession.FILTERED)
                     )[-1])
-        end = ' *' if arrow.get(last.created_at) > arrow.get(datetime.now()).shift(days=-7) else ''
+        within_last_week = arrow.get(last.created_at) > arrow.get(datetime.now()).shift(days=-7) 
+        has_active_pair = len(last.users) > 0
+        end = ' *' if within_last_week and has_active_pair else ''
         return f"{first.created_at.strftime('%x')}-{last.created_at.strftime('%x')}{end}"
     return ''
 
