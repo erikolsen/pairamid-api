@@ -1,4 +1,3 @@
-from datetime import datetime
 import pendulum
 from pairamid_api.models import User, Team
 from collections import Counter
@@ -26,23 +25,25 @@ def fetch_pairs(team_id, start, end):
 
     return [value for rowproxy in resultproxy for _, value in rowproxy.items()]
 
-def frequencies_for_user(user, sessions):
+def frequencies_for_user(user, sessions, default):
     counts = Counter([u for pair in sessions for u in pair if u != user and user in pair])
-    counts[user] = len([p for p in sessions if len(p) == 1 and user in p])
+    counts[user] = len([p for p in sessions if len(p) == 1 and user in p]) or 0
+    counts.update(default)
     return counts
 
 def run_build_frequency(team_uuid, start=None, end=None):
     team = Team.query.filter(Team.uuid == team_uuid).first()
     today = pendulum.now()
-    start_date = pendulum.parse(start, tz="US/Central").to_iso8601_string() if start else today.subtract(years=99).to_iso8601_string()
+    start_date = pendulum.parse(start, tz="US/Central").to_iso8601_string() if start else today.subtract(months=1).to_iso8601_string()
     end_date = pendulum.parse(end, tz="US/Central").add(days=1).to_iso8601_string() if end else today.add(days=1).to_iso8601_string()
     sessions = fetch_pairs(team.id, start=start_date, end=end_date)
+    default = {u.username: 0 for u in team.users}
 
     return [
         {
             'username': u.username,
             'roleName': u.role.name,
-            'frequencies': frequencies_for_user(u.username, sessions)
+            'frequencies': frequencies_for_user(u.username, sessions, default)
         } for u in team.users.order_by(asc(User.username)).all()
     ]
 
