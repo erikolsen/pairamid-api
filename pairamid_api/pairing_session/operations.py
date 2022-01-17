@@ -5,7 +5,8 @@ from sqlalchemy import asc
 from pairamid_api.extensions import db
 from pairamid_api.lib.date_helpers import start_of_day, end_of_day, is_weekday
 from pairamid_api.reminder.operations import fetch_reminders
-from pairamid_api.models import User, PairingSession, PairingSessionSchema, Team
+from pairamid_api.models import User, PairingSession, Team
+from pairamid_api.schema import PairingSessionSchema
 
 
 def streak(session):

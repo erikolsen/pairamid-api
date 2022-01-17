@@ -1,7 +1,7 @@
-from pairamid_api.models import Role, RoleSchema, Team, Reminder
+from pairamid_api.models import Role, Team
+from pairamid_api.schema import RoleSchema
 from pairamid_api.extensions import db
-from sqlalchemy import asc, desc
-
+from sqlalchemy import asc
 
 def run_fetch_all(team_uuid):
     team = Team.query.filter(Team.uuid == team_uuid).first()

@@ -1,7 +1,8 @@
-from pairamid_api.models import User, UserSchema, FullUserSchema, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag, Feedback, TeamUserProfile
+from pairamid_api.models import User, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag, Feedback
+from pairamid_api.schema import UserSchema, FullUserSchema, TeamUserProfile
 from pairamid_api.extensions import db, guard
 from pairamid_api.pairing_session.operations import add_user_to_available
-from sqlalchemy import asc, desc
+from sqlalchemy import asc
 from .initial_feedback_groups import INITIAL_FEEDBACK_GROUPS, INITIAL_FEEDBACK
 
 def tag_for_name(feedbacks, name):

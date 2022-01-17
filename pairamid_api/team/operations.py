@@ -1,6 +1,7 @@
-from pairamid_api.models import Team, TeamSchema, Role, User, PairingSession
+from pairamid_api.models import Team, Role, User, PairingSession
+from pairamid_api.schema import TeamSchema
 from pairamid_api.extensions import db
-from sqlalchemy import asc, desc
+from sqlalchemy import asc
 from datetime import datetime, timedelta
 
 def fetch_from_ids(id_string):

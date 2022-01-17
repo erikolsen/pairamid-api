@@ -1,4 +1,5 @@
-from pairamid_api.models import User, Feedback, FeedbackSchema, FeedbackTag, FeedbackTagGroup, FeedbackRequestUserSchema
+from pairamid_api.models import User, Feedback, FeedbackTag
+from pairamid_api.schema import FeedbackSchema, FeedbackRequestUserSchema
 from pairamid_api.extensions import db
 
 def fetch_feedback_user(user_uuid):

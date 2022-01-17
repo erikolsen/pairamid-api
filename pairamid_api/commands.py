@@ -8,15 +8,11 @@ from flask.cli import with_appcontext
 from sqlalchemy import asc
 from pairamid_api.extensions import db
 from pairamid_api.models import (
-    TeamUserProfile,
     User, 
     PairingSession, 
     PairingSession, 
     Role, 
     Team, 
-    Feedback, 
-    FeedbackTag, 
-    FeedbackTagGroup, 
     Reminder, 
     Participants,
 )

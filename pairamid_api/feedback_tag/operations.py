@@ -1,4 +1,5 @@
-from pairamid_api.models import FeedbackTag, FeedbackTagSchema
+from pairamid_api.models import FeedbackTag
+from pairamid_api.schema import FeedbackTagSchema
 from pairamid_api.extensions import db
 
 def run_create(data):

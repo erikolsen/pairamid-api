@@ -1,7 +1,8 @@
-from pairamid_api.models import Reminder, User, ReminderSchema, Team
-from pairamid_api.extensions import db
-from sqlalchemy import asc, desc, and_, not_, or_
 import arrow
+from sqlalchemy import and_, not_, or_
+from pairamid_api.models import Reminder, User, Team
+from pairamid_api.schema import ReminderSchema
+from pairamid_api.extensions import db
 
 
 def weekday_range(day1, day2):
