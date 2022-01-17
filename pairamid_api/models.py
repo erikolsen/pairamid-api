@@ -435,7 +435,6 @@ class FullUserSchema(UserSchema):
     class Meta:
         fields = ('id', 'active_pairing_sessions', 'team', 'username', 'full_name', 'uuid', 'feedback_received', 'feedback_tag_groups')
 
-# faster team user profile page
 class FeedbackRequestUserSchema(UserSchema):
     feedback_tag_groups = fields.Nested(FeedbackTagGroupSchema, many=True)
 
@@ -458,7 +457,7 @@ class ProfilePairingSessionSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = PairingSession
         include_relationships = True
-        fields = ('users', 'created_at')
+        fields = ('users', 'created_at', 'streak')
 
     users = fields.Nested(NestedUserSchema, many=True)
 

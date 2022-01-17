@@ -34,7 +34,7 @@ def frequencies_for_user(user, sessions, default):
 def run_build_frequency(team_uuid, start=None, end=None):
     team = Team.query.filter(Team.uuid == team_uuid).first()
     today = pendulum.now()
-    start_date = pendulum.parse(start, tz="US/Central").to_iso8601_string() if start else today.subtract(months=1).to_iso8601_string()
+    start_date = pendulum.parse(start, tz="US/Central").to_iso8601_string() if start else today.subtract(days=30).to_iso8601_string()
     end_date = pendulum.parse(end, tz="US/Central").add(days=1).to_iso8601_string() if end else today.add(days=1).to_iso8601_string()
     sessions = fetch_pairs(team.id, start=start_date, end=end_date)
     default = {u.username: 0 for u in team.users}
