@@ -108,7 +108,7 @@ def set_streak():
 @with_appcontext
 def seed_pairs():
     """Seeds the db with past Pairing Sessions for the last month"""
-    end = arrow.get(datetime.now()).shift(days=-31)
+    end = arrow.get(datetime.now()).shift(days=-1)
     start = end.shift(months=-11)
     team = Team.query.filter_by(name="Parks and Rec").first()
     for r in arrow.Arrow.range("day", start, end):
