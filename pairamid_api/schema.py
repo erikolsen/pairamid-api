@@ -1,6 +1,6 @@
 from sqlalchemy import desc
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
-from pairamid_api.models import Role, User, Reminder, Team, PairingSession, FeedbackTag 
+from pairamid_api.models import Role, TeamMember, Reminder, Team, PairingSession, FeedbackTag 
 
 class RoleSchema(SQLAlchemyAutoSchema):
     class Meta:
@@ -17,7 +17,7 @@ class RoleSchema(SQLAlchemyAutoSchema):
 
 class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
-        model = User
+        model = TeamMember
         fields = ('username', 'role', 'uuid', 'created_at', 'id', 'deleted', 'full_name')
 
     role = fields.Nested(RoleSchema)
@@ -112,7 +112,7 @@ class NestedRoleSchema(SQLAlchemyAutoSchema):
 
 class NestedUserSchema(SQLAlchemyAutoSchema):
     class Meta:
-        model = User
+        model = TeamMember
         fields = ('username', 'role')
 
     role = fields.Nested(NestedRoleSchema)

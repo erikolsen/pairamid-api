@@ -1,6 +1,6 @@
 from datetime import datetime
 from pairamid_api.extensions import db
-from pairamid_api.models.user import User
+from pairamid_api.models.user import TeamMember
 from sqlalchemy.ext.hybrid import hybrid_property
 
 class Role(db.Model):
@@ -10,11 +10,11 @@ class Role(db.Model):
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey("team.id"))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    all_users = db.relationship("User", lazy="dynamic", order_by="asc(User.username)")
+    all_users = db.relationship("TeamMember", lazy="dynamic", order_by="asc(TeamMember.username)")
 
     @hybrid_property
     def users(self):
-        return self.all_users.filter(User.deleted==False)
+        return self.all_users.filter(TeamMember.deleted==False)
 
     @users.setter
     def users(self, users):

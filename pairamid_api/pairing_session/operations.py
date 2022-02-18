@@ -5,7 +5,7 @@ from sqlalchemy import asc
 from pairamid_api.extensions import db
 from pairamid_api.lib.date_helpers import start_of_day, end_of_day, is_weekday
 from pairamid_api.reminder.operations import fetch_reminders
-from pairamid_api.models import User, PairingSession, Team
+from pairamid_api.models import TeamMember, PairingSession, Team
 from pairamid_api.schema import PairingSessionSchema
 
 
@@ -99,7 +99,7 @@ def run_batch_update(pairs):
     for data in pairs:
         pair = data["pair"]
         user_ids = [user["id"] for user in pair["users"]]
-        users = User.query.filter(User.id.in_(user_ids)).order_by(asc(User.username))
+        users = TeamMember.query.filter(TeamMember.id.in_(user_ids)).order_by(asc(TeamMember.username))
         pairing_session = PairingSession.query.get(pair["id"])
         pairing_session.info = pair["info"]
         pairing_session.users = list(users)
@@ -115,7 +115,7 @@ def run_batch_update(pairs):
 
 def _daily_refresh_pairs(team_uuid):
     team = Team.query.filter_by(uuid=team_uuid).first()
-    all_users = set(team.users.order_by(asc(User.username)).all())
+    all_users = set(team.users.order_by(asc(TeamMember.username)).all())
     ooo_users = set(todays_ooo(team))
     unpaired = PairingSession(
         users=list(all_users - ooo_users), info="UNPAIRED", team=team

@@ -13,7 +13,7 @@ from pairamid_api import (
 )
 from pairamid_api import models
 from pairamid_api.extensions import migrate, db, CORS, socketio, guard
-from pairamid_api.models import User
+from pairamid_api.models import TeamMember
 
 
 def create_app(config_object="pairamid_api.config"):
@@ -49,7 +49,7 @@ def register_extensions(app):
     socketio.init_app(app, cors_allowed_origins="*")
     guard.init_app(
         app,
-        User,
+        TeamMember,
     )
     return None
 

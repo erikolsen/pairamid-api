@@ -2,7 +2,7 @@ import random
 import functools
 import arrow
 from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, Role, Team, Participants, Reminder
+from pairamid_api.models import TeamMember, PairingSession, Role, Team, Participants, Reminder
 from pairamid_api.pairing_session.operations import _daily_refresh_pairs, _todays_pairs
 
 def generate_username():
@@ -40,7 +40,7 @@ class TeamFactory:
         users = []
         for i in range(1, self.user_count + 1):
             users.append(
-                User(username=generate_username(), role=random.choice(self.roles))
+                TeamMember(username=generate_username(), role=random.choice(self.roles))
             )
         db.session.add_all(users)
         db.session.commit()

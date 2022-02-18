@@ -9,7 +9,8 @@ from pairamid_api.models.pairing_session import PairingSession
 from pairamid_api.models.participants import Participants
 from pairamid_api.models.reminder import Reminder
 
-class User(SoftDeleteMixin, db.Model):
+
+class TeamMember(SoftDeleteMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     username = db.Column(db.String(64))
@@ -66,7 +67,7 @@ class User(SoftDeleteMixin, db.Model):
         return self.username < obj.username
 
     def __repr__(self):
-        return f"<User {self.username} {self.role and self.role.name or 'No Role'} >"
+        return f"<TeamMember {self.username} {self.role and self.role.name or 'No Role'} >"
 
     @property
     def active_pairing_sessions(self):
@@ -118,4 +119,3 @@ class User(SoftDeleteMixin, db.Model):
         todays_unpaired.users.append(self)
         self.reminders.update({Reminder.deleted: False})
         super().revive()
-        

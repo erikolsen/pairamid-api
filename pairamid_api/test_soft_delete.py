@@ -3,7 +3,7 @@ import time
 from pairamid_api.app import create_app
 from pairamid_api.extensions import db
 from pairamid_api.test.team_factory import TeamFactory
-from pairamid_api.models import User, PairingSession, Participants, Reminder
+from pairamid_api.models import TeamMember, PairingSession, Participants, Reminder
 
 class SoftDeleteCase(unittest.TestCase):
     def setUp(self):
@@ -25,7 +25,7 @@ class SoftDeleteCase(unittest.TestCase):
         # act
         u1.hard_delete()
         # assert
-        self.assertNotIn(u1, User.query.with_deleted().all())
+        self.assertNotIn(u1, TeamMember.query.with_deleted().all())
 
     def test_user_soft_delete_today_removes_user_from_pairs(self):
         # arrange
@@ -66,7 +66,7 @@ class SoftDeleteCase(unittest.TestCase):
         # act
         u1.soft_delete()
         # assert
-        self.assertEqual(User.query.count(), 2)
+        self.assertEqual(TeamMember.query.count(), 2)
         self.assertEqual(team.users.count(), 2)
         self.assertEqual(PairingSession.query.count(), 1)
         self.assertEqual(team.pairing_sessions.count(), 1)
@@ -86,7 +86,7 @@ class SoftDeleteCase(unittest.TestCase):
         # act
         u1.soft_delete()
         # assert
-        self.assertEqual(User.query.with_deleted().count(), 3)
+        self.assertEqual(TeamMember.query.with_deleted().count(), 3)
         self.assertEqual(team.all_users.count(), 3)
         self.assertEqual(PairingSession.query.with_deleted().count(), 2)
         self.assertEqual(team.all_pairing_sessions.count(), 2)
@@ -107,7 +107,7 @@ class SoftDeleteCase(unittest.TestCase):
         u1.soft_delete()
         u1.revive()
         # assert
-        self.assertEqual(User.query.count(), 3)
+        self.assertEqual(TeamMember.query.count(), 3)
         self.assertIn(u1, unpaired.users)
         self.assertEqual(PairingSession.query.count(), 5)
         self.assertEqual(Participants.query.count(), 7)

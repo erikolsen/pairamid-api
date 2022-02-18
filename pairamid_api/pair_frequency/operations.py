@@ -1,5 +1,5 @@
 import pendulum
-from pairamid_api.models import User, Team
+from pairamid_api.models import TeamMember, Team
 from collections import Counter
 from sqlalchemy import asc
 from pairamid_api.extensions import db
@@ -8,12 +8,12 @@ def fetch_pairs(team_id, start, end):
     """Fetches user names for all active pairs during a time period."""
 
     sql = f"""
-            SELECT ARRAY_AGG(public.user.username ORDER BY public.user.username ASC)
+            SELECT ARRAY_AGG(public.team_member.username ORDER BY public.team_member.username ASC)
             FROM pairing_session
             INNER JOIN participants
             ON participants.pairing_session_id = pairing_session.id
-            INNER JOIN public.user
-            ON participants.user_id = public.user.id
+            INNER JOIN public.team_member
+            ON participants.team_member_id = public.team_member.id
             WHERE pairing_session.info NOT IN ('UNPAIRED', 'OUT_OF_OFFICE')
             AND pairing_session.team_id = {team_id}
             AND pairing_session.created_at >= '{start}'::date
@@ -44,6 +44,6 @@ def run_build_frequency(team_uuid, start=None, end=None):
             'username': u.username,
             'roleName': u.role.name,
             'frequencies': frequencies_for_user(u.username, sessions, default)
-        } for u in team.users.order_by(asc(User.username)).all()
+        } for u in team.users.order_by(asc(TeamMember.username)).all()
     ]
 

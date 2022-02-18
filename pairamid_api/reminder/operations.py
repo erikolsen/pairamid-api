@@ -1,6 +1,6 @@
 import arrow
 from sqlalchemy import and_, not_, or_
-from pairamid_api.models import Reminder, User, Team
+from pairamid_api.models import Reminder, TeamMember, Team
 from pairamid_api.schema import ReminderSchema
 from pairamid_api.extensions import db
 
@@ -61,7 +61,7 @@ def run_create(team_uuid, data):
     reminder.end_date = arrow.get(data["endDate"]).to("US/Central").ceil("day").format()
     reminder.recuring_weekday = start_date.weekday() if data["repeatWeekly"] else None
     reminder.message = data["message"]
-    reminder.user_id = data["userId"] or None
+    reminder.team_member_id = data["userId"] or None
 
     db.session.add(reminder)
     db.session.commit()

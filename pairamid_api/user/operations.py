@@ -1,4 +1,4 @@
-from pairamid_api.models import User, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag, Feedback
+from pairamid_api.models import TeamMember, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag, Feedback
 from pairamid_api.schema import UserSchema, FullUserSchema, TeamUserProfile
 from pairamid_api.extensions import db, guard
 from pairamid_api.pairing_session.operations import add_user_to_available
@@ -47,7 +47,7 @@ def run_sign_up(data):
     password = data.get("password", None)
     full_name = data.get("fullName", None)
     try:
-        new_user = User(
+        new_user = TeamMember(
             email=email,
             full_name=full_name,
             username=initials_from(full_name),
@@ -65,24 +65,24 @@ def run_sign_up(data):
         raise e
 
 def run_fetch(user_uuid):
-    user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
+    user = TeamMember.query.with_deleted().filter(TeamMember.uuid == user_uuid).first()
     schema = FullUserSchema()
     return schema.dump(user)
 
 def run_fetch_team_user(user_uuid):
-    user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
+    user = TeamMember.query.with_deleted().filter(TeamMember.uuid == user_uuid).first()
     schema = TeamUserProfile()
     return schema.dump(user)
 
 def run_fetch_all(team_uuid):
     team = Team.query.filter(Team.uuid == team_uuid).first()
-    users = team.all_users.order_by(asc(User.username)).all() # includes soft deleted
+    users = team.all_users.order_by(asc(TeamMember.username)).all() # includes soft deleted
     schema = UserSchema(many=True)
     return schema.dump(users)
 
 
 def run_update(id, data):
-    user = User.query.get(id)
+    user = TeamMember.query.get(id)
     role = Role.query.get(data["roleId"])
     user.role = role
     user.username = data["initials"].upper()
@@ -95,7 +95,7 @@ def run_update(id, data):
 def run_create(team_uuid, data):
     team = Team.query.filter(Team.uuid == team_uuid).first()
     role = team.roles.first()
-    user = User(team=team, role=role)
+    user = TeamMember(team=team, role=role)
     db.session.add(user)
     add_user_to_available(user)
     db.session.commit()
@@ -104,7 +104,7 @@ def run_create(team_uuid, data):
 
 
 def run_delete(id):
-    user = User.query.with_deleted().get(id)
+    user = TeamMember.query.with_deleted().get(id)
     schema = UserSchema()
     if user.pairing_sessions.filter(PairingSession.info != "UNPAIRED").count() == 0:
         hard_delete = True
@@ -117,7 +117,7 @@ def run_delete(id):
     return dump 
 
 def run_revive(id):
-    user = User.query.with_deleted().get(id)
+    user = TeamMember.query.with_deleted().get(id)
     user.revive()
     schema = UserSchema()
     return schema.dump(user)

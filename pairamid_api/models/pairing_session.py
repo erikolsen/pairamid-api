@@ -14,7 +14,7 @@ class PairingSession(SoftDeleteMixin, db.Model):
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey("team.id"))
     users = db.relationship(
-        "User", secondary="participants", passive_deletes=True, order_by="User.username"
+        "TeamMember", secondary="participants", passive_deletes=True, order_by="TeamMember.username"
     )
     streak = db.Column(db.Integer, default=0)
 

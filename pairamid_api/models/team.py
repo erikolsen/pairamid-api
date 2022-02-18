@@ -5,7 +5,7 @@ from sqlalchemy.ext.hybrid import hybrid_property
 from pairamid_api.extensions import db
 from pairamid_api.models.pairing_session import PairingSession
 from pairamid_api.models.reminder import Reminder
-from pairamid_api.models.user import User
+from pairamid_api.models.user import TeamMember
 
 class Team(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -13,7 +13,7 @@ class Team(db.Model):
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     all_users = db.relationship(
-        "User", backref="user", lazy="dynamic"
+        "TeamMember", backref="user", lazy="dynamic"
     )
     all_reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
     all_pairing_sessions = db.relationship(
@@ -23,7 +23,7 @@ class Team(db.Model):
 
     @hybrid_property
     def users(self):
-        return self.all_users.filter(User.deleted==False)
+        return self.all_users.filter(TeamMember.deleted==False)
 
     @users.setter
     def users(self, users):

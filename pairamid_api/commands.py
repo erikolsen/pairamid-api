@@ -8,7 +8,7 @@ from flask.cli import with_appcontext
 from sqlalchemy import asc
 from pairamid_api.extensions import db
 from pairamid_api.models import (
-    User, 
+    TeamMember, 
     PairingSession, 
     PairingSession, 
     Role, 
@@ -82,7 +82,7 @@ def display_teams():
     print(
         spacer(f"Total-{Team.query.count()}", offset=25),
         spacer("-", 5),
-        spacer(str(User.query.with_deleted().count()), 12),
+        spacer(str(TeamMember.query.with_deleted().count()), 12),
         spacer(str(Role.query.count()), 7),
         spacer(str(PairingSession.query.with_deleted().count()), 12),
         spacer("-", 20),
@@ -127,7 +127,7 @@ def seed_pairs():
 @with_appcontext
 def seed_users():
     """Seeds the db with Users and Pairing Sessions"""
-    if User.query.count():
+    if TeamMember.query.count():
         print("Database base has already been seeded.")
         return None
 
@@ -140,17 +140,17 @@ def seed_users():
     db.session.add(pawnee)
 
     for username in parks_users:
-        user = User(username=username, role=parks_dept, team=team)
+        user = TeamMember(username=username, role=parks_dept, team=team)
         db.session.add(user)
 
     for username in pawnee_users:
-        user = User(username=username, role=pawnee, team=team)
+        user = TeamMember(username=username, role=pawnee, team=team)
         db.session.add(user)
 
     db.session.commit()
 
     print(
-        f"Database has been seeded with Users on team {team.name}: {User.query.count()}"
+        f"Database has been seeded with Users on team {team.name}: {TeamMember.query.count()}"
     )
 
 
@@ -175,7 +175,7 @@ def purge_team(id):
         print(f'Starting in {i+1}')
         time.sleep(1)
 
-    before_totals = f'Before totals: Teams: {Team.query.count()}, Users: {User.query.with_deleted().count()}, Pairs: {PairingSession.query.with_deleted().count()}, Roles: {Role.query.count()}, Reminders: {Reminder.query.with_deleted().count()}, Participants: {Participants.query.with_deleted().count()}'
+    before_totals = f'Before totals: Teams: {Team.query.count()}, Users: {TeamMember.query.with_deleted().count()}, Pairs: {PairingSession.query.with_deleted().count()}, Roles: {Role.query.count()}, Reminders: {Reminder.query.with_deleted().count()}, Participants: {Participants.query.with_deleted().count()}'
     print('Starting purge')
     ####
     print(f'Purging pairing_sessions: {pairs}')
@@ -213,5 +213,5 @@ def purge_team(id):
     db.session.commit()
     print('-'*len(before_totals))
     print(before_totals)
-    print(f'After totals:  Teams: {Team.query.count()}, Users: {User.query.with_deleted().count()}, Pairs: {PairingSession.query.with_deleted().count()}, Roles: {Role.query.count()}, Reminders: {Reminder.query.with_deleted().count()}, Participants: {Participants.query.with_deleted().count()}')
+    print(f'After totals:  Teams: {Team.query.count()}, Users: {TeamMember.query.with_deleted().count()}, Pairs: {PairingSession.query.with_deleted().count()}, Roles: {Role.query.count()}, Reminders: {Reminder.query.with_deleted().count()}, Participants: {Participants.query.with_deleted().count()}')
     print('-'*len(before_totals))
