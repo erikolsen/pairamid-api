@@ -35,6 +35,8 @@ class PairFrequencyCase(unittest.TestCase):
                 'frequencies': {
                     u1.username: 1,
                     u2.username: 3,
+                    u3.username: 0,
+                    u4.username: 0,
                 },
             },
             {
@@ -44,12 +46,14 @@ class PairFrequencyCase(unittest.TestCase):
                     u1.username: 3,
                     u2.username: 0,
                     u3.username: 1,
+                    u4.username: 0,
                 },
             },
             {
                 'username': u3.username,
                 'roleName': u3.role.name,
                 'frequencies': {
+                    u1.username: 0,
                     u2.username: 1,
                     u3.username: 0,
                     u4.username: 1,
@@ -59,6 +63,8 @@ class PairFrequencyCase(unittest.TestCase):
                 'username': u4.username,
                 'roleName': u4.role.name,
                 'frequencies': {
+                    u1.username: 0,
+                    u2.username: 0,
                     u3.username: 1,
                     u4.username: 1,
                 },
@@ -93,6 +99,7 @@ class PairFrequencyCase(unittest.TestCase):
                 'roleName': u1.role.name,
                 'frequencies': {
                     u1.username: 0,
+                    u2.username: 0,
                     u3.username: 1,
                     u4.username: 1,
                 },
@@ -101,6 +108,7 @@ class PairFrequencyCase(unittest.TestCase):
                 'username': u2.username,
                 'roleName': u2.role.name,
                 'frequencies': {
+                    u1.username: 0,
                     u2.username: 0,
                     u3.username: 1,
                     u4.username: 1,
@@ -113,6 +121,7 @@ class PairFrequencyCase(unittest.TestCase):
                     u1.username: 1,
                     u2.username: 1,
                     u3.username: 0,
+                    u4.username: 0,
                 },
             },
             {
@@ -121,6 +130,7 @@ class PairFrequencyCase(unittest.TestCase):
                 'frequencies': {
                     u1.username: 1,
                     u2.username: 1,
+                    u3.username: 0,
                     u4.username: 0,
                 },
             },
