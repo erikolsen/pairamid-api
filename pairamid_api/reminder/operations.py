@@ -52,7 +52,6 @@ def run_fetch_all(team_uuid, start_date, end_date):
     schema = ReminderSchema(many=True)
     return schema.dump(reminders)
 
-
 def run_create(team_uuid, data):
     team = Team.query.filter(Team.uuid == team_uuid).first()
     reminder = Reminder(team=team)
@@ -67,7 +66,6 @@ def run_create(team_uuid, data):
     db.session.commit()
     schema = ReminderSchema()
     return schema.dump(reminder)
-
 
 def run_delete(id):
     Reminder.query.filter(Reminder.id == id).delete()

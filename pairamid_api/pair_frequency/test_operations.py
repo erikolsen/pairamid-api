@@ -1,5 +1,4 @@
 import unittest
-import time
 from .operations import run_build_frequency
 from pairamid_api.app import create_app
 from pairamid_api.extensions import db
@@ -21,7 +20,7 @@ class PairFrequencyCase(unittest.TestCase):
     def test_run_build_frequency_all(self):
         factory = TeamFactory(user_count=4)
         team = factory.team
-        u1, u2, u3, u4 = factory.users
+        u1, u2, u3, u4 = factory.team_members
         factory.add_pair([u1])
         factory.add_pair([u4])
         factory.add_pair([u1, u2])
@@ -74,7 +73,7 @@ class PairFrequencyCase(unittest.TestCase):
         factory = TeamFactory(user_count=4, role_count=2)
         team = factory.team
         role1, role2 = factory.roles
-        u1, u2, u3, u4 = factory.users
+        u1, u2, u3, u4 = factory.team_members
         factory.update_roles(role1.name, u1, u2)
         factory.update_roles(role2.name, u3, u4)
         factory.add_pair([u1, u3])

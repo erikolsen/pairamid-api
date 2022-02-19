@@ -76,13 +76,13 @@ class TeamMember(SoftDeleteMixin, db.Model):
     def csv_row(self):
         row = []
         for pair in self.pairing_sessions.filter(~PairingSession.info.in_(PairingSession.FILTERED)):
-            members = ','.join([user.username for user in pair.users if user is not self])
+            members = ','.join([team_member.username for team_member in pair.team_members if team_member is not self])
             row.append(f"{self.username},{pair.created_at.strftime('%m/%d/%y')},{pair.info.replace(',', ' ')},{members}")
         return '\n'.join(row)
 
     def hard_delete(self):
         for pair in self.pairing_sessions:
-            pair.users.remove(self)
+            pair.team_members.remove(self)
         db.session.commit()
         self.role = None
         db.session.delete(self)
@@ -91,7 +91,7 @@ class TeamMember(SoftDeleteMixin, db.Model):
     def soft_delete(self):
         for pair in self.pairing_sessions:
             if arrow.get(pair.created_at).to("US/Central") >= arrow.now("US/Central").floor("days"):
-                pair.users.remove(self)
+                pair.team_members.remove(self)
             else:
                 Participants.query.filter(
                     Participants.pairing_session==pair
@@ -116,6 +116,6 @@ class TeamMember(SoftDeleteMixin, db.Model):
             .first()
         )
                                            
-        todays_unpaired.users.append(self)
+        todays_unpaired.team_members.append(self)
         self.reminders.update({Reminder.deleted: False})
         super().revive()

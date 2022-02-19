@@ -4,7 +4,7 @@ from pairamid_api.models.mixins.soft_delete_mixin import SoftDeleteMixin
 
 class Reminder(SoftDeleteMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user = db.relationship("TeamMember", uselist=False)
+    team_member = db.relationship("TeamMember", uselist=False)
     team_member_id = db.Column(db.Integer, db.ForeignKey("team_member.id"))
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey("team.id"))

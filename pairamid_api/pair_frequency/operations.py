@@ -5,7 +5,7 @@ from sqlalchemy import asc
 from pairamid_api.extensions import db
 
 def fetch_pairs(team_id, start, end): 
-    """Fetches user names for all active pairs during a time period."""
+    """Fetches team_member names for all active pairs during a time period."""
 
     sql = f"""
             SELECT ARRAY_AGG(public.team_member.username ORDER BY public.team_member.username ASC)
@@ -25,9 +25,9 @@ def fetch_pairs(team_id, start, end):
 
     return [value for rowproxy in resultproxy for _, value in rowproxy.items()]
 
-def frequencies_for_user(user, sessions, default):
-    counts = Counter([u for pair in sessions for u in pair if u != user and user in pair])
-    counts[user] = len([p for p in sessions if len(p) == 1 and user in p]) or 0
+def frequencies_for_team_member(team_member, sessions, default):
+    counts = Counter([u for pair in sessions for u in pair if u != team_member and team_member in pair])
+    counts[team_member] = len([p for p in sessions if len(p) == 1 and team_member in p]) or 0
     counts.update(default)
     return counts
 
@@ -37,13 +37,13 @@ def run_build_frequency(team_uuid, start=None, end=None):
     start_date = pendulum.parse(start, tz="US/Central").to_iso8601_string() if start else today.subtract(days=30).to_iso8601_string()
     end_date = pendulum.parse(end, tz="US/Central").add(days=1).to_iso8601_string() if end else today.add(days=1).to_iso8601_string()
     sessions = fetch_pairs(team.id, start=start_date, end=end_date)
-    default = {u.username: 0 for u in team.users}
+    default = {u.username: 0 for u in team.team_members}
 
     return [
         {
             'username': u.username,
             'roleName': u.role.name,
-            'frequencies': frequencies_for_user(u.username, sessions, default)
-        } for u in team.users.order_by(asc(TeamMember.username)).all()
+            'frequencies': frequencies_for_team_member(u.username, sessions, default)
+        } for u in team.team_members.order_by(asc(TeamMember.username)).all()
     ]
 

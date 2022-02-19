@@ -7,4 +7,4 @@ from .tagged_feedback import TaggedFeedback
 from .feedback_tag import FeedbackTag
 from .feedback_tag_group import FeedbackTagGroup
 from .feedback import Feedback
-from .user import TeamMember
+from .team_member import TeamMember

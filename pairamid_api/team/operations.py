@@ -50,7 +50,7 @@ def run_create(data):
     role = Role(name="Default")
     user = TeamMember(team=team, role=role)
     team.roles = [role]
-    team.users = [user]
+    team.team_members = [user]
     db.session.add(team)
     db.session.add(role)
     db.session.add(user)

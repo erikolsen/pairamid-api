@@ -4,16 +4,13 @@ from . import operations
 
 blueprint = Blueprint("pairing_session", __name__)
 
-
 @blueprint.route("/team/<team_uuid>/pairing_sessions", methods=["GET"])
 def index(team_uuid):
     return jsonify(operations.run_fetch_all(team_uuid))
 
-
 @blueprint.route("/team/<team_uuid>/pairing_sessions/daily", methods=["GET"])
 def daily(team_uuid):
-    return jsonify(operations.run_fetch_day(team_uuid))
-
+   return jsonify(operations.run_fetch_day(team_uuid))
 
 @blueprint.route("/team/<team_uuid>/pairing_sessions/weekly", methods=["GET"])
 def weekly(team_uuid):

@@ -13,7 +13,7 @@ class PairingSession(SoftDeleteMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     team = db.relationship("Team", uselist=False)
     team_id = db.Column(db.Integer, db.ForeignKey("team.id"))
-    users = db.relationship(
+    team_members = db.relationship(
         "TeamMember", secondary="participants", passive_deletes=True, order_by="TeamMember.username"
     )
     streak = db.Column(db.Integer, default=0)
@@ -22,4 +22,4 @@ class PairingSession(SoftDeleteMixin, db.Model):
         return self.created_at.date() < obj.created_at.date()
 
     def __eq__(self, obj):
-        return sorted(self.users) == sorted(obj.users)
+        return sorted(self.team_members) == sorted(obj.team_members)
