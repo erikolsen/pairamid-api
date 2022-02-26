@@ -2,7 +2,19 @@ from sqlalchemy import desc
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
 from pairamid_api.models import Role, TeamMember, Reminder, Team, PairingSession, FeedbackTag 
 
-class RoleSchema(SQLAlchemyAutoSchema):
+def camelcase(s):
+    parts = iter(s.split("_"))
+    return next(parts) + "".join(i.title() for i in parts)
+
+class CamelCaseSchema(SQLAlchemyAutoSchema):
+    """Schema that uses camel-case for its external representation
+    and snake-case for its internal representation.
+    """
+
+    def on_bind_field(self, field_name, field_obj):
+        field_obj.data_key = camelcase(field_obj.data_key or field_name)
+
+class RoleSchema(CamelCaseSchema):
     class Meta:
         model = Role
         fields = ('color', 'name', 'id', 'total_members')
@@ -15,14 +27,14 @@ class RoleSchema(SQLAlchemyAutoSchema):
 
         return 0
 
-class TeamMemberSchema(SQLAlchemyAutoSchema):
+class TeamMemberSchema(CamelCaseSchema):
     class Meta:
         model = TeamMember
         fields = ('username', 'role', 'uuid', 'created_at', 'id', 'deleted', 'full_name')
 
     role = fields.Nested(RoleSchema)
 
-class ReminderSchema(SQLAlchemyAutoSchema):
+class ReminderSchema(CamelCaseSchema):
     start_date = fields.fields.DateTime()
     end_date = fields.fields.DateTime()
     team_member = fields.Nested(TeamMemberSchema)
@@ -32,7 +44,7 @@ class ReminderSchema(SQLAlchemyAutoSchema):
         fields = ('start_date', 'end_date', 'message', 'team_member', 'id')
         datetimeformat = "%m/%d/%Y"
 
-class TeamSchema(SQLAlchemyAutoSchema):
+class TeamSchema(CamelCaseSchema):
     class Meta:
         model = Team
         fields = ('name', 'uuid', 'roles', 'team_members', 'members', 'lastActive')
@@ -60,7 +72,7 @@ class TeamSchema(SQLAlchemyAutoSchema):
 
         return 0
 
-class PairingSessionSchema(SQLAlchemyAutoSchema):
+class PairingSessionSchema(CamelCaseSchema):
     class Meta:
         model = PairingSession
         include_relationships = True
@@ -68,12 +80,12 @@ class PairingSessionSchema(SQLAlchemyAutoSchema):
 
     team_members = fields.Nested(TeamMemberSchema, many=True)
 
-class FeedbackTagSchema(SQLAlchemyAutoSchema):
+class FeedbackTagSchema(CamelCaseSchema):
     class Meta:
         model = FeedbackTag
         fields = ('id', 'name', 'description', 'group_id')
 
-class FeedbackTagGroupSchema(SQLAlchemyAutoSchema):
+class FeedbackTagGroupSchema(CamelCaseSchema):
     class Meta:
         model = PairingSession
         include_relationships = True
@@ -81,7 +93,7 @@ class FeedbackTagGroupSchema(SQLAlchemyAutoSchema):
 
     tags = fields.Nested(FeedbackTagSchema, many=True)
 
-class FeedbackSchema(SQLAlchemyAutoSchema):
+class FeedbackSchema(CamelCaseSchema):
     created_at = fields.fields.DateTime()
     class Meta:
         model = PairingSession
@@ -105,19 +117,19 @@ class FeedbackRequestUserSchema(TeamMemberSchema):
     class Meta:
         fields = ('username', 'full_name', 'feedback_tag_groups', 'id')
 
-class NestedRoleSchema(SQLAlchemyAutoSchema):
+class NestedRoleSchema(CamelCaseSchema):
     class Meta:
         model = Role
         fields = ('color', 'name')
 
-class NestedUserSchema(SQLAlchemyAutoSchema):
+class NestedUserSchema(CamelCaseSchema):
     class Meta:
         model = TeamMember
         fields = ('username', 'role')
 
     role = fields.Nested(NestedRoleSchema)
 
-class ProfilePairingSessionSchema(SQLAlchemyAutoSchema):
+class ProfilePairingSessionSchema(CamelCaseSchema):
     class Meta:
         model = PairingSession
         include_relationships = True
@@ -125,7 +137,7 @@ class ProfilePairingSessionSchema(SQLAlchemyAutoSchema):
 
     team_members = fields.Nested(NestedUserSchema, many=True)
 
-class NestedTeamSchema(SQLAlchemyAutoSchema):
+class NestedTeamSchema(CamelCaseSchema):
     class Meta:
         model = Team
         fields = ('name', 'uuid')

@@ -95,7 +95,7 @@ def run_batch_update(pairs):
     display_pairs = []
     for data in pairs:
         pair = data["pair"]
-        team_member_ids = [member["id"] for member in pair["team_members"]]
+        team_member_ids = [member["id"] for member in pair["teamMembers"]]
         team_members = TeamMember.query.filter(TeamMember.id.in_(team_member_ids)).order_by(asc(TeamMember.username))
         pairing_session = PairingSession.query.get(pair["id"])
         pairing_session.info = pair["info"]
