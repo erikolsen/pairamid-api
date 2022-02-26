@@ -147,4 +147,4 @@ class TeamUserProfile(TeamMemberSchema):
     team = fields.Nested(NestedTeamSchema)
 
     class Meta:
-        fields = ('id', 'active_pairing_sessions', 'username', 'full_name', 'uuid', 'team')
+        fields = ('id', 'active_pairing_sessions', 'username', 'full_name', 'uuid', 'team', 'deleted')
