@@ -2,8 +2,8 @@ import random
 import functools
 import arrow
 from pairamid_api.extensions import db
-from pairamid_api.models import User, PairingSession, Role, Team, Participants, Reminder
-from pairamid_api.pairing_session.operations import _daily_refresh_pairs, _todays_pairs
+from pairamid_api.models import TeamMember, PairingSession, Role, Team, Reminder
+from pairamid_api.pairing_session.operations import _daily_refresh_pairs
 
 def generate_username():
     letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -24,7 +24,7 @@ class TeamFactory:
     def team(self):
         team = Team(name=self.name)
         team.roles = self.roles
-        team.users = self.users
+        team.team_members = self.team_members
         db.session.add(team)
         db.session.commit()
         return team
@@ -36,36 +36,36 @@ class TeamFactory:
 
     @property
     @functools.lru_cache
-    def users(self):
-        users = []
+    def team_members(self):
+        members = []
         for i in range(1, self.user_count + 1):
-            users.append(
-                User(username=generate_username(), role=random.choice(self.roles))
+            members.append(
+                TeamMember(username=generate_username(), role=random.choice(self.roles))
             )
-        db.session.add_all(users)
+        db.session.add_all(members)
         db.session.commit()
-        return sorted(tuple(users))
+        return sorted(tuple(members))
 
-    def mark_ooo(self, user):
+    def mark_ooo(self, member):
         reminder = Reminder(
             team=self.team,
             start_date=arrow.utcnow().format(),
             end_date=arrow.utcnow().format(),
             message="OUT_OF_OFFICE",
-            user=user
+            team_member=member
         )
         db.session.add(reminder)
         db.session.commit()
 
-    def add_pair(self, users, info=None, date_offset=0):
-        pair = PairingSession(team=self.team, users=users, info=info)
+    def add_pair(self, team_members, info=None, date_offset=0):
+        pair = PairingSession(team=self.team, team_members=team_members, info=info)
         pair.created_at = arrow.now("US/Central").shift(days=date_offset).format()
         db.session.add(pair)
         db.session.commit()
         return pair
 
-    def update_roles(self, role_name, *users):
-        for user in users:
-            user.role = Role.query.filter(Role.name == role_name).first()
-            db.session.add(user)
+    def update_roles(self, role_name, *team_members):
+        for team_member in team_members:
+            team_member.role = Role.query.filter(Role.name == role_name).first()
+            db.session.add(team_member)
         db.session.commit()

@@ -1,5 +1,5 @@
-from pairamid_api.models import User, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag, Feedback
-from pairamid_api.schema import UserSchema, FullUserSchema, TeamUserProfile
+from pairamid_api.models import TeamMember, Role, Team, PairingSession, FeedbackTagGroup, FeedbackTag, Feedback
+from pairamid_api.schema import TeamMemberSchema, FullUserSchema, TeamUserProfile
 from pairamid_api.extensions import db, guard
 from pairamid_api.pairing_session.operations import add_user_to_available
 from sqlalchemy import asc
@@ -8,21 +8,21 @@ from .initial_feedback_groups import INITIAL_FEEDBACK_GROUPS, INITIAL_FEEDBACK
 def tag_for_name(feedbacks, name):
     return next((x for x in feedbacks if x.name == name), None)
 
-def add_inital_feedback_for(user, tags):
+def add_inital_feedback_for(team_member, tags):
     for feedback in INITIAL_FEEDBACK:
         new_feedback = Feedback(
             author_name='Pairamid Team',
             message=feedback.get('message', ''),
             tags=[tag_for_name(tags, tag) for tag in feedback.get('tags', [])],
-            recipient=user
+            recipient=team_member
         )
         db.session.add(new_feedback)
     return True
 
-def build_feedback_tag_groups_for(user):
+def build_feedback_tag_groups_for(team_member):
     tags = []
     for group in INITIAL_FEEDBACK_GROUPS:
-        fb_group = FeedbackTagGroup(name=group['name'], user=user)
+        fb_group = FeedbackTagGroup(name=group['name'], team_member=team_member)
         db.session.add(fb_group)
         for tag in group['tags']:
             new_tag = FeedbackTag(
@@ -47,7 +47,7 @@ def run_sign_up(data):
     password = data.get("password", None)
     full_name = data.get("fullName", None)
     try:
-        new_user = User(
+        new_user = TeamMember(
             email=email,
             full_name=full_name,
             username=initials_from(full_name),
@@ -65,59 +65,58 @@ def run_sign_up(data):
         raise e
 
 def run_fetch(user_uuid):
-    user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
+    team_member = TeamMember.query.with_deleted().filter(TeamMember.uuid == user_uuid).first()
     schema = FullUserSchema()
-    return schema.dump(user)
+    return schema.dump(team_member)
 
 def run_fetch_team_user(user_uuid):
-    user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
+    team_member = TeamMember.query.with_deleted().filter(TeamMember.uuid == user_uuid).first()
     schema = TeamUserProfile()
-    return schema.dump(user)
+    return schema.dump(team_member)
 
 def run_fetch_all(team_uuid):
     team = Team.query.filter(Team.uuid == team_uuid).first()
-    users = team.all_users.order_by(asc(User.username)).all() # includes soft deleted
-    schema = UserSchema(many=True)
-    return schema.dump(users)
-
+    team_members = team.all_team_members.order_by(asc(TeamMember.username)).all() # includes soft deleted
+    schema = TeamMemberSchema(many=True)
+    return schema.dump(team_members)
 
 def run_update(id, data):
-    user = User.query.get(id)
+    team_member = TeamMember.query.get(id)
     role = Role.query.get(data["roleId"])
-    user.role = role
-    user.username = data["initials"].upper()
-    db.session.add(user)
+    team_member.role = role
+    team_member.username = data["initials"].upper()
+    db.session.add(team_member)
     db.session.commit()
-    schema = UserSchema()
-    return schema.dump(user)
+    schema = TeamMemberSchema()
+    return schema.dump(team_member)
 
 
 def run_create(team_uuid, data):
     team = Team.query.filter(Team.uuid == team_uuid).first()
     role = team.roles.first()
-    user = User(team=team, role=role)
-    db.session.add(user)
-    add_user_to_available(user)
+    team_member = TeamMember(team=team, role=role)
+    db.session.add(team_member)
+    add_user_to_available(team_member)
     db.session.commit()
-    schema = UserSchema()
-    return schema.dump(user)
+    schema = TeamMemberSchema()
+    return schema.dump(team_member)
 
 
 def run_delete(id):
-    user = User.query.with_deleted().get(id)
-    schema = UserSchema()
-    if user.pairing_sessions.filter(PairingSession.info != "UNPAIRED").count() == 0:
+    team_member = TeamMember.query.with_deleted().get(id)
+    schema = TeamMemberSchema()
+    if team_member.pairing_sessions.filter(PairingSession.info != "UNPAIRED").count() == 0:
         hard_delete = True
-        user.hard_delete()
+        team_member.hard_delete()
     else:
         hard_delete = False
-        user.soft_delete()
-    dump = schema.dump(user)
+        team_member.soft_delete()
+    dump = schema.dump(team_member)
     dump['hardDelete'] = hard_delete
     return dump 
 
 def run_revive(id):
-    user = User.query.with_deleted().get(id)
-    user.revive()
-    schema = UserSchema()
-    return schema.dump(user)
+    team_member = TeamMember.query.with_deleted().get(id)
+    team_member.revive()
+    schema = TeamMemberSchema()
+    return schema.dump(team_member)

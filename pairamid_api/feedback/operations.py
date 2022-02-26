@@ -1,11 +1,11 @@
-from pairamid_api.models import User, Feedback, FeedbackTag
+from pairamid_api.models import TeamMember, Feedback, FeedbackTag
 from pairamid_api.schema import FeedbackSchema, FeedbackRequestUserSchema
 from pairamid_api.extensions import db
 
 def fetch_feedback_user(user_uuid):
-    user = User.query.with_deleted().filter(User.uuid == user_uuid).first()
+    team_member = TeamMember.query.with_deleted().filter(TeamMember.uuid == user_uuid).first()
     schema = FeedbackRequestUserSchema()
-    return schema.dump(user)
+    return schema.dump(team_member)
 
 def run_update(id, data):
     feedback = Feedback.query.get(id)

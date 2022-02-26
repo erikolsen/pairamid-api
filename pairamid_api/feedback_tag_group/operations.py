@@ -3,7 +3,7 @@ from pairamid_api.schema import FeedbackTagGroupSchema
 from pairamid_api.extensions import db
 
 def run_create(data):
-    new_group = FeedbackTagGroup(user_id=data.get('userId'))
+    new_group = FeedbackTagGroup(team_member_id=data.get('userId'))
     db.session.add(new_group)
     db.session.commit()
     schema = FeedbackTagGroupSchema()

@@ -3,7 +3,7 @@ from pairamid_api import (
     pairing_session,
     pair_frequency,
     role,
-    user,
+    team_member,
     team,
     commands,
     reminder,
@@ -13,8 +13,7 @@ from pairamid_api import (
 )
 from pairamid_api import models
 from pairamid_api.extensions import migrate, db, CORS, socketio, guard
-from pairamid_api.models import User
-
+from pairamid_api.models import TeamMember
 
 def create_app(config_object="pairamid_api.config"):
     app = Flask(__name__)
@@ -33,7 +32,7 @@ def register_blueprints(app):
     app.register_blueprint(pairing_session.routes.blueprint)
     app.register_blueprint(pair_frequency.routes.blueprint)
     app.register_blueprint(role.routes.blueprint)
-    app.register_blueprint(user.routes.blueprint)
+    app.register_blueprint(team_member.routes.blueprint)
     app.register_blueprint(team.routes.blueprint)
     app.register_blueprint(reminder.routes.blueprint)
     app.register_blueprint(feedback.routes.blueprint)
@@ -49,7 +48,7 @@ def register_extensions(app):
     socketio.init_app(app, cors_allowed_origins="*")
     guard.init_app(
         app,
-        User,
+        TeamMember,
     )
     return None
 
