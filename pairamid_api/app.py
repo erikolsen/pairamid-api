@@ -10,10 +10,11 @@ from pairamid_api import (
     feedback,
     feedback_tag,
     feedback_tag_group,
+    user,
 )
 from pairamid_api import models
 from pairamid_api.extensions import migrate, db, CORS, socketio, guard
-from pairamid_api.models import TeamMember
+from pairamid_api.models import User
 
 def create_app(config_object="pairamid_api.config"):
     app = Flask(__name__)
@@ -38,6 +39,7 @@ def register_blueprints(app):
     app.register_blueprint(feedback.routes.blueprint)
     app.register_blueprint(feedback_tag_group.routes.blueprint)
     app.register_blueprint(feedback_tag.routes.blueprint)
+    app.register_blueprint(user.routes.blueprint)
     return None
 
 
@@ -48,7 +50,7 @@ def register_extensions(app):
     socketio.init_app(app, cors_allowed_origins="*")
     guard.init_app(
         app,
-        TeamMember,
+        User,
     )
     return None
 
@@ -59,6 +61,7 @@ def register_commands(app):
     app.cli.add_command(commands.seed_users)
     app.cli.add_command(commands.seed_pairs)
     app.cli.add_command(commands.purge_team)
+    app.cli.add_command(commands.team_member_to_user)
     return None
 
 

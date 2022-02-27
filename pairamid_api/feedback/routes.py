@@ -1,7 +1,5 @@
-import flask_praetorian
 from flask import jsonify, request, Blueprint
 from . import operations
-from pairamid_api.extensions import guard
 
 blueprint = Blueprint("feedback", __name__)
 

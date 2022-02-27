@@ -1,6 +1,6 @@
 from sqlalchemy import desc
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, fields
-from pairamid_api.models import Role, TeamMember, Reminder, Team, PairingSession, FeedbackTag 
+from pairamid_api.models import Role, TeamMember, Reminder, Team, PairingSession, FeedbackTag, User
 
 def camelcase(s):
     parts = iter(s.split("_"))
@@ -102,14 +102,20 @@ class FeedbackSchema(CamelCaseSchema):
 
     tags = fields.Nested(FeedbackTagSchema, many=True)
 
-class FullUserSchema(TeamMemberSchema):
-    active_pairing_sessions = fields.Nested(PairingSessionSchema, many=True)
-    team = fields.Nested(TeamSchema)
+class UserSchema(CamelCaseSchema):
+    class Meta:
+        model = User
+        fields = ('username', 'role', 'uuid', 'created_at', 'id', 'full_name')
+
+    role = fields.Nested(RoleSchema)
+
+class FullUserSchema(UserSchema):
+    class Meta:
+        fields = ('id', 'username', 'full_name', 'uuid', 'feedback_received', 'feedback_tag_groups')
+
     feedback_received = fields.Nested(FeedbackSchema, many=True)
     feedback_tag_groups = fields.Nested(FeedbackTagGroupSchema, many=True)
 
-    class Meta:
-        fields = ('id', 'active_pairing_sessions', 'team', 'username', 'full_name', 'uuid', 'feedback_received', 'feedback_tag_groups')
 
 class FeedbackRequestUserSchema(TeamMemberSchema):
     feedback_tag_groups = fields.Nested(FeedbackTagGroupSchema, many=True)

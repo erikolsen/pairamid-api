@@ -8,3 +8,4 @@ from .feedback_tag import FeedbackTag
 from .feedback_tag_group import FeedbackTagGroup
 from .feedback import Feedback
 from .team_member import TeamMember
+from .user import User

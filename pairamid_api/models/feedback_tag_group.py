@@ -5,6 +5,8 @@ class FeedbackTagGroup(db.Model):
     name = db.Column(db.String(64))
     team_member = db.relationship("TeamMember", uselist=False)
     team_member_id = db.Column(db.Integer, db.ForeignKey("team_member.id"))
+    user = db.relationship("User", uselist=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     tags = db.relationship(
         "FeedbackTag",
         order_by="asc(FeedbackTag.name)",

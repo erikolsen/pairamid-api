@@ -14,6 +14,8 @@ class TeamMember(SoftDeleteMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUID(as_uuid=True), default=uuid4, index=True)
     username = db.Column(db.String(64))
+    user = db.relationship("User", uselist=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     role = db.relationship("Role", uselist=False)
     role_id = db.Column(db.Integer, db.ForeignKey("role.id"))
     team = db.relationship("Team", uselist=False)
