@@ -14,8 +14,39 @@ from pairamid_api.models import (
     Team, 
     Reminder, 
     Participants,
+    User,
 )
 from pairamid_api.pairing_session.operations import streak
+
+@click.command()
+@with_appcontext
+def team_member_to_user():
+    """Transition TeamMembers to Users"""
+    for team_member in TeamMember.query.all():
+        if team_member.email:
+            print('Team Member', team_member.username)
+            user = User(
+                uuid=team_member.uuid,
+                email=team_member.email,
+                password=team_member.password,
+                full_name=team_member.full_name,
+                username=team_member.username,
+            )
+            db.session.add(user)
+
+            print('Members groups', team_member.feedback_tag_groups.count())
+            for group in team_member.feedback_tag_groups.all():
+                group.user_id = user.id
+                db.session.add(group)
+
+            print('Members feedbacks', team_member.feedback_received.count())
+            for feedback in team_member.feedback_received.all():
+                feedback.user_id = user.id
+                db.session.add(feedback)
+
+            print("User feedback", user.feedback_received.count())
+            print("User Tags", user.feedback_tag_groups.count())
+    db.session.commit()
 
 def spacer(word, offset=20):
     space = (offset - len(word)) * " "
@@ -148,7 +179,7 @@ def seed_users():
     db.session.commit()
 
     print(
-        f"Database has been seeded with Users on team {team.name}: {TeamMember.query.count()}"
+        f"Database has been seeded with Team Members on team {team.name}-{team.uuid}: {TeamMember.query.count()}"
     )
 
 

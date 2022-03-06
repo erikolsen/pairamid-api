@@ -6,6 +6,7 @@ class Feedback(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey("team_member.id"))
     author_name = db.Column(db.String(64))
     recipient_id = db.Column(db.Integer, db.ForeignKey("team_member.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     message = db.Column(db.Text())
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     tags = db.relationship(

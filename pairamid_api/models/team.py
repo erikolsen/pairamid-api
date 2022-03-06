@@ -13,7 +13,7 @@ class Team(db.Model):
     name = db.Column(db.String(64))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     all_team_members = db.relationship(
-        "TeamMember", backref="user", lazy="dynamic"
+        "TeamMember", backref="team_member", lazy="dynamic"
     )
     all_reminders = db.relationship("Reminder", backref="reminder", lazy="dynamic")
     all_pairing_sessions = db.relationship(
