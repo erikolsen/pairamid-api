@@ -26,6 +26,7 @@ def team_member_to_user():
         if team_member.email:
             print('Team Member', team_member.username)
             user = User(
+                uuid=team_member.uuid,
                 email=team_member.email,
                 password=team_member.password,
                 full_name=team_member.full_name,

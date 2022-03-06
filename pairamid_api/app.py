@@ -77,7 +77,7 @@ def register_shellcontext(app: Flask):
     def make_shell_context():
         return {
             'db': db,
-            'models': models,
+            'm': models,
         }
 
     app.shell_context_processor(make_shell_context)
