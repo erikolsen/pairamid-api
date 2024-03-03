@@ -23,20 +23,7 @@ class TeamMember(SoftDeleteMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     reminders = db.relationship("Reminder", lazy="dynamic")
     feedback_tag_groups = db.relationship("FeedbackTagGroup", lazy="dynamic")
-    feedback_authored = db.relationship(
-        'Feedback',
-        foreign_keys='Feedback.author_id',
-        backref='author',
-        order_by="desc(Feedback.created_at)",
-        lazy='dynamic'
-    )
-    feedback_received = db.relationship(
-        'Feedback',
-        foreign_keys='Feedback.recipient_id',
-        backref='recipient',
-        order_by="desc(Feedback.created_at)",
-        lazy='dynamic'
-    )
+
     pairing_sessions = db.relationship(
         "PairingSession",
         secondary="participants",
@@ -47,6 +34,7 @@ class TeamMember(SoftDeleteMixin, db.Model):
     email = db.Column(db.String(64), index=True, unique=True)
     password = db.Column(db.Text)
     full_name = db.Column(db.String(64))
+
     ### start flask praetorian ###
     @classmethod
     def lookup(cls, email):
@@ -60,27 +48,42 @@ class TeamMember(SoftDeleteMixin, db.Model):
     def identity(self):
         return self.id
 
-    @property # not currently used but required by flask-praetorian
+    @property  # not currently used but required by flask-praetorian
     def rolenames(self):
         return []
+
     ### end flask praetorian ###
 
     def __lt__(self, obj):
         return self.username < obj.username
 
     def __repr__(self):
-        return f"<TeamMember {self.username} {self.role and self.role.name or 'No Role'} >"
+        return (
+            f"<TeamMember {self.username} {self.role and self.role.name or 'No Role'} >"
+        )
 
     @property
     def active_pairing_sessions(self):
-        return self.pairing_sessions.filter(~PairingSession.info.in_(PairingSession.FILTERED)).all()
+        return self.pairing_sessions.filter(
+            ~PairingSession.info.in_(PairingSession.FILTERED)
+        ).all()
 
     def csv_row(self):
         row = []
-        for pair in self.pairing_sessions.filter(~PairingSession.info.in_(PairingSession.FILTERED)):
-            members = ','.join([team_member.username for team_member in pair.team_members if team_member is not self])
-            row.append(f"{self.username},{pair.created_at.strftime('%m/%d/%y')},{pair.info.replace(',', ' ')},{members}")
-        return '\n'.join(row)
+        for pair in self.pairing_sessions.filter(
+            ~PairingSession.info.in_(PairingSession.FILTERED)
+        ):
+            members = ",".join(
+                [
+                    team_member.username
+                    for team_member in pair.team_members
+                    if team_member is not self
+                ]
+            )
+            row.append(
+                f"{self.username},{pair.created_at.strftime('%m/%d/%y')},{pair.info.replace(',', ' ')},{members}"
+            )
+        return "\n".join(row)
 
     def hard_delete(self):
         for pair in self.pairing_sessions:
@@ -92,12 +95,14 @@ class TeamMember(SoftDeleteMixin, db.Model):
 
     def soft_delete(self):
         for pair in self.pairing_sessions:
-            if arrow.get(pair.created_at).to("US/Central") >= arrow.now("US/Central").floor("days"):
+            if arrow.get(pair.created_at).to("US/Central") >= arrow.now(
+                "US/Central"
+            ).floor("days"):
                 pair.team_members.remove(self)
             else:
-                Participants.query.filter(
-                    Participants.pairing_session==pair
-                ).update({Participants.deleted: True})
+                Participants.query.filter(Participants.pairing_session == pair).update(
+                    {Participants.deleted: True}
+                )
                 pair.soft_delete()
 
         self.reminders.update({Reminder.deleted: True})
@@ -106,18 +111,19 @@ class TeamMember(SoftDeleteMixin, db.Model):
     def revive(self):
         for pair in self.pairing_sessions:
             Participants.query.with_deleted().filter(
-                Participants.pairing_session==pair
+                Participants.pairing_session == pair
             ).update({Participants.deleted: False})
             pair.revive()
 
         todays_unpaired = (
-            self.team.pairing_sessions
-            .filter(PairingSession.created_at >= start_of_day(datetime.now()))
+            self.team.pairing_sessions.filter(
+                PairingSession.created_at >= start_of_day(datetime.now())
+            )
             .filter(PairingSession.created_at < end_of_day(datetime.now()))
-            .filter(PairingSession.info == 'UNPAIRED')
+            .filter(PairingSession.info == "UNPAIRED")
             .first()
         )
-                                           
+
         todays_unpaired.team_members.append(self)
         self.reminders.update({Reminder.deleted: False})
         super().revive()
