@@ -63,7 +63,7 @@ def add_inital_feedback_for(user, tags):
             author_name="Pairamid Team",
             message=feedback.get("message", ""),
             tags=[tag_for_name(tags, tag) for tag in feedback.get("tags", [])],
-            user=user,
+            recipient=user,
         )
         db.session.add(new_feedback)
     return True
